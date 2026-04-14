@@ -1,0 +1,111 @@
+<comicContinuation>
+
+  <continuity importance="critical">
+    <previousPanels reference="provided"/>
+
+    <characterModelSheets>
+      <sheet>SWORDMASTER</sheet>
+      <sheet>LANCER</sheet>
+      <sheet>AIRBENDER</sheet>
+      <sheet>ROGUE</sheet>
+    </characterModelSheets>
+
+    <retrievalAnchors importance="critical">
+      <anchor character="SWORDMASTER" modelSheetRef="modelSheet_SWORDMASTER_v1" lockAppearance="true"/>
+      <anchor character="LANCER" modelSheetRef="modelSheet_LANCER_v1" lockAppearance="true"/>
+      <anchor character="AIRBENDER" modelSheetRef="modelSheet_AIRBENDER_v1" lockAppearance="true"/>
+      <anchor character="ROGUE" modelSheetRef="modelSheet_ROGUE_v1" lockAppearance="true"/>
+      <environmentAnchor source="startingSceneImage_v1" lockEnvironment="true"/>
+    </retrievalAnchors>
+
+    <visualLocks>
+      <globalCharacterProportions priority="highest">
+        <rule>All characters are exactly 5'11 in height.</rule>
+        <rule>Maintain correct anatomical proportions and silhouette consistency as defined in each model sheet.</rule>
+        <rule>No character may appear taller or shorter than another when standing on equal ground.</rule>
+      </globalCharacterProportions>
+
+      <SWORDMASTER priority="highest">
+        <rule>Right eye must remain fully covered by bangs.</rule>
+        <rule>Light‑green hair clip must remain visible on the bangs.</rule>
+        <rule>Expression aloof or faintly amused; posture elegant; cup handling consistent with model sheet.</rule>
+      </SWORDMASTER>
+
+      <LANCER priority="high">
+        <rule>Demeanor calm and attentive.</rule>
+        <rule>Gaze remains forward.</rule>
+      </LANCER>
+    </visualLocks>
+
+    <environment>
+      <rule>Temple layout, materials, lighting direction, palette, and spatial continuity must match the last plot reference image: startingSceneImage_v1.</rule>
+    </environment>
+  </continuity>
+
+
+  <panels>
+
+    <panel id="C1">
+      <camera>
+        <shotType>close-up</shotType>
+        <angle>eye-level</angle>
+        <framing>symmetrical</framing>
+      </camera>
+
+      <action>
+        <staging>
+          <block>
+            AIRBENDER and ROGUE stand close together, both facing forward with matching eyelines. AIRBENDER’s raised hand gesture remains, but his micro‑expression is warm and subtly confident, hinting at recognition of the unseen counterparts.
+          </block>
+          <block>
+            ROGUE maintains a composed, steady forward gaze with a faint, respectful half‑smile, reinforcing the implied cross‑panel connection. Both maintain strict model‑sheet fidelity and 5'11 proportional consistency.
+          </block>
+        </staging>
+
+        <retrievalChecks priority="highest">
+          <check character="AIRBENDER" modelSheetRef="modelSheet_AIRBENDER_v1"/>
+          <check character="ROGUE" modelSheetRef="modelSheet_ROGUE_v1"/>
+          <check environment="temple" source="startingSceneImage_v1"/>
+        </retrievalChecks>
+      </action>
+
+      <dialogue>
+        <line speaker="AIRBENDER">It’s been ages since I was trapped in that ancient mirage, wrestling with the qi.</line>
+        <line speaker="AIRBENDER">And this—(lightly tapping Rogue)—is the young warrior who pulled me out of that Saṃsāra loop.</line>
+        <line speaker="AIRBENDER">Rogue, meet my friends: Swordmaster and Lancer.</line>
+        <line speaker="AIRBENDER">And yes—he really is Rogue, a true believer in Inter‑Dimensionalism, the broader framework that encompasses Taoism.</line>
+      </dialogue>
+    </panel>
+
+
+    <panel id="C2">
+      <camera>
+        <shotType>medium</shotType>
+        <angle>eye-level</angle>
+        <framing>symmetrical</framing>
+      </camera>
+
+      <action>
+        <staging>
+          <block>
+            SWORDMASTER and LANCER stand elegantly side by side or with slight spatial offset, both facing forward with matching eyelines that align with AIRBENDER and ROGUE’s eyelines from the previous panel.
+          </block>
+          <block>
+            SWORDMASTER’s micro‑expression is a subtle, aloof half‑smirk, suggesting poised acknowledgment. Her posture remains elegant, cup held with precise model‑sheet accuracy, right eye covered by bangs, hair clip visible.
+          </block>
+          <block>
+            LANCER maintains a calm, steady forward gaze with a faint softening of the eyes, creating a quiet, respectful counterpoint to AIRBENDER and ROGUE. His posture aligns with model‑sheet proportions and the 5'11 height constraint.
+          </block>
+        </staging>
+
+        <retrievalChecks priority="highest">
+          <check character="SWORDMASTER" modelSheetRef="modelSheet_SWORDMASTER_v1"/>
+          <check character="LANCER" modelSheetRef="modelSheet_LANCER_v1"/>
+          <check environment="temple" source="startingSceneImage_v1"/>
+        </retrievalChecks>
+      </action>
+    </panel>
+
+  </panels>
+
+</comicContinuation>
