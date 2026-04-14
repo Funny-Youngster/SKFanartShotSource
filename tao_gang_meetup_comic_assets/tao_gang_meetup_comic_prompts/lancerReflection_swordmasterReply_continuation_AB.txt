@@ -1,0 +1,69 @@
+<comicContinuation>
+
+  <continuity importance="critical">
+    <previousPanels reference="provided"/>
+
+    <characterModelSheets>
+      <sheet>SWORDMASTER</sheet>
+      <sheet>LANCER</sheet>
+    </characterModelSheets>
+
+    <visualLocks>
+      <SWORDMASTER>
+        <rule priority="highest">Right eye must remain fully covered by bangs.</rule>
+        <rule priority="highest">Light‑green hair clip must remain visible on the bangs.</rule>
+      </SWORDMASTER>
+    </visualLocks>
+
+    <environment>
+      <rule>Lighting, outfits, proportions, and scene continuity must match all previous panels.</rule>
+    </environment>
+  </continuity>
+
+  <panels>
+
+    <panel id="A">
+      <camera>
+        <shotType>close-up</shotType>
+        <angle>eye-level</angle>
+      </camera>
+
+      <action>
+        <description>
+          LANCER faces the camera in a close-up. Maintain his canonical appearance and proportions.
+          He gives a calm, elegant smile.
+        </description>
+      </action>
+
+      <dialogue>
+        <line speaker="LANCER">I thought it was just politically correct nonsense…</line>
+        <line speaker="LANCER">but yeah, I just realized I know that red haired guy. I kind of respect him.</line>
+        <line speaker="LANCER">He did save the Airbender from falling into the Abyss of Turbid Qi.</line>
+      </dialogue>
+    </panel>
+
+    <panel id="B">
+      <camera>
+        <shotType>close-up</shotType>
+        <angle>eye-level</angle>
+      </camera>
+
+      <action>
+        <description>
+          Close-up of SWORDMASTER. Her right eye remains fully covered by her bangs, and the
+          light‑green hair clip is clearly visible. She takes a slow sip of tea, then sets the cup
+          down with aloof grace.
+        </description>
+      </action>
+
+      <dialogue>
+        <line speaker="SWORDMASTER">Rogue is coming to the monastery.</line>
+        <line speaker="SWORDMASTER">We’re going to meet him.</line>
+        <line speaker="SWORDMASTER">Ignoring him isn’t an option.</line>
+        <line speaker="SWORDMASTER">And as Taoists… we value champions who can do things that are meta‑real.</line>
+      </dialogue>
+    </panel>
+
+  </panels>
+
+</comicContinuation>

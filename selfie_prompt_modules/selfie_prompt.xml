@@ -22,6 +22,7 @@
       <Rule>Model sheet fidelity overrides all other instructions without exception.</Rule>
     </RetrievalEmphasis>
   </ModelSheetAuthority>
+
   <ReferenceMaterials>
     <StyleReference>
       <Rendering>
@@ -41,6 +42,7 @@
       </TitleCard>
     </StyleReference>
   </ReferenceMaterials>
+
   <PhotoSetting>
     <Location>
       <Environment>Taoist hermit‑style utopia with trees, mountains, and clouds. No substitutions.</Environment>
@@ -61,29 +63,36 @@
       </Visibility>
     </Arrangement>
   </PhotoSetting>
+
   <CharacterDetails>
     <ModelSheetFidelity>
       <Appearance>Appearance must match the model sheets exactly. No deviations.</Appearance>
       <Clothing>Clothing must match the model sheets exactly. No substitutions.</Clothing>
       <Detail>All model sheet details must be present. No omissions.</Detail>
     </ModelSheetFidelity>
+
     <Age>
       <Approximate>18</Approximate>
     </Age>
+
     <WeaponConstraint>
       <Remove>All weapons and handheld objects must be removed. None may appear.</Remove>
     </WeaponConstraint>
+
     <CameraPerspective>
       <Viewpoint>Selfie taken at arm’s length. Mandatory.</Viewpoint>
       <Holder>Exactly one character holds the camera. Mandatory.</Holder>
     </CameraPerspective>
+
     <DeviceVisibility>
       <Prohibition>No phone or device may be visible. The device must be fully out of frame.</Prohibition>
     </DeviceVisibility>
+
     <Height>
       <Approximate>5'11"</Approximate>
       <Adjustment>Apply selfie‑appropriate foreshortening. Mandatory.</Adjustment>
     </Height>
+
     <AdditionalCharacterConstraints>
       <Swordmaster>
         <Hair>
@@ -97,6 +106,7 @@
       </Swordmaster>
     </AdditionalCharacterConstraints>
   </CharacterDetails>
+
   <Output>
     <Dimensions>
       <Width>4</Width>
