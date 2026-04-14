@@ -1,0 +1,64 @@
+<video_prompt>
+  <global_constraints>
+    <character_constraint character="SWORDMASTER">
+      <physical_trait>Right eye covered by bangs throughout entire scene</physical_trait>
+      <accessory>Small light-green hair clip on bangs, visible in every shot</accessory>
+      <body_type>Curvy body type - hard constraint per model sheet</body_type>
+      <reference>Model sheet for Swordmaster must be applied</reference>
+    </character_constraint>
+    <character_constraint character="LANCER">
+      <reference>Model sheet for Lancer must be applied</reference>
+    </character_constraint>
+    <scene_constraint>Reference image serves as initial frame for continuity</scene_constraint>
+    <continuity_constraint>All three segments form continuous narrative flow</continuity_constraint>
+  </global_constraints>
+
+  <segment id="3">
+    <narration>
+      SWORDMASTER takes a slow sip of tea, then sets the cup down. She reveals Rogue's impending arrival at the monastery with Taoist philosophical weight.
+    </narration>
+
+    <setting>
+      <location>Monastery tea room</location>
+      <time_of_day>Afternoon</time_of_day>
+      <atmosphere>Serene, contemplative, muted tones</atmosphere>
+      <props>Tea cup, low table, traditional seating</props>
+    </setting>
+
+    <camera_direction>
+      <shot_type>Close-up</shot_type>
+      <lens>85mm prime lens</lens>
+      <framing>SWORDMASTER centered, bangs and hair clip prominent</framing>
+      <movement>Slow tilt down following cup movement, then return to face</movement>
+      <focus>Sharp focus on face and hair clip, cup slightly soft</focus>
+      <composition>Vertical symmetry, hair clip at golden ratio point</composition>
+    </camera_direction>
+
+    <lighting>
+      <key_light>Soft window light from camera left</key_light>
+      <fill_light>Minimal fill maintaining mystery</fill_light>
+      <accent_light>Highlight on light-green hair clip</accent_light>
+      <mood>Philosophical, determined</mood>
+    </lighting>
+
+    <pacing>
+      <duration>18 seconds</duration>
+      <rhythm>Slow, weighty, deliberate pauses</rhythm>
+      <beat>Sip of tea, set down, then dialogue with gravitas</beat>
+    </pacing>
+
+    <dialogue>
+      <speaker>SWORDMASTER</speaker>
+      <line>Rogue is coming to the monastery. We're going to meet him. Ignoring him isn't an option. And as Taoists... we value champions who can do things that are meta-real.</line>
+      <delivery>Calm, resolute, philosophical weight</delivery>
+      <action>Slow sip of tea, sets cup down, bangs cover right eye throughout</action>
+    </dialogue>
+
+    <continuity>
+      <entry_state>Continues from LANCER's respect statement</entry_state>
+      <exit_state>Scene conclusion, leads to next sequence</exit_state>
+      <visual_markers>Hair clip visible in final frame, right eye remains covered</visual_markers>
+      <match_cut>Ensures continuity with segments 1 and 2</match_cut>
+    </continuity>
+  </segment>
+</video_prompt>

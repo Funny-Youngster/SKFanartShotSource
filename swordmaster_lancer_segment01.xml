@@ -1,0 +1,148 @@
+{
+  "title": "SWORDMASTER & LANCER — Rogue Conversation",
+  "duration_seconds": 8,
+  "aspect_ratio": "4:3",
+  "style": "grounded cinematic realism, Nolan-influenced",
+
+  "reference_identification": {
+    "required": true,
+    "steps": [
+      "Analyze all provided images",
+      "Identify SWORDMASTER model sheet",
+      "Identify LANCER model sheet",
+      "Identify start-scene environment reference",
+      "Assign them as SWORDMASTER_MODEL, LANCER_MODEL, SCENE_CANON"
+    ]
+  },
+
+  "global_continuity": {
+    "characters_match_model_sheets": true,
+    "environment_matches_scene_canon": true,
+    "no_color_drift": true,
+    "no_outfit_changes": true,
+    "camera_style": "controlled, grounded, minimal motion"
+  },
+
+  "character_constraints": {
+    "SWORDMASTER": {
+      "right_eye_covered": true,
+      "hair_clip_color": "light-green",
+      "hair_clip_visible": true,
+      "body_type": "curvy",
+      "cup_hand_fixed": true,
+      "reference": "SWORDMASTER_MODEL"
+    },
+    "LANCER": {
+      "demeanor": "calm_attentive_grounded",
+      "reference": "LANCER_MODEL"
+    }
+  },
+
+  "scene_constraints": {
+    "reference_environment": "SCENE_CANON",
+    "match_lighting": true,
+    "match_palette": true,
+    "match_props": true,
+    "start_frame_exact_match": {
+      "required": true,
+      "rules": [
+        "Camera angle identical to SCENE_CANON",
+        "Character poses identical",
+        "Lighting identical",
+        "Prop placement identical",
+        "Color and exposure identical",
+        "Framing identical"
+      ]
+    }
+  },
+
+  "shots": [
+    {
+      "id": 1,
+      "time": "0:00-0:02",
+      "camera": "medium_eye_level",
+      "description": "SWORDMASTER seated as in SCENE_CANON, lifting cup.",
+      "start_frame": "must_match_SCENE_CANON_exactly",
+      "dialogue": {
+        "speaker": "SWORDMASTER",
+        "line": "Have you heard of a guy named Rogue?"
+      },
+      "markers": [
+        "right_eye_covered",
+        "hair_clip_visible",
+        "cup_in_same_hand"
+      ]
+    },
+    {
+      "id": 2,
+      "time": "0:02-0:04",
+      "camera": "medium_eye_level",
+      "description": "LANCER turns head toward SWORDMASTER.",
+      "dialogue": {
+        "speaker": "LANCER",
+        "line": "No. What happened."
+      }
+    },
+    {
+      "id": 3,
+      "time": "0:04-0:06",
+      "camera": "closeup_three_quarter",
+      "description": "SWORDMASTER with cup near lips.",
+      "dialogue": {
+        "speaker": "SWORDMASTER",
+        "line": "He’s been giving himself a whole list of titles—"
+      },
+      "markers": [
+        "right_eye_covered",
+        "hair_clip_visible",
+        "cup_in_same_hand"
+      ]
+    },
+    {
+      "id": 4,
+      "time": "0:06-0:08",
+      "camera": "medium_three_quarter",
+      "description": "SWORDMASTER gestures with free hand.",
+      "dialogue": {
+        "speaker": "SWORDMASTER",
+        "line": "The OG of the Knight Gang… The true believer of Inter-Dimensionalism… Representative of the House of Knight."
+      },
+      "markers": [
+        "right_eye_covered",
+        "hair_clip_visible",
+        "cup_in_same_hand"
+      ]
+    }
+  ],
+
+  "segment_metadata": {
+    "segment_1": {
+      "narration": "SWORDMASTER introduces Rogue.",
+      "setting": {
+        "location": "monastery_tea_room",
+        "time_of_day": "afternoon",
+        "atmosphere": "serene_muted",
+        "props": ["tea_cup", "low_table", "traditional_seating"]
+      },
+      "camera_direction": {
+        "shot_type": "medium_closeup",
+        "lens": "50mm",
+        "framing": "centered_slight_dutch",
+        "movement": "slow_push_in",
+        "focus": "shallow_on_visible_eye_and_clip",
+        "composition": "rule_of_thirds"
+      },
+      "lighting": {
+        "key": "soft_window_left",
+        "fill": "minimal",
+        "accent": "rim_on_hair",
+        "mood": "low_key"
+      },
+      "dialogue": {
+        "speaker": "SWORDMASTER",
+        "line": "Have you heard of a guy named Rogue?",
+        "delivery": "measured_aloof"
+      }
+    }
+  }
+}

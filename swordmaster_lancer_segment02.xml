@@ -1,0 +1,77 @@
+<video_prompt>
+  <global_constraints>
+    <character_constraint character="SWORDMASTER">
+      <physical_trait>Right eye covered by bangs throughout entire scene</physical_trait>
+      <accessory>Small light-green hair clip on bangs, visible in every shot</accessory>
+      <body_type>Curvy body type - hard constraint per model sheet</body_type>
+      <reference>Model sheet for Swordmaster must be applied</reference>
+    </character_constraint>
+    <character_constraint character="LANCER">
+      <reference>Model sheet for Lancer must be applied</reference>
+    </character_constraint>
+    <scene_constraint>Reference image serves as initial frame for continuity</scene_constraint>
+    <continuity_constraint>All three segments form continuous narrative flow</continuity_constraint>
+  </global_constraints>
+
+  <segment id="2">
+    <narration>
+      LANCER turns his gaze toward SWORDMASTER. He responds with elegant composure, revealing unexpected respect for Rogue despite initial skepticism.
+    </narration>
+
+    <setting>
+      <location>Monastery tea room</location>
+      <time_of_day>Afternoon</time_of_day>
+      <atmosphere>Serene, contemplative, muted tones</atmosphere>
+      <props>Tea cup, low table, traditional seating</props>
+    </setting>
+
+    <camera_direction>
+      <shot_type>Close-up</shot_type>
+      <lens>85mm prime lens</lens>
+      <framing>LANCER facing camera, slight three-quarter angle</framing>
+      <movement>Static with subtle handheld micro-movement</movement>
+      <focus>Sharp focus on eyes and facial expression</focus>
+      <composition>Centered framing, eye-line matches SWORDMASTER from previous shot</composition>
+    </camera_direction>
+
+    <lighting>
+      <key_light>Soft window light from camera right</key_light>
+      <fill_light>Gentle fill to reveal elegant features</fill_light>
+      <accent_light>Warm backlight for separation</accent_light>
+      <mood>Refined, thoughtful</mood>
+    </lighting>
+
+    <pacing>
+      <duration>15 seconds</duration>
+      <rhythm>Moderate, building to smile</rhythm>
+      <beat>Pause after question, then elegant smile emerges</beat>
+    </pacing>
+
+    <dialogue>
+      <speaker>LANCER</speaker>
+      <line>No. What happened?</line>
+      <delivery>Curious, engaged</delivery>
+      <action>Turns gaze toward SWORDMASTER</action>
+    </dialogue>
+
+    <dialogue>
+      <speaker>LANCER</speaker>
+      <line>I thought it was just politically correct nonsense... but I kind of respect him. He did save the Airbender from falling into the Abyss of Turbid Qi.</line>
+      <delivery>Elegant smile, genuine respect</delivery>
+      <action>Smiles elegantly facing camera</action>
+    </dialogue>
+
+    <dialogue>
+      <speaker>SWORDMASTER</speaker>
+      <line>He's been giving himself a whole list of titles—"the OG of the Knight Gang," "the true believer of Inter-Dimensionalism," "the representative of the House of Knight." I could throw out these posh phrases all day.</line>
+      <delivery>Quiet, amused breath, slightly mocking</delivery>
+      <action>Lets out amused breath, bangs still cover right eye</action>
+    </dialogue>
+
+    <continuity>
+      <entry_state>Continues from SWORDMASTER's question</entry_state>
+      <exit_state>Leads into SWORDMASTER close-up with tea</exit_state>
+      <visual_markers>Hair clip must remain visible when cutting back to SWORDMASTER</visual_markers>
+    </continuity>
+  </segment>
+</video_prompt>

@@ -1,0 +1,118 @@
+<videoPrompt>
+  <meta>
+    <duration seconds="7-8" />
+    <format ratio="4:3" orientation="horizontal" />
+    <style quality="production" influence="Soul Knight" />
+    <startingFrame source="attached-confrontation-image" />
+  </meta>
+
+  <characters>
+    <rogue
+      reference="model-sheet-rogue"
+      hair="red"
+      emotion="calm-determined"
+      weapons="silver-sword red-sword"
+      integrity="strict"
+    />
+    <airbender
+      reference="model-sheet-airbender"
+      version="yin"
+      qiState="turbid"
+      aura="dark-sinister"
+      expression="fierce-evil"
+      integrity="strict"
+    />
+  </characters>
+
+  <environment>
+    <relics
+      type="maya"
+      material="light-yellow-gold"
+      structure="pyramids"
+    />
+    <vegetation>
+      <tree type="coconut" />
+    </vegetation>
+  </environment>
+
+  <themes>
+    <motif keyword="no-discord-no-concord" />
+    <contrast type="moral-duality" />
+    <symbolism type="fate-convergence" />
+  </themes>
+
+  <sequence>
+
+    <shot id="1" start="0.0" end="1.5">
+      <camera
+        angle="low"
+        movement="tracking-back"
+        framing="near-full-body"
+      />
+      <action>
+        <airbender motion="dash" direction="right-to-left" />
+        <effects qi="dark-turbid-trails" dust="light" />
+      </action>
+      <environmentReveal elements="pyramids coconut-trees" />
+    </shot>
+
+    <shot id="2" start="1.5" end="3.0">
+      <camera
+        angle="lateral"
+        movement="dolly-opposite"
+        framing="near-full-body"
+      />
+      <action>
+        <rogue motion="sprint" direction="left-to-right" />
+        <rogue
+          action="evasive-slip"
+          detail="shifts-weight-to-lead-foot torso-rotation slips-past-outstretched-hand arms-extended-for-balance"
+        />
+      </action>
+    </shot>
+
+    <shot id="3" start="3.0" end="5.0">
+      <camera
+        angle="over-shoulder-airbender"
+        lens="slight-compression"
+        movement="forward-glide"
+      />
+      <action>
+        <airbender motion="accelerate" />
+        <rogue motion="curve-dodge-arc" />
+      </action>
+    </shot>
+
+    <shot id="4" start="5.0" end="6.5">
+      <camera
+        angle="dynamic"
+        perspective="cross-flow-passby"
+        framing="near-full-body"
+      />
+      <moment type="motion-freeze" />
+      <action>
+        <airbender motion="dash" direction="right-to-left" />
+        <rogue
+          motion="defensive-rotation"
+          direction="left-to-right"
+          visibility="partially-obscured-behind-airbender"
+        />
+        <rogue
+          attack="right-fist-swing"
+          target="airbender-abdomen"
+        />
+        <effects qi="scatter-upward" origin="airbender-back" />
+      </action>
+    </shot>
+
+    <shot id="5" start="6.5" end="8.0">
+      <camera movement="crane-rise" speed="slow" />
+      <action>
+        <airbender motion="post-passby-skid" />
+        <rogue motion="graceful-landing" />
+      </action>
+      <environmentReveal elements="pyramids coconut-trees" />
+    </shot>
+
+  </sequence>
+</videoPrompt>

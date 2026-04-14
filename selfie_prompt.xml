@@ -1,0 +1,107 @@
+<SelfieRequest>
+  <ModelSheetAuthority>
+    <ModelSheets count="7">
+      <Authority>
+        <Source>Model sheets are the sole and exclusive reference for all visual attributes.</Source>
+        <Restrictions>
+          <Restriction>Use the exact facial structure and features shown in the model sheets. No deviations.</Restriction>
+          <Restriction>Use the exact eye shapes and colors only. No substitutions.</Restriction>
+          <Restriction>Use the exact hair colors, lengths, styles, bangs, and accessories only. No alterations.</Restriction>
+          <Restriction>Use the exact clothing, fabrics, patterns, and armor only. No redesigns.</Restriction>
+          <Restriction>Use the exact color palettes only. No palette shifts.</Restriction>
+          <Restriction>Use the exact body proportions and height relationships only. No reinterpretation.</Restriction>
+          <Restriction>Use the exact unique identifiers only. No additions.</Restriction>
+          <Restriction>No invented, modified, or omitted details under any circumstances.</Restriction>
+        </Restrictions>
+      </Authority>
+    </ModelSheets>
+    <RetrievalEmphasis>
+      <Rule>All visual attributes must be retrieved strictly and exclusively from the model sheets.</Rule>
+      <Rule>No attribute may appear unless it exists in the model sheets.</Rule>
+      <Rule>No hallucinated clothing, accessories, colors, features, or details.</Rule>
+      <Rule>Model sheet fidelity overrides all other instructions without exception.</Rule>
+    </RetrievalEmphasis>
+  </ModelSheetAuthority>
+  <ReferenceMaterials>
+    <StyleReference>
+      <Rendering>
+        <Linework>High‑fidelity semi‑realistic anime with tapered lines. Mandatory.</Linework>
+        <Shading>Hybrid cel‑shaded and painterly volumetric shading. Mandatory.</Shading>
+        <Materials>
+          <Metal>High‑specular reflections. Mandatory.</Metal>
+          <Fabric>Micro‑grain texture. Mandatory.</Fabric>
+        </Materials>
+        <Surfaces>Soft, luminous rendering for organic surfaces. Mandatory.</Surfaces>
+        <Lighting>Warm directional lighting with cool ambient fill. Mandatory.</Lighting>
+      </Rendering>
+      <TitleCard>
+        <Text>Welcome to The Tao Gang!</Text>
+        <Integration>The title must be integrated into the environment. No floating overlays.</Integration>
+        <Font>Font must resemble Soul Knight style. No alternate fonts.</Font>
+      </TitleCard>
+    </StyleReference>
+  </ReferenceMaterials>
+  <PhotoSetting>
+    <Location>
+      <Environment>Taoist hermit‑style utopia with trees, mountains, and clouds. No substitutions.</Environment>
+    </Location>
+    <Arrangement>
+      <Distribution>
+        <Cluster>Characters must be tightly packed with minimal spacing. No wide gaps.</Cluster>
+      </Distribution>
+      <Orientation>
+        <Facing>All characters must face the camera in a semicircle. No alternate orientations.</Facing>
+      </Orientation>
+      <Depth>
+        <FrontRow count="4">Front micro‑row. Mandatory.</FrontRow>
+        <BackRow count="3">Back micro‑row positioned less than one character‑width behind. Mandatory.</BackRow>
+      </Depth>
+      <Visibility>
+        <Requirement>All characters must be fully visible. No occlusion.</Requirement>
+      </Visibility>
+    </Arrangement>
+  </PhotoSetting>
+  <CharacterDetails>
+    <ModelSheetFidelity>
+      <Appearance>Appearance must match the model sheets exactly. No deviations.</Appearance>
+      <Clothing>Clothing must match the model sheets exactly. No substitutions.</Clothing>
+      <Detail>All model sheet details must be present. No omissions.</Detail>
+    </ModelSheetFidelity>
+    <Age>
+      <Approximate>18</Approximate>
+    </Age>
+    <WeaponConstraint>
+      <Remove>All weapons and handheld objects must be removed. None may appear.</Remove>
+    </WeaponConstraint>
+    <CameraPerspective>
+      <Viewpoint>Selfie taken at arm’s length. Mandatory.</Viewpoint>
+      <Holder>Exactly one character holds the camera. Mandatory.</Holder>
+    </CameraPerspective>
+    <DeviceVisibility>
+      <Prohibition>No phone or device may be visible. The device must be fully out of frame.</Prohibition>
+    </DeviceVisibility>
+    <Height>
+      <Approximate>5'11"</Approximate>
+      <Adjustment>Apply selfie‑appropriate foreshortening. Mandatory.</Adjustment>
+    </Height>
+    <AdditionalCharacterConstraints>
+      <Swordmaster>
+        <Hair>
+          <Coverage>Hair must cover one eye. No exceptions.</Coverage>
+          <Clip color="light-green">Clip must be visible. No omission.</Clip>
+          <Style>
+            <Length>Waist‑length. No shortening.</Length>
+            <Structure>Ponytail. No alternate structures.</Structure>
+          </Style>
+        </Hair>
+      </Swordmaster>
+    </AdditionalCharacterConstraints>
+  </CharacterDetails>
+  <Output>
+    <Dimensions>
+      <Width>4</Width>
+      <Height>3</Height>
+    </Dimensions>
+    <Orientation>Horizontal Rectangle</Orientation>
+  </Output>
+</SelfieRequest>
