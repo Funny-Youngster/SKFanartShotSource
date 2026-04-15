@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SKFanartShotSource | Soul Knight Creative Assets</title>
+  
+  <!-- Google Fonts: Cool, modern typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    /* ===== BLUE GRADIENT THEME ===== */
+    :root {
+      --light-blue: #87CEEB;
+      --blue: #4A90E2;
+      --dark-blue: #1a3a5c;
+      --darker-blue: #0d1b2a;
+      --accent-cyan: #00d4ff;
+      --text-light: #f0f8ff;
+      --text-dim: #b8d4f0;
+      --card-bg: rgba(26, 58, 92, 0.7);
+      --glass-bg: rgba(74, 144, 226, 0.15);
+      --shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Rajdhani', sans-serif;
+      background: linear-gradient(135deg, var(--light-blue), var(--blue), var(--dark-blue), var(--darker-blue));
+      background-attachment: fixed;
+      color: var(--text-light);
+      line-height: 1.6;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* ===== TYPOGRAPHY & TEXT CONTAINMENT ===== */
+    h1, h2, h3, h4 {
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+      line-height: 1.2;
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+      hyphens: auto;
+    }
+
+    h1 {
+      font-size: clamp(1.8rem, 4.5vw, 3.2rem);
+      background: linear-gradient(90deg, var(--text-light), var(--accent-cyan));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      padding: 0 0.5rem;
+    }
+
+    h2 {
+      font-size: clamp(1.4rem, 2.8vw, 2rem);
+      color: var(--accent-cyan);
+      margin-bottom: 1rem;
+      position: relative;
+      display: inline-block;
+      max-width: 100%;
+    }
+
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background: var(--accent-cyan);
+      border-radius: 2px;
+    }
+
+    p, li, small, code {
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+      word-break: break-word;
+    }
+
+    p {
+      color: var(--text-dim);
+      font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+      margin-bottom: 1rem;
+      line-height: 1.7;
+    }
+
+    /* ===== HEADER & HERO ===== */
+    header {
+      padding: 2rem 1rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(0, 212, 255, 0.1) 0%, transparent 70%);
+      animation: pulse 8s ease-in-out infinite;
+      pointer-events: none;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 0.5; }
+      50% { transform: scale(1.1); opacity: 0.8; }
+    }
+
+    .hero {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+
+    .tagline {
+      font-size: clamp(1rem, 2.2vw, 1.25rem);
+      max-width: 700px;
+      margin: 1rem auto 2rem;
+      color: var(--text-light);
+      opacity: 0.95;
+      padding: 0 0.5rem;
+    }
+
+    /* ===== NAVIGATION ===== */
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      margin: 1.5rem 0;
+      padding: 0.5rem;
+    }
+
+    nav a {
+      padding: 0.55rem 1.2rem;
+      background: var(--glass-bg);
+      border: 1px solid rgba(135, 206, 235, 0.3);
+      border-radius: 50px;
+      color: var(--text-light);
+      text-decoration: none;
+      font-weight: 600;
+      font-family: 'Rajdhani', sans-serif;
+      font-size: clamp(0.85rem, 2vw, 1rem);
+      transition: var(--transition);
+      backdrop-filter: blur(10px);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 100%;
+    }
+
+    nav a:hover {
+      background: var(--accent-cyan);
+      color: var(--darker-blue);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 20px rgba(0, 212, 255, 0.4);
+    }
+
+    /* ===== MAIN CONTENT ===== */
+    main {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 1rem 1rem 4rem;
+    }
+
+    section {
+      margin: 2.5rem 0;
+      padding: 1.75rem;
+      background: var(--card-bg);
+      border-radius: 20px;
+      border: 1px solid rgba(135, 206, 235, 0.2);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+      transition: var(--transition);
+      overflow: hidden; /* Prevent content bleed */
+    }
+
+    section:hover {
+      transform: translateY(-5px);
+      border-color: var(--accent-cyan);
+      box-shadow: 0 12px 40px rgba(0, 212, 255, 0.25);
+    }
+
+    /* ===== GALLERY GRID ===== */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.25rem;
+      margin-top: 1.25rem;
+    }
+
+    .gallery-item {
+      background: var(--glass-bg);
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(135, 206, 235, 0.2);
+      transition: var(--transition);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.02);
+      border-color: var(--accent-cyan);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 190px;
+      object-fit: cover;
+      display: block;
+      transition: var(--transition);
+      flex-shrink: 0;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.03);
+    }
+
+    .gallery-caption {
+      padding: 0.9rem 0.8rem;
+      text-align: center;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .gallery-caption h4 {
+      font-size: clamp(1rem, 2.5vw, 1.15rem);
+      margin-bottom: 0.25rem;
+      color: var(--text-light);
+      line-height: 1.3;
+    }
+
+    .gallery-caption p {
+      font-size: clamp(0.8rem, 2vw, 0.9rem);
+      margin: 0;
+      color: var(--text-dim);
+      line-height: 1.4;
+    }
+
+    /* ===== PROMPT CARDS ===== */
+    .prompt-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+      margin-top: 1.25rem;
+    }
+
+    .prompt-card {
+      background: linear-gradient(145deg, rgba(74, 144, 226, 0.2), rgba(26, 58, 92, 0.4));
+      border-radius: 16px;
+      padding: 1.25rem;
+      border-left: 4px solid var(--accent-cyan);
+      transition: var(--transition);
+      overflow: hidden;
+    }
+
+    .prompt-card:hover {
+      transform: translateX(4px);
+      background: linear-gradient(145deg, rgba(74, 144, 226, 0.3), rgba(26, 58, 92, 0.5));
+    }
+
+    .prompt-card h4 {
+      color: var(--accent-cyan);
+      margin-bottom: 0.7rem;
+      font-size: clamp(1.05rem, 2.3vw, 1.2rem);
+      line-height: 1.3;
+    }
+
+    .prompt-code {
+      background: rgba(13, 27, 42, 0.7);
+      padding: 0.9rem;
+      border-radius: 8px;
+      font-family: 'Courier New', monospace;
+      font-size: clamp(0.75rem, 1.8vw, 0.9rem);
+      color: var(--light-blue);
+      overflow-x: auto;
+      overflow-y: hidden;
+      margin: 0.7rem 0;
+      border: 1px solid rgba(135, 206, 235, 0.2);
+      white-space: pre-wrap;
+      word-break: break-all;
+      max-width: 100%;
+      line-height: 1.5;
+    }
+
+    .prompt-card small {
+      display: block;
+      font-size: clamp(0.75rem, 1.7vw, 0.85rem);
+      color: var(--text-dim);
+      margin-top: 0.4rem;
+      overflow-wrap: break-word;
+    }
+
+    /* ===== FEATURES LIST ===== */
+    .features-list {
+      list-style: none;
+      margin-top: 1rem;
+      padding-left: 0.5rem;
+    }
+
+    .features-list li {
+      padding: 0.7rem 0 0.7rem 2rem;
+      position: relative;
+      color: var(--text-dim);
+      font-size: clamp(0.95rem, 2vw, 1.05rem);
+      line-height: 1.5;
+      overflow-wrap: break-word;
+    }
+
+    .features-list li::before {
+      content: '✦';
+      position: absolute;
+      left: 0;
+      top: 0.7rem;
+      color: var(--accent-cyan);
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    /* ===== REPO STRUCTURE ===== */
+    .folder-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1rem;
+      margin-top: 1.25rem;
+    }
+
+    .folder-card {
+      background: var(--glass-bg);
+      padding: 1.1rem;
+      border-radius: 12px;
+      border: 1px solid rgba(135, 206, 235, 0.2);
+      transition: var(--transition);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      min-height: 120px;
+    }
+
+    .folder-card:hover {
+      border-color: var(--accent-cyan);
+      background: rgba(74, 144, 226, 0.25);
+    }
+
+    .folder-card h4 {
+      color: var(--light-blue);
+      margin-bottom: 0.4rem;
+      font-size: clamp(1rem, 2.3vw, 1.1rem);
+      line-height: 1.3;
+      flex-shrink: 0;
+    }
+
+    .folder-card p {
+      font-size: clamp(0.85rem, 1.9vw, 0.95rem);
+      margin: 0;
+      flex-grow: 1;
+      line-height: 1.5;
+    }
+
+    /* ===== CTA SECTION ===== */
+    .cta-section {
+      text-align: center;
+      background: linear-gradient(135deg, rgba(26, 58, 92, 0.92), rgba(13, 27, 42, 0.97));
+      margin-top: 1.5rem;
+      padding: 2rem 1.5rem;
+    }
+
+    .cta-section h2 {
+      margin-bottom: 0.8rem;
+    }
+
+    .cta-section p {
+      max-width: 650px;
+      margin: 0 auto 1.2rem;
+    }
+
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 0.9rem;
+      flex-wrap: wrap;
+      margin-top: 1.2rem;
+    }
+
+    .btn {
+      padding: 0.85rem 1.8rem;
+      border-radius: 50px;
+      font-weight: 600;
+      font-family: 'Rajdhani', sans-serif;
+      text-decoration: none;
+      transition: var(--transition);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      cursor: pointer;
+      border: none;
+      font-size: clamp(0.95rem, 2.1vw, 1.05rem);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 100%;
+    }
+
+    .btn-primary {
+      background: linear-gradient(90deg, var(--blue), var(--accent-cyan));
+      color: var(--darker-blue);
+      box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(0, 212, 255, 0.5);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--text-light);
+      border: 2px solid var(--accent-cyan);
+    }
+
+    .btn-secondary:hover {
+      background: var(--accent-cyan);
+      color: var(--darker-blue);
+      transform: translateY(-3px);
+    }
+
+    .git-command {
+      margin-top: 1.2rem;
+      background: rgba(0,0,0,0.25);
+      padding: 0.9rem 1.2rem;
+      border-radius: 12px;
+      display: inline-block;
+      max-width: 100%;
+      overflow-x: auto;
+    }
+
+    .git-command code {
+      color: var(--accent-cyan);
+      font-family: 'Courier New', monospace;
+      font-size: clamp(0.8rem, 2vw, 0.95rem);
+      white-space: pre-wrap;
+      word-break: break-all;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      text-align: center;
+      padding: 1.8rem 1rem 2.5rem;
+      color: var(--text-dim);
+      font-size: clamp(0.85rem, 1.9vw, 0.95rem);
+      border-top: 1px solid rgba(135, 206, 235, 0.2);
+      margin-top: 1.5rem;
+      line-height: 1.6;
+    }
+
+    footer a {
+      color: var(--accent-cyan);
+      text-decoration: none;
+      transition: var(--transition);
+      overflow-wrap: break-word;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* ===== RESPONSIVE ENHANCEMENTS ===== */
+    @media (max-width: 768px) {
+      h1 { font-size: 2rem; padding: 0 0.3rem; }
+      h2 { font-size: 1.5rem; }
+      .tagline { font-size: 1.05rem; }
+      nav { gap: 0.4rem; padding: 0.3rem; }
+      nav a { padding: 0.45rem 0.9rem; font-size: 0.9rem; }
+      section { padding: 1.4rem 1.2rem; }
+      .gallery-grid { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
+      .gallery-item img { height: 170px; }
+      .prompt-cards, .folder-grid { grid-template-columns: 1fr; }
+      .cta-buttons { flex-direction: column; align-items: center; }
+      .btn { width: 100%; max-width: 320px; justify-content: center; }
+    }
+
+    @media (max-width: 480px) {
+      h1 { font-size: 1.75rem; }
+      h2 { font-size: 1.35rem; }
+      .gallery-grid { grid-template-columns: 1fr 1fr; }
+      .gallery-item img { height: 150px; }
+      .prompt-code { font-size: 0.8rem; padding: 0.75rem; }
+    }
+
+    /* ===== ANIMATIONS ===== */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(25px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    section {
+      animation: fadeInUp 0.55s ease-out forwards;
+      opacity: 0;
+    }
+
+    section:nth-child(1) { animation-delay: 0.1s; opacity: 1; }
+    section:nth-child(2) { animation-delay: 0.2s; }
+    section:nth-child(3) { animation-delay: 0.3s; }
+    section:nth-child(4) { animation-delay: 0.4s; }
+    section:nth-child(5) { animation-delay: 0.5s; }
+
+    /* ===== UTILITY: Prevent text overflow in all containers ===== */
+    [class*="card"], [class*="item"], [class*="caption"], 
+    .prompt-code, .git-command code, nav a, .btn {
+      overflow-wrap: break-word !important;
+      word-wrap: break-word !important;
+      word-break: break-word !important;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <div class="hero">
+      <h1>⚔️ SKFanartShotSource</h1>
+      <p class="tagline">
+        A complete, open-source collection of <strong>source images</strong>, <strong>model sheets</strong>, 
+        and <strong>creative prompt modules</strong> for generating <strong>Soul Knight–themed</strong> 
+        videos, comics, animations, and visual content.
+      </p>
+      
+      <nav>
+        <a href="#gallery">🖼️ Gallery</a>
+        <a href="#prompts">💬 Prompts</a>
+        <a href="#structure">📁 Structure</a>
+        <a href="#features">✨ Features</a>
+        <a href="https://github.com/Funny-Youngster/SKFanartShotSource" target="_blank">🔗 GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main>
+
+    <!-- ===== HIGHLIGHT GALLERY (REORDERED: Knight → Rogue → Wizard → Assassin) ===== -->
+    <section id="gallery">
+      <h2>🎨 Highlight Model Sheets</h2>
+      <p>Core reference images for the Knight Gang cast — perfect for character consistency and prompt engineering.</p>
+      
+      <div class="gallery-grid">
+        <!-- 1. KNIGHT -->
+        <div class="gallery-item">
+          <img src="KnightGangRefs/knight_model_sheet.png" alt="Knight Model Sheet" onerror="this.src='https://via.placeholder.com/400x300/1a3a5c/87CEEB?text=Knight+Sheet'">
+          <div class="gallery-caption">
+            <h4>Knight</h4>
+            <p>Armor variations and weapon references</p>
+          </div>
+        </div>
+        <!-- 2. ROGUE -->
+        <div class="gallery-item">
+          <img src="KnightGangRefs/rogue_model_sheet.png" alt="Rogue Model Sheet" onerror="this.src='https://via.placeholder.com/400x300/1a3a5c/87CEEB?text=Rogue+Sheet'">
+          <div class="gallery-caption">
+            <h4>Rogue</h4>
+            <p>Agile poses and signature weapon Aurora</p>
+          </div>
+        </div>
+        <!-- 3. WIZARD -->
+        <div class="gallery-item">
+          <img src="KnightGangRefs/wizard_model_sheet.png" alt="Wizard Model Sheet" onerror="this.src='https://via.placeholder.com/400x300/1a3a5c/87CEEB?text=Wizard+Sheet'">
+          <div class="gallery-caption">
+            <h4>Wizard</h4>
+            <p>Spell-casting stances and magical effects</p>
+          </div>
+        </div>
+        <!-- 4. ASSASSIN -->
+        <div class="gallery-item">
+          <img src="KnightGangRefs/assassin_model_sheet.png" alt="Assassin Model Sheet" onerror="this.src='https://via.placeholder.com/400x300/1a3a5c/87CEEB?text=Assassin+Sheet'">
+          <div class="gallery-caption">
+            <h4>Assassin</h4>
+            <p>Model sheet with pose variants & scarf details</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROMPT MODULES ===== -->
+    <section id="prompts">
+      <h2>💡 Creative Prompt Modules</h2>
+      <p>Modular, plug-and-play prompt snippets organized by scene, character, and shot type.</p>
+      
+      <div class="prompt-cards">
+        <div class="prompt-card">
+          <h4>🤳 Selfie-Style Shot</h4>
+          <p>Character-focused close-ups with dynamic angles:</p>
+          <div class="prompt-code">
+[character: Rogue], selfie angle, dynamic pose, holding Aurora, 
+glowing blue aura, cinematic lighting, Soul Knight art style, 
+detailed character design, vibrant colors --ar 3:4
+          </div>
+          <small>Source: <code>selfie_prompt_modules/selfie_prompt.xml</code></small>
+        </div>
+        
+        <div class="prompt-card">
+          <h4>🎬 Scene: Rogue Meets Tao Gang</h4>
+          <p>Narrative setup for cinematic generation:</p>
+          <div class="prompt-code">
+wide shot, Rogue entering Tao Gang hideout, 
+dim lantern lighting, suspicious glances, 
+Soul Knight pixel-art inspired, atmospheric fog, 
+character interaction, storyboarding style --ar 16:9
+          </div>
+          <small>Source: <code>scene_introduce_rogue_to_tao_gang/</code></small>
+        </div>
+        
+        <div class="prompt-card">
+          <h4>📚 Tao Gang Selfie Spec (JSON)</h4>
+          <p>Structured prompt parameters for batch generation:</p>
+          <div class="prompt-code">
+{
+  "character": "Tao Gang Member",
+  "shot_type": "selfie",
+  "mood": "confident",
+  "lighting": "neon_glow",
+  "background": "urban_dungeon",
+  "style_tags": ["soul_knight", "pixel_art", "vibrant"]
+}
+          </div>
+          <small>Source: <code>selfie_prompt_modules/tao_gang_selfie_spec.json</code></small>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== REPO STRUCTURE ===== -->
+    <section id="structure">
+      <h2>📁 Repository Structure</h2>
+      <p>Organized for easy navigation, version control, and collaboration.</p>
+      
+      <div class="folder-grid">
+        <div class="folder-card">
+          <h4>🗡️ KnightGangRefs/</h4>
+          <p>Core reference sheets for Knight Gang characters. Ensures visual consistency across panels.</p>
+        </div>
+        <div class="folder-card">
+          <h4>☯️ TaoGang_ModelSheets/</h4>
+          <p>Model sheets for Tao Gang cast. Perfect for pose, outfit, and proportion reference.</p>
+        </div>
+        <div class="folder-card">
+          <h4>🎁 no_discord_no_concord_assets/</h4>
+          <p>Curated misc assets originally bundled to bypass Discord upload limits.</p>
+        </div>
+        <div class="folder-card">
+          <h4>🎭 scene_introduce_rogue_to_tao_gang/</h4>
+          <p>Storyboard assets and prompts for the "Rogue meets Tao Gang" narrative scene.</p>
+        </div>
+        <div class="folder-card">
+          <h4>🤳 selfie_prompt_modules/</h4>
+          <p>Reusable prompt blocks for character-focused selfie-style shots.</p>
+        </div>
+        <div class="folder-card">
+          <h4>📰 tao_gang_meetup_comic_assets/</h4>
+          <p>Multi-panel comic generation assets with continuity-preserving prompts.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FEATURES ===== -->
+    <section id="features">
+      <h2>✨ Key Features</h2>
+      <ul class="features-list">
+        <li><strong>Centralized source of truth</strong> — Model sheets, reference packs, and prompt modules in one versioned repository</li>
+        <li><strong>Prompt-engineering ready</strong> — Assets organized by scenes, characters, and shot types for easy pipeline integration</li>
+        <li><strong>Version-controlled visual canon</strong> — Character details refined via commits, ensuring tight visual continuity</li>
+        <li><strong>Collaboration-friendly</strong> — Designed to be forked, extended, and improved by the community</li>
+        <li><strong>Platform-agnostic</strong> — No more oversized zips or Discord upload limits; everything is Git-friendly</li>
+      </ul>
+    </section>
+
+    <!-- ===== CALL TO ACTION ===== -->
+    <section class="cta-section">
+      <h2>🚀 Get Started Today</h2>
+      <p>Clone the repository and start creating Soul Knight fanart with professional-grade references and prompts.</p>
+      
+      <div class="cta-buttons">
+        <a href="https://github.com/Funny-Youngster/SKFanartShotSource.git" class="btn btn-primary" target="_blank">
+          ⬇️ Clone Repository
+        </a>
+        <a href="https://github.com/Funny-Youngster/SKFanartShotSource" class="btn btn-secondary" target="_blank">
+          🔍 Browse on GitHub
+        </a>
+      </div>
+      
+      <div class="git-command">
+        <code>git clone https://github.com/Funny-Youngster/SKFanartShotSource.git</code>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>
+      <strong>SKFanartShotSource</strong> • Open Source Soul Knight Creative Assets<br>
+      Maintained by <a href="https://github.com/Funny-Youngster" target="_blank">@Funny-Youngster</a> & 
+      <a href="https://github.com/LostInHustle" target="_blank">@LostInHustle</a>
+    </p>
+    <p style="margin-top: 0.4rem; font-size: 0.9rem;">
+      🎮 Soul Knight is a trademark of ChillyRoom. This is a fan-made resource project.
+    </p>
+  </footer>
+
+  <!-- ===== SMOOTH SCROLL & INTERACTIONS ===== -->
+  <script>
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // Intersection Observer for fade-in animations on scroll
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('section').forEach(section => {
+      section.style.opacity = '0';
+      section.style.transform = 'translateY(20px)';
+      section.style.transition = 'opacity 0.55s ease-out, transform 0.55s ease-out';
+      observer.observe(section);
+    });
+
+    // Image error handler fallback
+    document.querySelectorAll('img').forEach(img => {
+      img.addEventListener('error', function() {
+        this.style.display = 'none';
+        const caption = this.nextElementSibling;
+        if (caption) {
+          caption.innerHTML += '<br><small style="color:#87CEEB; display:block; margin-top:0.3rem">[Image placeholder]</small>';
+        }
+      });
+    });
+
+    // Prevent horizontal scroll on code blocks
+    document.querySelectorAll('.prompt-code, .git-command code').forEach(el => {
+      el.addEventListener('wheel', (e) => {
+        if (e.deltaY !== 0 && el.scrollWidth > el.clientWidth) {
+          e.preventDefault();
+          el.scrollLeft += e.deltaY;
+        }
+      }, { passive: false });
+    });
+  </script>
+
+</body>
+</html>
