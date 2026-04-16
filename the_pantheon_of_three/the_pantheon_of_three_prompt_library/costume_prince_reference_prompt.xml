@@ -1,0 +1,258 @@
+<PROMPT>
+
+  <RENDERING_SPEC>
+    <STYLE>High-fidelity semi-realistic anime.</STYLE>
+    <LINEWORK>Ultra-clean, softly tapered.</LINEWORK>
+    <SHADING>Hybrid cel-shaded + painterly volumetric.</SHADING>
+
+    <MATERIALS>
+      <METAL>Crisp specular reflections (for crown and water gun details).</METAL>
+      <FABRIC>Soft, plush texture for the frog kigurumi.</FABRIC>
+      <ORGANIC>Soft luminous texture for skin.</ORGANIC>
+    </MATERIALS>
+
+    <LIGHTING>
+      <KEY_LIGHT>Warm, directional, cinematic.</KEY_LIGHT>
+      <FILL_LIGHT>Cool ambient.</FILL_LIGHT>
+      <CONSISTENCY>Identical lighting direction, intensity, softness, and shadow behavior across ALL panels.</CONSISTENCY>
+    </LIGHTING>
+
+    <COLOR_PALETTE>Vibrant greens, gold, deep reds, and muted neutrals.</COLOR_PALETTE>
+    
+    <BACKGROUND>
+      Clean, neutral, plain; painterly texture with depth-of-field blur and reduced distant contrast.
+    </BACKGROUND>
+    
+    <AESTHETIC>Premium fantasy / JRPG key-art quality.</AESTHETIC>
+  </RENDERING_SPEC>
+
+  <REFERENCE_CLEANUP>
+    <REMOVE_FROM_SOURCE_IMAGE>
+      <RULE>Remove ALL bottles or clutter from the frog kigurumi's front belly patch.</RULE>
+      <RULE>Ensure no extra characters or people are present in the scene.</RULE>
+    </REMOVE_FROM_SOURCE_IMAGE>
+
+    <IDENTITY_LOCK_AFTER_REMOVAL>
+      <RULE>The cleaned reference (with bottles and extra elements removed) is the ONLY identity source.</RULE>
+      <RULE>DO NOT reintroduce bottles or extra people in ANY panel.</RULE>
+    </IDENTITY_LOCK_AFTER_REMOVAL>
+  </REFERENCE_CLEANUP>
+
+  <CHARACTER_TRAITS>
+    <GENDER>Male.</GENDER>
+    <EXPRESSION_POSTURE>Playful yet aloof, gorgeous vibe.</EXPRESSION_POSTURE>
+    <AGE>Appears mid-20s.</AGE>
+    <COLOR_MODE>Full color only.</COLOR_MODE>
+
+    <HEIGHT>EXACTLY 5'11".</HEIGHT>
+    <HEIGHT_ENFORCEMENT>
+      <RULE>Full-body proportions MUST represent a tall 5'11" adult male.</RULE>
+      <RULE>No shortening, compressing, shrinking, or stylizing the body.</RULE>
+      <RULE>No "average height" or "skinny short" silhouette.</RULE>
+    </HEIGHT_ENFORCEMENT>
+
+    <BODY_PROPORTIONS>
+      <RULE>Inverted-triangle male physique (broad shoulders, tapered waist) visible at the neck/wrists.</RULE>
+      <RULE>Balanced, natural, anatomically correct.</RULE>
+      <RULE>Leg-to-torso ratio MUST match a real 5'11" male.</RULE>
+      <RULE>Shoulder width, limb length, and head-to-body ratio MUST reflect tall adult male proportions.</RULE>
+    </BODY_PROPORTIONS>
+
+    <CLOTHING_DETAILS>
+      <KIGURUMI>
+        <TYPE>Full-body oversized green frog kigurumi (onesie style).</TYPE>
+        <COLOR>Bright vibrant green.</COLOR>
+        <HOOD_FEATURES>Must have large, 3D frog eyes (yellow/gold with black pupils) on the forehead area of the hood.</HOOD_FEATURES>
+        <BELLY_PATCH>
+          <DESCRIPTION>Lighter green/yellowish patch on the stomach with a frog mouth line design.</DESCRIPTION>
+          <RULE>This patch must remain empty; NO bottles or items inside it.</RULE>
+        </BELLY_PATCH>
+        <FIT>Kigurumi MUST be oversized, baggy, and slouchy.</FIT>
+        <DRAPERY>Fabric folds and looseness MUST remain consistent across all panels.</DRAPERY>
+      </KIGURUMI>
+      
+      <FEET>
+        <TYPE>Large, green, webbed frog feet (integrated into the costume).</TYPE>
+        <RULE>Feet must match the oversized, plush look of the rest of the suit.</RULE>
+        <RULE>No human shoes or bare feet.</RULE>
+      </FEET>
+
+      <ACCESSORIES>
+        <CROWN>
+          <TYPE>Gold crown.</TYPE>
+          <POSITION>Resting on top of the frog hood (between the frog eyes).</POSITION>
+          <RULE>Must be present in ALL panels where the head is visible.</RULE>
+        </CROWN>
+        
+        <SCARF>
+          <TYPE>Red scarf/neckerchief.</TYPE>
+          <POSITION>Tied around the neck.</POSITION>
+          <RULE>Must be visible in front and side views.</RULE>
+        </SCARF>
+
+        <CAPE>
+          <TYPE>Dark red/maroon cape.</TYPE>
+          <POSITION>Attached to the back, flowing downwards.</POSITION>
+          <RULE>Must be visible in side and back views.</RULE>
+        </CAPE>
+      </ACCESSORIES>
+    </CLOTHING_DETAILS>
+
+    <WEAPON_AND_ITEM_RULES>
+      <LEFT_HAND>
+        <ITEM>Colorful Water Gun.</ITEM>
+        <COLORS>Green body, Yellow accents, Red handle/trigger area.</COLORS>
+        <POSE>Raised high in the air.</POSE>
+        <RULE>Left hand MUST hold the water gun in ALL full-body panels.</RULE>
+        <RULE>Hand position MUST remain natural and anatomically correct.</RULE>
+      </LEFT_HAND>
+
+      <RIGHT_HAND>
+        <ITEM>Red Slime Dummy.</ITEM>
+        <DESCRIPTION>Red round slime object with a face (two yellow eyes, mouth).</DESCRIPTION>
+        <RULE>Right hand MUST hold the red slime dummy in ALL full-body panels.</RULE>
+        <RULE>EXACT same slime dummy design, color, shape, and size as source.</RULE>
+      </RIGHT_HAND>
+
+      <CONSISTENCY>
+        <RULE>Handedness must never change (Left=Gun, Right=Slime).</RULE>
+        <RULE>Both items must appear together in all full-body views.</RULE>
+      </CONSISTENCY>
+    </WEAPON_AND_ITEM_RULES>
+    
+    <FACIAL_DETAILS>
+        <RULE>Character must have distinct pink blush marks on cheeks.</RULE>
+        <RULE>Face is visible inside the frog hood opening.</RULE>
+    </FACIAL_DETAILS>
+  </CHARACTER_TRAITS>
+
+  <IDENTITY_CONSISTENCY>
+    <IDENTITY_LOCK>
+      <RULE>Facial features, hair, body shape, clothing, and accessories MUST match the cleaned reference.</RULE>
+      <RULE>No redesigning or altering identity elements.</RULE>
+      <RULE>Frog kigurumi details (eyes on hood, belly patch) must remain consistent.</RULE>
+    </IDENTITY_LOCK>
+  </IDENTITY_CONSISTENCY>
+
+  <STYLE>
+    <BACKGROUND>Clean, neutral, plain.</BACKGROUND>
+    <AESTHETIC_MATCH>Rendering, realism, texture, and color treatment MUST match the redrawn character.</AESTHETIC_MATCH>
+    <SHEET_LOOK>Crisp, print-ready, high-detail reference sheet.</SHEET_LOOK>
+  </STYLE>
+
+  <LAYOUT>
+    <COMPOSITION>Two horizontal rows.</COMPOSITION>
+
+    <TOP_ROW>
+      <FULL_BODY_VIEWS count="4">
+        <VIEW order="1">Front</VIEW>
+        <VIEW order="2">Left profile (facing left)</VIEW>
+        <VIEW order="3">Right profile (facing right)</VIEW>
+        <VIEW order="4">Back</VIEW>
+      </FULL_BODY_VIEWS>
+
+      <POSE>Relaxed A-pose, legs parallel; Left hand raised holding water gun, Right hand holding slime dummy.</POSE>
+
+      <ALIGNMENT>
+        <SCALE>
+          <RULE>All four full-body views MUST share identical scale.</RULE>
+          <RULE>Scale MUST represent EXACT 5'11" height.</RULE>
+          <RULE>Head height and total body height MUST match across all four views.</RULE>
+        </SCALE>
+        <ANATOMY>Clean, accurate silhouette.</ANATOMY>
+        <SPACING>Even spacing + clean panel separation.</SPACING>
+        <FRAMING>Uniform framing across all full-body panels.</FRAMING>
+      </ALIGNMENT>
+    </TOP_ROW>
+
+    <BOTTOM_ROW>
+      <PORTRAITS count="3">
+        <PORTRAIT order="1">Front portrait</PORTRAIT>
+        <PORTRAIT order="2">Left profile portrait</PORTRAIT>
+        <PORTRAIT order="3">Right profile portrait</PORTRAIT>
+      </PORTRAITS>
+
+      <ALIGNMENT>
+        <FACIAL_SCALE>Identical across all portraits.</FACIAL_SCALE>
+        <SPACING>Even spacing + clean separation.</SPACING>
+      </ALIGNMENT>
+    </BOTTOM_ROW>
+  </LAYOUT>
+
+  <CONSISTENCY_RULES>
+    <IDENTITY>
+      <RULE>Identity MUST remain perfectly consistent across ALL panels.</RULE>
+    </IDENTITY>
+
+    <SCALE>
+      <FULL_BODY>
+        <RULE>MUST represent EXACT 5'11".</RULE>
+        <RULE>MUST remain constant across all full-body views.</RULE>
+      </FULL_BODY>
+      <PORTRAIT>
+        <RULE>Facial scale MUST remain constant across all portrait views.</RULE>
+      </PORTRAIT>
+    </SCALE>
+
+    <ANATOMY>
+      <RULE>Accurate anatomy in ALL views.</RULE>
+      <RULE>Proportions MUST reflect a tall, well-balanced 5'11" male with an inverted-triangle build.</RULE>
+      <RULE>No shortening of limbs, torso, or neck.</RULE>
+      <RULE>No stylized shrinking or "skinny short" silhouette.</RULE>
+    </ANATOMY>
+
+    <CLOTHING>
+      <RULE>Frog kigurumi MUST remain oversized and slouchy in ALL views.</RULE>
+      <RULE>No tightening, resizing, or altering silhouette.</RULE>
+      <RULE>Crown must remain on top of the hood in ALL views.</RULE>
+      <RULE>Cape must flow naturally from the back in ALL relevant views.</RULE>
+      <RULE>Belly patch must remain empty (no bottles) in ALL views.</RULE>
+    </CLOTHING>
+
+    <ACCESSORY>
+      <RULE>Red slime dummy MUST appear in Right Hand in ALL full-body views.</RULE>
+      <RULE>Water gun MUST appear in Left Hand in ALL full-body views.</RULE>
+      <RULE>NO redesign, recolor, or reinterpretation of accessories.</RULE>
+      <RULE>Water gun colors (Green/Yellow/Red) must remain constant.</RULE>
+      <RULE>Slime dummy colors (Red with face) must remain constant.</RULE>
+    </ACCESSORY>
+  </CONSISTENCY_RULES>
+
+  <LIGHTING_RULES>
+    <DIRECTION>Identical in all panels.</DIRECTION>
+    <INTENSITY>Identical in all panels.</INTENSITY>
+    <SOFTNESS>Identical in all panels.</SOFTNESS>
+    <SHADOWS>Natural, controlled, detail-preserving.</SHADOWS>
+  </LIGHTING_RULES>
+
+  <PANELS>
+    <FULL_BODY_PANELS>
+      <PANEL order="1" type="full-body" view="front"/>
+      <PANEL order="2" type="full-body" view="left-profile" facing="left"/>
+      <PANEL order="3" type="full-body" view="right-profile" facing="right"/>
+      <PANEL order="4" type="full-body" view="back"/>
+    </FULL_BODY_PANELS>
+
+    <PORTRAIT_PANELS>
+      <PANEL order="1" type="portrait" view="front"/>
+      <PANEL order="2" type="portrait" view="left-profile" facing="left"/>
+      <PANEL order="3" type="portrait" view="right-profile" facing="right"/>
+    </PORTRAIT_PANELS>
+  </PANELS>
+
+  <FRAMING>
+    <SPACING>Even spacing between ALL panels.</SPACING>
+    <SEPARATION>Clean panel dividers.</SEPARATION>
+    <UNIFORMITY>Uniform framing across both rows.</UNIFORMITY>
+  </FRAMING>
+
+  <OUTPUT>
+    <FINAL_ASPECT_RATIO>4:3 horizontal rectangle.</FINAL_ASPECT_RATIO>
+  </OUTPUT>
+
+  <REFERENCES>
+    <IDENTITY_SOURCE>Cleaned reference image ONLY.</IDENTITY_SOURCE>
+    <STYLE_SOURCE>Redrawn version ONLY.</STYLE_SOURCE>
+  </REFERENCES>
+
+</PROMPT>
