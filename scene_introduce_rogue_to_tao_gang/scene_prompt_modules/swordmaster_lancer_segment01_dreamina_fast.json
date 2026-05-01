@@ -92,7 +92,7 @@
       "description": "SWORDMASTER gestures with free hand.",
       "dialogue": {
         "speaker": "SWORDMASTER",
-        "line": "The OG of the Knight Gang… The true believer of Inter-Dimensionalism… Representative of the House of Knight."
+        "line": "The OG of the Knight Gang… The true believer of Inter-Dimensionalism… Representative of the House of Knight. I could throw out these posh phrases all day."
       },
       "markers": ["right_eye_covered","hair_clip_visible","cup_in_same_hand"]
     }

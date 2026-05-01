@@ -7,15 +7,17 @@
   "reference_identification": {
     "required": true,
     "steps": [
-      "Analyze provided start-frame picture",
-      "Analyze provided end-frame picture",
-      "Assign them as START_FRAME_REFERENCE and END_FRAME_REFERENCE"
+      "Analyze all provided images",
+      "Identify SWORDMASTER model sheet",
+      "Identify LANCER model sheet",
+      "Identify start-scene environment reference",
+      "Assign them as SWORDMASTER_MODEL, LANCER_MODEL, SCENE_CANON"
     ]
   },
 
   "global_continuity": {
-    "characters_match_start_end_frames": true,
-    "environment_matches_start_end_frames": true,
+    "characters_match_model_sheets": true,
+    "environment_matches_scene_canon": true,
     "no_color_drift": true,
     "no_outfit_changes": true,
     "camera_style": "controlled, grounded, minimal motion"
@@ -28,34 +30,23 @@
       "hair_clip_visible": true,
       "body_type": "curvy",
       "cup_hand_fixed": true,
-      "reference": "START_FRAME_REFERENCE"
+      "reference": "SWORDMASTER_MODEL"
     },
     "LANCER": {
       "demeanor": "calm_attentive_grounded",
-      "reference": "START_FRAME_REFERENCE"
+      "reference": "LANCER_MODEL"
     }
   },
 
   "scene_constraints": {
-    "reference_environment": "START_FRAME_REFERENCE",
+    "reference_environment": "SCENE_CANON",
     "match_lighting": true,
     "match_palette": true,
     "match_props": true,
     "start_frame_exact_match": {
       "required": true,
       "rules": [
-        "Camera angle identical to START_FRAME_REFERENCE",
-        "Character poses identical",
-        "Lighting identical",
-        "Prop placement identical",
-        "Color and exposure identical",
-        "Framing identical"
-      ]
-    },
-    "end_frame_exact_match": {
-      "required": true,
-      "rules": [
-        "Camera angle identical to END_FRAME_REFERENCE",
+        "Camera angle identical to SCENE_CANON",
         "Character poses identical",
         "Lighting identical",
         "Prop placement identical",
@@ -70,8 +61,8 @@
       "id": 1,
       "time": "0:00-0:02",
       "camera": "medium_eye_level",
-      "description": "SWORDMASTER seated as in START_FRAME_REFERENCE, lifting cup.",
-      "start_frame": "must_match_START_FRAME_REFERENCE_exactly",
+      "description": "SWORDMASTER seated as in SCENE_CANON, lifting cup.",
+      "start_frame": "must_match_SCENE_CANON_exactly",
       "dialogue": {
         "speaker": "SWORDMASTER",
         "line": "Have you heard of a guy named Rogue?"
@@ -114,7 +105,7 @@
       "description": "SWORDMASTER gestures with free hand.",
       "dialogue": {
         "speaker": "SWORDMASTER",
-        "line": "The OG of the Knight Gang… The true believer of Inter-Dimensionalism… Representative of the House of Knight."
+        "line": "The OG of the Knight Gang… The true believer of Inter-Dimensionalism… Representative of the House of Knight. I could throw out these posh phrases all day."
       },
       "markers": [
         "right_eye_covered",

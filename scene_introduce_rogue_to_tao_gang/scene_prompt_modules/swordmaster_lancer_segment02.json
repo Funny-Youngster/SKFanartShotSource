@@ -1,0 +1,86 @@
+{
+  "segment_id": 2,
+  "narration": "LANCER shifts from skepticism to respect, acknowledging Rogue’s deeds.",
+  "setting": {
+    "location": "monastery_tea_room",
+    "time_of_day": "afternoon",
+    "atmosphere": "serene_contemplative",
+    "props": ["tea_cup", "low_table", "traditional_seating"]
+  },
+  "pacing": {
+    "duration": "15s",
+    "rhythm": "moderate",
+    "beat": "pause after question, then smile"
+  },
+  "shots": [
+    {
+      "id": 5,
+      "camera": {
+        "type": "closeup",
+        "lens": "85mm",
+        "framing": "three_quarter",
+        "movement": "static_with_micro_handheld",
+        "focus": "eyes_expression"
+      },
+      "dialogue": {
+        "speaker": "LANCER",
+        "line": "No. What happened?",
+        "delivery": "curious_engaged",
+        "action": "turns gaze toward SWORDMASTER"
+      },
+      "perspective_control": {
+        "eye_line": "matches Swordmaster’s previous shot",
+        "composition": "centered, subtle depth from background"
+      }
+    },
+    {
+      "id": 6,
+      "camera": {
+        "type": "closeup",
+        "lens": "85mm",
+        "framing": "three_quarter",
+        "movement": "slight_breath_shift",
+        "focus": "visible_eye_and_mouth"
+      },
+      "dialogue": {
+        "speaker": "SWORDMASTER",
+        "line": null,
+        "delivery": "quiet_amused_mocking",
+        "action": "exhales softly"
+      },
+      "continuity": {
+        "entry": "carries over from Swordmaster’s list of titles in Scene 1",
+        "exit": "sets up Lancer’s smile response"
+      },
+      "perspective_control": {
+        "hair_clip": "remains visible despite angle",
+        "eye_cover": "bangs consistently obscure right eye"
+      }
+    },
+    {
+      "id": 7,
+      "camera": {
+        "type": "medium",
+        "lens": "50mm",
+        "framing": "three_quarter",
+        "movement": "static",
+        "focus": "facial_expression"
+      },
+      "dialogue": {
+        "speaker": "LANCER",
+        "line": "At first I thought it was just nonsense, but then I realized you meant that red-haired guy. I know him, and I respect him because he saved the Airbender from falling into the Abyss of Turbid Qi.",
+        "delivery": "smiling_respectful",
+        "action": "smiles facing camera"
+      },
+      "perspective_control": {
+        "framing": "centered, eye-line steady",
+        "exit": "prepares cut to Swordmaster close-up with tea"
+      }
+    }
+  ],
+  "continuity": {
+    "entry_state": "picks up after Swordmaster’s mocking list",
+    "exit_state": "transitions to Swordmaster close-up with tea",
+    "visual_markers": ["hair_clip_visible when cutting back"]
+  }
+}
