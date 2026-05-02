@@ -2,147 +2,233 @@
   "title": "SWORDMASTER & LANCER — Rogue Conversation",
   "duration_seconds": 8,
   "aspect_ratio": "4:3",
-  "style": "grounded cinematic realism, Nolan-influenced",
+  "style_descriptors": [
+    "grounded cinematic realism",
+    "Nolan-influenced restraint",
+    "low-key naturalistic lighting",
+    "locked-off camera with minimal motion"
+  ],
 
-  "reference_identification": {
-    "required": true,
-    "steps": [
-      "Analyze all provided images",
-      "Identify SWORDMASTER model sheet",
-      "Identify LANCER model sheet",
-      "Identify start-scene environment reference",
-      "Assign them as SWORDMASTER_MODEL, LANCER_MODEL, SCENE_CANON"
+  "reference_assets": {
+    "instructions": "Before generating, identify each provided reference image and assign it to the named role below. Use only these named roles in all subsequent shot descriptions.",
+    "roles": {
+      "SWORDMASTER_MODEL": "Character model sheet for SWORDMASTER. Defines face, hair, bangs, hair clip, outfit, body type.",
+      "LANCER_MODEL": "Character model sheet for LANCER. Defines face, hair, outfit, demeanor.",
+      "SCENE_CANON": "Environment reference image. Defines room geometry, props, palette, lighting direction, and the exact starting camera framing for shot 1."
+    }
+  },
+
+  "global_continuity_rules": {
+    "characters_must_match": "SWORDMASTER must match SWORDMASTER_MODEL exactly. LANCER must match LANCER_MODEL exactly. No facial drift, no outfit drift, no hair drift between shots.",
+    "environment_must_match": "All shots take place inside the room defined by SCENE_CANON. No new rooms, no new windows, no new props.",
+    "color_consistency": "Color palette and exposure must remain consistent across all four shots. No shot should appear warmer, cooler, brighter, or darker than the others.",
+    "outfits": "No outfit changes between shots.",
+    "camera_grammar": "All shots use a locked horizon. No dutch tilt. No handheld shake. Movement is either fully locked or a slow, subtle push-in only when explicitly specified.",
+    "edit_grammar": "Hard cuts only. No fades. No dissolves. No wipes.",
+    "audio_grammar": "Use J-cuts and L-cuts where specified to bridge shots. Audio may begin before or continue past a picture cut."
+  },
+
+  "dialogue_rules": {
+    "language": "English only",
+    "accent": "Native Asian-American English. No foreign accent. No translation artifacts.",
+    "do_not_translate": "Do not translate, transliterate, or substitute any line into another language under any condition.",
+    "do_not_alter": "Do not paraphrase, shorten, or extend the lines as written."
+  },
+
+  "character_specifications": {
+    "SWORDMASTER": {
+      "reference_image": "SWORDMASTER_MODEL",
+      "face_rules": {
+        "right_eye_state": "fully covered by bangs in every frame",
+        "right_eye_visibility": "must never become visible, even partially, in any shot",
+        "bangs_shape": "match SWORDMASTER_MODEL exactly"
+      },
+      "hair_clip": {
+        "color": "light green",
+        "visibility": "must be visible in every shot where SWORDMASTER's head is on screen"
+      },
+      "body_type": "curvy",
+      "prop_handling": {
+        "tea_cup": "held in the same hand across all shots where SWORDMASTER is on screen",
+        "hand_continuity": "do not switch hands between shots"
+      }
+    },
+    "LANCER": {
+      "reference_image": "LANCER_MODEL",
+      "demeanor": "calm, attentive, grounded. Minimal expression change. No smiling, no frowning."
+    }
+  },
+
+  "environment_specifications": {
+    "reference_image": "SCENE_CANON",
+    "location": "monastery tea room",
+    "time_of_day": "afternoon",
+    "atmosphere": "serene, muted, low-key",
+    "props_present": ["tea cup", "low table", "traditional floor seating"],
+    "props_absent": "Do not add props that are not in SCENE_CANON.",
+    "lighting": {
+      "key_light": "soft daylight from a window positioned camera-left",
+      "fill_light": "minimal",
+      "accent_light": "subtle rim light on hair",
+      "overall_mood": "low-key, low contrast in shadow areas, soft falloff"
+    }
+  },
+
+  "start_frame_rules": {
+    "applies_to": "shot 1 only",
+    "requirements": [
+      "Camera angle matches SCENE_CANON",
+      "Lighting direction and intensity match SCENE_CANON",
+      "Prop placement matches SCENE_CANON",
+      "Color and exposure match SCENE_CANON",
+      "Framing matches SCENE_CANON"
     ]
   },
 
-  "global_continuity": {
-    "characters_match_model_sheets": true,
-    "environment_matches_scene_canon": true,
-    "no_color_drift": true,
-    "no_outfit_changes": true,
-    "camera_style": "controlled, grounded, minimal motion"
-  },
-
-  "character_constraints": {
-    "SWORDMASTER": {
-      "right_eye_covered": true,
-      "hair_clip_color": "light-green",
-      "hair_clip_visible": true,
-      "body_type": "curvy",
-      "cup_hand_fixed": true,
-      "reference": "SWORDMASTER_MODEL"
-    },
-    "LANCER": {
-      "demeanor": "calm_attentive_grounded",
-      "reference": "LANCER_MODEL"
-    }
-  },
-
-  "scene_constraints": {
-    "reference_environment": "SCENE_CANON",
-    "match_lighting": true,
-    "match_palette": true,
-    "match_props": true,
-    "start_frame_exact_match": {
-      "required": true,
-      "rules": [
-        "Camera angle identical to SCENE_CANON",
-        "Character poses identical",
-        "Lighting identical",
-        "Prop placement identical",
-        "Color and exposure identical",
-        "Framing identical"
-      ]
-    }
+  "sound_design": {
+    "ambient_bed": [
+      "low sub-bass drone, continuous, no melodic movement",
+      "one rhythmic element such as a distant kettle or a slow wooden tick",
+      "muted room tone underneath both"
+    ],
+    "diegetic_accents_allowed": [
+      "cup placed on wood",
+      "distant bell",
+      "fabric shift on seating"
+    ],
+    "score_style": "Hans Zimmer / Ludwig Göransson influenced. Drone-based. No melody. No swell.",
+    "cut_on_sound_rule": "Where possible, picture cuts should land on a diegetic sound event."
   },
 
   "shots": [
     {
       "id": 1,
-      "time": "0:00-0:02",
-      "camera": "medium_eye_level",
-      "description": "SWORDMASTER seated as in SCENE_CANON, lifting cup.",
-      "start_frame": "must_match_SCENE_CANON_exactly",
+      "time_range": "0.0s – 1.5s",
+      "shot_type": "static macro insert",
+      "camera": {
+        "movement": "fully locked, no motion",
+        "horizon": "level",
+        "framing": "tight on the tea cup as it rises into frame; steam visible; a small sliver of SWORDMASTER's hair enters at the top edge"
+      },
+      "on_screen_subject": "tea cup and steam only",
+      "off_screen_subject": "SWORDMASTER (speaking)",
+      "start_frame_rule": "must match SCENE_CANON at insert scale",
+      "audio": {
+        "structure": "offscreen dialogue over insert",
+        "timing": "voice begins approximately 0.5s after the image settles, dry, no reverb tail"
+      },
       "dialogue": {
         "speaker": "SWORDMASTER",
-        "line": "Have you heard of a guy named Rogue?"
+        "speaker_visible_on_screen": false,
+        "line": "Have you heard of a guy named Rogue?",
+        "delivery": "measured, aloof, dry"
       },
-      "markers": [
-        "right_eye_covered",
-        "hair_clip_visible",
-        "cup_in_same_hand"
+      "must_enforce": [
+        "SWORDMASTER's face is not shown in this shot",
+        "right eye remains hidden by virtue of the speaker being off-screen"
       ]
     },
     {
       "id": 2,
-      "time": "0:02-0:04",
-      "camera": "medium_eye_level",
-      "description": "LANCER turns head toward SWORDMASTER.",
-      "dialogue": {
-        "speaker": "LANCER",
-        "line": "No. What happened."
-      }
+      "time_range": "1.5s – 3.5s",
+      "shot_type": "medium, eye level, locked",
+      "camera": {
+        "movement": "fully locked, no motion",
+        "horizon": "level",
+        "framing": "rule of thirds, no dutch tilt"
+      },
+      "on_screen_subject": "LANCER",
+      "off_screen_subject": "none",
+      "audio": {
+        "structure": "L-cut outgoing",
+        "behavior": "LANCER's second line ('What happened?') begins on this shot and the audio continues across the picture cut into shot 3"
+      },
+      "dialogue": [
+        {
+          "speaker": "LANCER",
+          "speaker_visible_on_screen": true,
+          "line": "It rings a bell.",
+          "delivery": "calm, grounded, low volume"
+        },
+        {
+          "speaker": "LANCER",
+          "speaker_visible_on_screen": true,
+          "line": "What happened?",
+          "delivery": "calm, grounded, low volume",
+          "audio_continues_into_next_shot": true
+        }
+      ]
     },
     {
       "id": 3,
-      "time": "0:04-0:06",
-      "camera": "closeup_three_quarter",
-      "description": "SWORDMASTER with cup near lips.",
+      "time_range": "3.5s – 5.0s",
+      "shot_type": "medium three-quarter, locked",
+      "camera": {
+        "movement": "fully locked, no motion",
+        "horizon": "level",
+        "framing": "centered or rule of thirds, no dutch tilt"
+      },
+      "on_screen_subject": "SWORDMASTER",
+      "off_screen_subject": "none",
+      "audio": {
+        "structure": "L-cut incoming, then onscreen speaker",
+        "behavior": "the tail of LANCER's 'What happened?' resolves at the head of this shot, then SWORDMASTER speaks on camera"
+      },
       "dialogue": {
         "speaker": "SWORDMASTER",
-        "line": "He’s been giving himself a whole list of titles—"
+        "speaker_visible_on_screen": true,
+        "line": "He's been giving himself a whole list of titles—",
+        "delivery": "measured, aloof, lightly amused"
       },
-      "markers": [
-        "right_eye_covered",
-        "hair_clip_visible",
-        "cup_in_same_hand"
+      "must_enforce": [
+        "right eye fully covered by bangs",
+        "hair clip visible",
+        "tea cup in the same hand established earlier",
+        "no outfit change"
       ]
     },
     {
       "id": 4,
-      "time": "0:06-0:08",
-      "camera": "medium_three_quarter",
-      "description": "SWORDMASTER gestures with free hand.",
+      "time_range": "5.0s – 8.0s",
+      "shot_type": "medium, eye level, locked, with optional fractional push-in",
+      "camera": {
+        "movement": "locked from 5.0s to approximately 7.0s; from 7.0s to 8.0s a very small slow push-in is permitted but optional",
+        "horizon": "level",
+        "framing": "rule of thirds, no dutch tilt"
+      },
+      "on_screen_subject": "LANCER",
+      "off_screen_subject": "SWORDMASTER (speaking)",
+      "audio": {
+        "structure": "speaker offscreen over listener onscreen",
+        "behavior": "SWORDMASTER's full line is delivered off-screen; the camera does not cut away to her during the line"
+      },
       "dialogue": {
         "speaker": "SWORDMASTER",
-        "line": "The OG of the Knight Gang… The true believer of Inter-Dimensionalism… Representative of the House of Knight. I could throw out these posh phrases all day."
+        "speaker_visible_on_screen": false,
+        "line": "The OG of the Knight Gang… The true believer of Inter-Dimensionalism… Representative of the House of Knight. I could throw out these posh phrases all day.",
+        "delivery": "measured, aloof, lightly sardonic, steady pace, no acceleration"
       },
-      "markers": [
-        "right_eye_covered",
-        "hair_clip_visible",
-        "cup_in_same_hand"
+      "must_enforce": [
+        "no cut to SWORDMASTER during this line",
+        "LANCER's expression remains attentive and minimally changing",
+        "shot ends on a hard cut on the final word"
       ]
     }
   ],
 
-  "segment_metadata": {
-    "segment_1": {
-      "narration": "SWORDMASTER introduces Rogue.",
-      "setting": {
-        "location": "monastery_tea_room",
-        "time_of_day": "afternoon",
-        "atmosphere": "serene_muted",
-        "props": ["tea_cup", "low_table", "traditional_seating"]
-      },
-      "camera_direction": {
-        "shot_type": "medium_closeup",
-        "lens": "50mm",
-        "framing": "centered_slight_dutch",
-        "movement": "slow_push_in",
-        "focus": "shallow_on_visible_eye_and_clip",
-        "composition": "rule_of_thirds"
-      },
-      "lighting": {
-        "key": "soft_window_left",
-        "fill": "minimal",
-        "accent": "rim_on_hair",
-        "mood": "low_key"
-      },
-      "dialogue": {
-        "speaker": "SWORDMASTER",
-        "line": "Have you heard of a guy named Rogue?",
-        "delivery": "measured_aloof"
-      }
-    }
-  }
+  "do_not_list": [
+    "Do not add lens flare.",
+    "Do not add film grain heavier than a subtle natural texture.",
+    "Do not add slow motion.",
+    "Do not add any character not defined in reference_assets.",
+    "Do not add subtitles or burned-in text.",
+    "Do not show SWORDMASTER's right eye at any point.",
+    "Do not switch the hand holding the tea cup.",
+    "Do not introduce camera shake.",
+    "Do not introduce dutch tilt.",
+    "Do not use fades, dissolves, or wipes between shots.",
+    "Do not translate any dialogue line.",
+    "Do not insert music with melodic phrasing; drone only.",
+    "Do not cut to SWORDMASTER during shot 4."
+  ]
 }

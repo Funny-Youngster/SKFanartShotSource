@@ -1,6 +1,40 @@
 {
   "segment_id": 2,
   "narration": "LANCER shifts from skepticism to respect, acknowledging Rogue’s deeds.",
+  "assets": {
+    "environment_reference": {
+      "type": "image",
+      "role": "pure_background_environment",
+      "usage": "scene_environment_reference",
+      "entities_present": false
+    },
+    "opening_frame_reference": {
+      "type": "image",
+      "role": "starting_frame_current_scene",
+      "usage": "scene_entry_point"
+    },
+    "model_sheets": [
+      {
+        "id": "sheet_A",
+        "type": "character_model",
+        "expected_character": "LANCER",
+        "identification_required": true
+      },
+      {
+        "id": "sheet_B",
+        "type": "character_model",
+        "expected_character": "SWORDMASTER",
+        "identification_required": true
+      }
+    ],
+    "character_mapping": {
+      "resolve_required": true,
+      "mapping_rules": [
+        {"sheet_A": "LANCER"},
+        {"sheet_B": "SWORDMASTER"}
+      ]
+    }
+  },
   "setting": {
     "location": "monastery_tea_room",
     "time_of_day": "afternoon",
@@ -24,13 +58,13 @@
       },
       "dialogue": {
         "speaker": "LANCER",
-        "line": "No. What happened?",
+        "line": null,
         "delivery": "curious_engaged",
         "action": "turns gaze toward SWORDMASTER"
       },
       "perspective_control": {
         "eye_line": "matches Swordmaster’s previous shot",
-        "composition": "centered, subtle depth from background"
+        "composition": "centered with subtle background depth"
       }
     },
     {
@@ -73,7 +107,7 @@
         "action": "smiles facing camera"
       },
       "perspective_control": {
-        "framing": "centered, eye-line steady",
+        "framing": "centered, steady eye-line",
         "exit": "prepares cut to Swordmaster close-up with tea"
       }
     }
