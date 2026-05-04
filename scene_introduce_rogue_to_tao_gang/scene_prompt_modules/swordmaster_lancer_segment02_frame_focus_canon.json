@@ -1,0 +1,120 @@
+{
+  "segment_id": 2,
+  "narration": "LANCER shifts from skepticism to respect, acknowledging Rogue’s deeds.",
+  "constraints": {
+    "dialogue_control": "Only LANCER speaks scripted lines. SWORDMASTER remains silent (non-verbal).",
+    "transition_style": "Smooth cut or direct jump to next focus shot.",
+    "camera_behavior": "Explicit Veo3 control: stable framing, physics-aware motion, no drift.",
+    "frame_constraints": {
+      "start_frame": "Contains both LANCER and SWORDMASTER.",
+      "end_frame": "Contains only LANCER."
+    },
+    "identity_resolution": {
+      "LANCER": "Primary speaker, delivers scripted dialogue.",
+      "SWORDMASTER": "Secondary presence, silent, non-verbal actions only."
+    }
+  },
+  "assets": {
+    "opening_frame_reference": {
+      "type": "image",
+      "role": "starting_frame_current_scene",
+      "usage": "scene_entry_point"
+    },
+    "ending_frame_reference": {
+      "type": "image",
+      "role": "ending_frame_current_scene",
+      "usage": "scene_exit_point"
+    },
+    "environment_reference": {
+      "type": "image",
+      "role": "pure_background_environment",
+      "usage": "scene_environment_reference",
+      "entities_present": false
+    }
+  },
+  "setting": {
+    "location": "monastery_tea_room",
+    "time_of_day": "afternoon",
+    "atmosphere": "serene_contemplative",
+    "props": ["tea_cup", "low_table", "traditional_seating"]
+  },
+  "pacing": {
+    "duration": "15s",
+    "rhythm": "moderate",
+    "beat": "pause after question, then smile"
+  },
+  "shots": [
+    {
+      "id": 5,
+      "camera": {
+        "type": "closeup",
+        "lens": "85mm",
+        "framing": "three_quarter",
+        "movement": "static_with_micro_handheld",
+        "focus": "eyes_expression",
+        "physics_constraints": "stable handheld micro-shift only"
+      },
+      "dialogue": {
+        "speaker": "LANCER",
+        "line": null,
+        "delivery": "curious_engaged",
+        "action": "turns gaze toward Swordmaster"
+      },
+      "perspective_control": {
+        "eye_line": "matches Swordmaster’s previous shot",
+        "composition": "centered with subtle background depth"
+      }
+    },
+    {
+      "id": 6,
+      "camera": {
+        "type": "closeup",
+        "lens": "85mm",
+        "framing": "three_quarter",
+        "movement": "slight_breath_shift",
+        "focus": "visible_eye_and_mouth",
+        "physics_constraints": "minimal drift, steady framing"
+      },
+      "dialogue": {
+        "speaker": "SWORDMASTER",
+        "line": null,
+        "delivery": "silent",
+        "action": "exhales softly (non-verbal)"
+      },
+      "continuity": {
+        "entry": "carries over from Swordmaster’s list of titles in Scene 1",
+        "exit": "sets up Lancer’s smile response"
+      },
+      "perspective_control": {
+        "hair_clip": "remains visible despite angle",
+        "eye_cover": "bangs consistently obscure right eye"
+      }
+    },
+    {
+      "id": 7,
+      "camera": {
+        "type": "medium",
+        "lens": "50mm",
+        "framing": "three_quarter",
+        "movement": "static",
+        "focus": "facial_expression",
+        "physics_constraints": "locked tripod stability"
+      },
+      "dialogue": {
+        "speaker": "LANCER",
+        "line": "At first I thought it was just nonsense, but then I realized you meant that red-haired guy. I know him, and I respect him because he saved the Airbender from falling into the Abyss of Turbid Qi.",
+        "delivery": "smiling_respectful",
+        "action": "smiles facing camera"
+      },
+      "perspective_control": {
+        "framing": "centered, steady eye-line",
+        "exit": "prepares cut to Swordmaster close-up with tea"
+      }
+    }
+  ],
+  "continuity": {
+    "entry_state": "picks up after Swordmaster’s mocking list",
+    "exit_state": "transitions to Swordmaster close-up with tea",
+    "visual_markers": ["hair_clip_visible when cutting back"]
+  }
+}
