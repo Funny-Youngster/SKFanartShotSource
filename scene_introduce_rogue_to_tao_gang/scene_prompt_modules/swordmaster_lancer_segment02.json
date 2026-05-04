@@ -1,6 +1,10 @@
 {
   "segment_id": 2,
   "narration": "LANCER shifts from skepticism to respect, acknowledging Rogue’s deeds.",
+  "constraints": {
+    "dialogue_language": "English",
+    "auto_translation": "disabled"
+  },
   "assets": {
     "environment_reference": {
       "type": "image",
