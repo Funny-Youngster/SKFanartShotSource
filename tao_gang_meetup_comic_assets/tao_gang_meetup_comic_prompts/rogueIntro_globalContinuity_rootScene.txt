@@ -1,115 +1,131 @@
 <comicPrompt>
 
-  <globalContinuity>
+  <globalContinuity>
 
-    <referenceAssets>
-      <image id="REF_1"/>
-      <image id="REF_2"/>
-      <image id="REF_3"/>
-    </referenceAssets>
+    <referenceAssets>
+      <image id="REF_1" role="SCENE_CANON">Source image 0</image>
+      <image id="REF_2" role="SWORDMASTER_MODEL">Source image 1</image>
+      <image id="REF_3" role="LANCER_MODEL">Source image 2</image>
+    </referenceAssets>
 
-    <identificationRules>
-      <step>Analyze all three images before generating any panel.</step>
-      <step>Identify the SWORDMASTER model sheet.</step>
-      <step>Identify the LANCER model sheet.</step>
-      <step>Identify the start-scene environment reference.</step>
-      <step>Assign them as SWORDMASTER_MODEL, LANCER_MODEL, and SCENE_CANON.</step>
-      <step>Use these assignments consistently for all panels.</step>
-    </identificationRules>
+    <identificationRules>
+      <step>Analyze all three images before generating any panel.</step>
+      <step>Identify the SWORDMASTER model sheet (Image 1).</step>
+      <step>Identify the LANCER model sheet (Image 2).</step>
+      <step>Identify the start-scene environment reference (Image 0).</step>
+      <step>Assign them as SWORDMASTER_MODEL, LANCER_MODEL, and SCENE_CANON.</step>
+      <step>Use these assignments consistently for all panels.</step>
+    </identificationRules>
 
-    <retrievalRules>
-      <rule>Characters must match their model sheets exactly.</rule>
-      <rule>Environment must match the start scene exactly.</rule>
-      <rule>No new outfits, colors, or missing accessories.</rule>
-      <rule>Maintain perfect recognition continuity across all panels.</rule>
-    </retrievalRules>
+    <retrievalRules>
+      <rule>Characters must match their model sheets exactly.</rule>
+      <rule>Environment must match the start scene exactly.</rule>
+      <rule>No new outfits, colors, or missing accessories.</rule>
+      <rule>Maintain perfect recognition continuity across all panels.</rule>
+      <rule>CRITICAL: Weapons are STATIC PROPS. Do not generate characters holding weapons unless specified.</rule>
+      <rule>CRITICAL: Swordmaster's hair is a high ponytail with long, waist-length loose hair flowing down the back.</rule>
+    </retrievalRules>
 
-    <character id="SWORDMASTER">
-      <hair>
-        <bangs>fully cover her right eye</bangs>
-        <accessory><type>hair clip</type><color>light-green</color></accessory>
-      </hair>
-      <props><cup>same hand in every panel</cup></props>
-      <positioning>
-        <spatial>same seat as SCENE_CANON</spatial>
-        <orientation>faces LANCER</orientation>
-      </positioning>
-    </character>
+    <character id="SWORDMASTER">
+      <hair>
+        <bangs>fully cover her right eye</bangs>
+        <style>high ponytail with waist-length loose hair flowing down the back</style>
+        <accessory><type>hair clip</type><color>light-green</color></accessory>
+      </hair>
+      <props>
+        <cup>same hand in every panel</cup>
+        <sword>leaning against the stone bench beside her, glowing blue, NOT held</sword>
+      </props>
+      <positioning>
+        <spatial>sitting on the left stone bench, facing right</spatial>
+        <orientation>faces LANCER</orientation>
+      </positioning>
+    </character>
 
-    <character id="LANCER">
-      <demeanor>calm, attentive</demeanor>
-      <positioning>
-        <spatial>same seat as SCENE_CANON</spatial>
-        <orientation>faces SWORDMASTER</orientation>
-      </positioning>
-    </character>
+    <character id="LANCER">
+      <demeanor>calm, attentive</demeanor>
+      <props>
+        <spear>leaning against the wooden pillar or bench beside him, NOT held</spear>
+      </props>
+      <positioning>
+        <spatial>sitting on the right mat/bench, facing left</spatial>
+        <orientation>faces SWORDMASTER</orientation>
+      </positioning>
+    </character>
 
-    <environment>
-      <continuity>match SCENE_CANON lighting, palette, and layout</continuity>
-    </environment>
+    <environment>
+      <continuity>match SCENE_CANON lighting, palette, and layout</continuity>
+      <anchor>
+        <object>Stone table in the center</object>
+        <object>Circular Moon Gate window in the background</object>
+        <object>Tea set on the table</object>
+      </anchor>
+    </environment>
 
-    <style>
-      <linework>clean, cinematic</linework>
-      <shading>moody gradients, grounded realism</shading>
-      <cinematicInfluence>Christopher Nolan</cinematicInfluence>
-    </style>
+    <style>
+      <linework>clean, cinematic</linework>
+      <shading>moody gradients, grounded realism</shading>
+      <cinematicInfluence>Christopher Nolan</cinematicInfluence>
+      <camera>low angles, high contrast, dramatic lighting, depth of field</camera>
+    </style>
 
-  </globalContinuity>
-
-
-  <outputFormat>
-    <composite>true</composite>
-    <panelCount>4</panelCount>
-    <panelShape>horizontal-rectangle</panelShape>
-    <finalAspectRatio>4:3</finalAspectRatio>
-    <layout>freeform</layout>
-  </outputFormat>
+  </globalContinuity>
 
 
-  <panels>
+  <outputFormat>
+    <composite>true</composite>
+    <panelCount>4</panelCount>
+    <panelShape>horizontal-rectangle</panelShape>
+    <finalAspectRatio>4:3</finalAspectRatio>
+    <layout>freeform</layout>
+  </outputFormat>
 
-    <panel id="1">
-      <camera><shotType>medium</shotType><angle>eye-level</angle></camera>
-      <action>
-        <description>SWORDMASTER lifts her cup with aloof grace, posture composed and still.</description>
-      </action>
-      <dialogue>
-        <line>Have you heard of a guy named Rogue?</line>
-      </dialogue>
-    </panel>
 
-    <panel id="2">
-      <camera><shotType>medium</shotType><angle>eye-level</angle></camera>
-      <action>
-        <description>LANCER turns his head toward her, a subtle shift in his shoulders.</description>
-      </action>
-      <dialogue>
-        <line>No. What happened?</line>
-      </dialogue>
-    </panel>
+  <panels>
 
-    <panel id="3">
-      <camera><shotType>close-up</shotType><angle>three-quarter</angle></camera>
-      <action>
-        <description>SWORDMASTER exhales a quiet amused breath, cup near her lips.</description>
-      </action>
-      <dialogue>
-        <line>He’s been giving himself a whole list of titles—</line>
-      </dialogue>
-    </panel>
+    <panel id="1">
+      <camera><shotType>medium</shotType><angle>eye-level</angle><composition>over-the-shoulder from Lancer's perspective</composition></camera>
+      <action>
+        <description>SWORDMASTER sits on the left bench. Her glowing blue sword leans against the bench beside her. She lifts her tea cup with aloof grace, posture composed.</description>
+      </action>
+      <dialogue>
+        <line>Have you heard of a guy named Rogue?</line>
+      </dialogue>
+    </panel>
 
-    <panel id="4">
-      <camera><shotType>medium</shotType><angle>three-quarter</angle></camera>
-      <action>
-        <description>SWORDMASTER gestures lightly with her free hand, controlled and deliberate.</description>
-      </action>
-      <dialogue>
-        <line>“The OG of the Knight Gang.”</line>
-        <line>“The true believer of Inter-Dimensionalism.”</line>
-        <line>“Representative of the House of Knight.”</line>
-      </dialogue>
-    </panel>
+    <panel id="2">
+      <camera><shotType>medium</shotType><angle>eye-level</angle><composition>over-the-shoulder from Swordmaster's perspective</composition></camera>
+      <action>
+        <description>LANCER sits on the right. His spear leans against the pillar beside him. He turns his head toward her, a subtle shift in his shoulders, looking attentive.</description>
+      </action>
+      <dialogue>
+        <line>It rings a bell. What happened?</line>
+      </dialogue>
+    </panel>
 
-  </panels>
+    <panel id="3">
+      <camera><shotType>close-up</shotType><angle>three-quarter</angle><composition>focus on SWORDMASTER</composition></camera>
+      <action>
+        <description>Close up on SWORDMASTER. She exhales a quiet amused breath, cup near her lips. Her bangs cover her right eye.</description>
+      </action>
+      <dialogue>
+        <line>He’s been giving himself a whole list of titles—</line>
+      </dialogue>
+    </panel>
+
+    <panel id="4">
+      <camera><shotType>medium</shotType><angle>three-quarter</angle><composition>wide shot showing both characters and the table</composition></camera>
+      <action>
+        <description>SWORDMASTER gestures lightly with her free hand, controlled and deliberate. LANCER watches her. The tea set sits on the stone table between them.</description>
+      </action>
+      <dialogue>
+        <line>“The OG of the Knight Gang.”</line>
+        <line>“The true believer of Inter-Dimensionalism.”</line>
+        <line>“Representative of the House of Knight.”</line>
+        <line>I could throw out these posh phrases all day...</line>
+      </dialogue>
+    </panel>
+
+  </panels>
 
 </comicPrompt>

@@ -1,0 +1,182 @@
+{
+  "title": "SWORDMASTER & LANCER — Rogue Dialogue",
+  "duration_seconds": 8,
+  "aspect_ratio": "4:3",
+  "style": "cinematic_realism_nolan_inspired",
+
+  "reference_identification": {
+    "required": true,
+    "steps": [
+      "analyze_images",
+      "identify_swordmaster_model_sheet",
+      "identify_lancer_model_sheet",
+      "identify_environment_reference",
+      "assign_as_canonical_models_and_scene"
+    ]
+  },
+
+  "global_continuity": {
+    "characters_match_models": true,
+    "environment_matches_canon": true,
+    "no_color_shift": true,
+    "no_outfit_variation": true,
+    "camera_style": "controlled_minimal_motion",
+    "swordmaster_eye_always_hidden": true
+  },
+
+  "dialogue_constraints": {
+    "language": "english",
+    "tone": "asian_american_native",
+    "translation_lock": true
+  },
+
+  "character_constraints": {
+    "swordmaster": {
+      "right_eye_covered": true,
+      "bangs_cover_right_eye": true,
+      "bangs_reference": "swordmaster_model",
+      "hair_clip_color": "light_green",
+      "hair_clip_visible": true,
+      "body_type": "curvy",
+      "cup_hand_consistent": true,
+      "reference": "swordmaster_model",
+      "eye_visibility_rule": "right_eye_must_remain_hidden_in_all_shots"
+    },
+    "lancer": {
+      "demeanor": "calm_attentive_grounded",
+      "reference": "lancer_model"
+    }
+  },
+
+  "scene_constraints": {
+    "reference_environment": "scene_canon",
+    "match_lighting": true,
+    "match_palette": true,
+    "match_props": true,
+    "start_frame_exact_match": {
+      "required": true,
+      "rules": [
+        "camera_angle_identical",
+        "character_pose_identical",
+        "lighting_identical",
+        "prop_placement_identical",
+        "color_and_exposure_identical",
+        "framing_identical",
+        "swordmaster_eye_hidden_consistency"
+      ]
+    }
+  },
+
+  "shots": [
+    {
+      "id": 1,
+      "time": "0:00-0:02",
+      "camera": "medium_eye_level",
+      "description": "swordmaster_seated_lifting_cup_scene_canon",
+      "start_frame": "match_scene_canon_exact",
+      "dialogue": {
+        "speaker": "swordmaster",
+        "line": "Have you heard of someone called Rogue?",
+        "language": "english",
+        "tone": "asian_american_native",
+        "translation_lock": true
+      },
+      "markers": [
+        "bangs_cover_right_eye",
+        "hair_clip_visible",
+        "cup_in_consistent_hand",
+        "eye_hidden"
+      ]
+    },
+    {
+      "id": 2,
+      "time": "0:02-0:04",
+      "camera": "medium_eye_level",
+      "description": "lancer_turns_head_toward_swordmaster",
+      "dialogue": {
+        "speaker": "lancer",
+        "line": "Sort of. What happened?",
+        "language": "english",
+        "tone": "asian_american_native",
+        "translation_lock": true
+      }
+    },
+    {
+      "id": 3,
+      "time": "0:04-0:06",
+      "camera": "closeup_three_quarter",
+      "description": "swordmaster_with_cup_near_lips",
+      "dialogue": {
+        "speaker": "swordmaster",
+        "line": "He’s been giving himself a whole list of titles—",
+        "language": "english",
+        "tone": "asian_american_native",
+        "translation_lock": true
+      },
+      "markers": [
+        "bangs_cover_right_eye",
+        "hair_clip_visible",
+        "cup_in_consistent_hand",
+        "eye_hidden"
+      ]
+    },
+    {
+      "id": 4,
+      "time": "0:06-0:08",
+      "camera": "medium_three_quarter",
+      "description": "swordmaster_gestures_with_free_hand",
+      "dialogue": {
+        "speaker": "swordmaster",
+        "line": "The OG of the Knight Gang… The true believer in Inter-Dimensionalism… Representative of the House of Knight. I could throw out these lofty phrases all day.",
+        "language": "english",
+        "tone": "asian_american_native",
+        "translation_lock": true
+      },
+      "markers": [
+        "bangs_cover_right_eye",
+        "hair_clip_visible",
+        "cup_in_consistent_hand",
+        "eye_hidden"
+      ]
+    }
+  ],
+
+  "segment_metadata": {
+    "segment_1": {
+      "narration": "swordmaster_introduces_rogue",
+      "setting": {
+        "location": "monastery_tea_room",
+        "time_of_day": "afternoon",
+        "atmosphere": "serene_muted",
+        "props": ["tea_cup", "low_table", "traditional_seating"]
+      },
+      "camera_direction": {
+        "shot_type": "medium_closeup",
+        "lens": "50mm",
+        "framing": "centered_slight_dutch",
+        "movement": "slow_push_in",
+        "focus": "shallow_on_visible_eye_and_clip",
+        "composition": "rule_of_thirds"
+      },
+      "lighting": {
+        "key": "soft_window_left",
+        "fill": "minimal",
+        "accent": "rim_on_hair",
+        "mood": "low_key"
+      },
+      "dialogue": {
+        "speaker": "swordmaster",
+        "line": "Have you heard of someone called Rogue?",
+        "delivery": "measured_aloof",
+        "language": "english",
+        "tone": "asian_american_native",
+        "translation_lock": true
+      },
+      "markers": [
+        "bangs_cover_right_eye",
+        "hair_clip_visible",
+        "eye_hidden"
+      ]
+    }
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "task": "reconstruct_source_scene_environment_only",
+  "input_reference": "source_image",
+  "preserve_from_source": {
+    "spatial_layout": ["composition", "perspective", "camera_angle", "framing", "depth", "scale"],
+    "environment": [
+      "terrain", "ground", "floor", "walls", "ceiling", "sky",
+      "architecture", "structures", "ruins", "interiors", "furniture",
+      "natural_formations", "rocks", "water_bodies", "vegetation",
+      "roads", "paths", "bridges"
+    ],
+    "atmosphere": [
+      "lighting_direction", "light_color", "shadows", "time_of_day",
+      "weather", "fog", "mist", "haze", "particles", "ambient_effects"
+    ],
+    "surface_qualities": ["textures", "materials", "wear", "weathering", "stains", "patina"],
+    "color_and_tone": ["palette", "color_grading", "contrast", "saturation", "mood"],
+    "style": ["art_style", "rendering", "medium", "level_of_detail", "artistic_treatment"],
+    "static_props": [
+      "background_objects", "scenery_props", "tools_left_in_environment",
+      "containers", "signage", "decorations", "debris"
+    ]
+  },
+  "exclude_from_output": {
+    "living_entities": [
+      "humans", "people", "characters", "figures", "silhouettes", "crowds",
+      "animals", "creatures", "monsters", "mounts", "pets", "insects", "birds"
+    ],
+    "entity_attachments": [
+      "weapons", "swords", "guns", "bows", "shields", "armor", "clothing_on_body",
+      "held_items", "worn_accessories"
+    ],
+    "entity_traces": [
+      "shadows_cast_by_entities", "reflections_of_entities",
+      "footprints", "blood", "active_effects_emitted_by_entities",
+      "spell_effects", "muzzle_flashes", "motion_blur_from_entities"
+    ],
+    "piloted_or_occupied_objects": [
+      "ridden_vehicles", "active_mechs", "occupied_cockpits"
+    ]
+  },
+  "fill_strategy": {
+    "method": "inpaint_behind_removed_entities",
+    "rule": "extend_surrounding_environment_naturally",
+    "guidance": [
+      "infer_occluded_background_from_visible_context",
+      "match_existing_lighting_and_shadows",
+      "match_existing_textures_and_materials",
+      "preserve_perspective_and_vanishing_lines",
+      "no_invented_new_objects_or_focal_points",
+      "no_added_entities_of_any_kind"
+    ]
+  },
+  "ambiguity_rules": {
+    "if_object_is_part_of_environment": "preserve",
+    "if_object_is_carried_or_worn_by_entity": "remove_with_entity",
+    "if_unclear_whether_static_or_entity_owned": "treat_as_entity_owned_and_remove",
+    "abandoned_items_resting_in_scene": "preserve_as_static_props",
+    "vehicles_parked_and_unoccupied": "preserve",
+    "vehicles_in_active_use": "remove"
+  },
+  "output_requirements": {
+    "fidelity": "match_source_setting_one_to_one",
+    "resolution": "high_resolution_detailed",
+    "consistency": "seamless_no_visible_inpaint_seams",
+    "must_not": [
+      "alter_setting",
+      "restyle_environment",
+      "add_entities",
+      "change_time_of_day",
+      "change_weather"
+    ]
+  },
+  "negative_prompt": "person, people, human, character, figure, silhouette, crowd, animal, creature, monster, mount, pet, weapon, sword, gun, bow, shield, armor, held item, mecha pilot, rider, ghost, spirit, hand, face, body part, footprints, blood, spell effect, added object, new focal point, style change, setting change"
+}
