@@ -1,6 +1,5 @@
 {
   "title": "SWORDMASTER & LANCER — Rogue Dialogue",
-  "duration_seconds": 8,
   "aspect_ratio": "4:3",
   "style": "cinematic_realism_nolan_inspired",
 
@@ -70,7 +69,6 @@
   "shots": [
     {
       "id": 1,
-      "time": "0:00-0:02",
       "camera": "medium_eye_level",
       "description": "swordmaster_seated_lifting_cup_scene_canon",
       "start_frame": "match_scene_canon_exact",
@@ -90,7 +88,6 @@
     },
     {
       "id": 2,
-      "time": "0:02-0:04",
       "camera": "medium_eye_level",
       "description": "lancer_turns_head_toward_swordmaster",
       "dialogue": {
@@ -103,7 +100,6 @@
     },
     {
       "id": 3,
-      "time": "0:04-0:06",
       "camera": "closeup_three_quarter",
       "description": "swordmaster_with_cup_near_lips",
       "dialogue": {
@@ -122,7 +118,6 @@
     },
     {
       "id": 4,
-      "time": "0:06-0:08",
       "camera": "medium_three_quarter",
       "description": "swordmaster_gestures_with_free_hand",
       "dialogue": {
@@ -146,7 +141,6 @@
       "narration": "swordmaster_introduces_rogue",
       "setting": {
         "location": "monastery_tea_room",
-        "time_of_day": "afternoon",
         "atmosphere": "serene_muted",
         "props": ["tea_cup", "low_table", "traditional_seating"]
       },
