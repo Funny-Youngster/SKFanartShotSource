@@ -41,12 +41,10 @@
   },
   "setting": {
     "location": "monastery_tea_room",
-    "time_of_day": "afternoon",
     "atmosphere": "serene_contemplative",
     "props": ["tea_cup", "low_table", "traditional_seating"]
   },
   "pacing": {
-    "duration": "15s",
     "rhythm": "moderate",
     "beat": "pause after question, then smile"
   },
