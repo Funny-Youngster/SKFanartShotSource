@@ -62,7 +62,7 @@
         "speaker": "SWORDMASTER",
         "line": "Have you heard of a guy named Rogue?"
       },
-      "markers": ["right_eye_covered","hair_clip_visible","cup_in_same_hand"]
+      "markers": ["right_eye_covered", "hair_clip_visible", "cup_in_same_hand"]
     },
     {
       "id": 2,
@@ -83,7 +83,7 @@
         "speaker": "SWORDMASTER",
         "line": "He’s been giving himself a whole list of titles—"
       },
-      "markers": ["right_eye_covered","hair_clip_visible","cup_in_same_hand"]
+      "markers": ["right_eye_covered", "hair_clip_visible", "cup_in_same_hand"]
     },
     {
       "id": 4,
@@ -94,7 +94,7 @@
         "speaker": "SWORDMASTER",
         "line": "The OG of the Knight Gang… The true believer of Inter-Dimensionalism… Representative of the House of Knight. I could throw out these posh phrases all day."
       },
-      "markers": ["right_eye_covered","hair_clip_visible","cup_in_same_hand"]
+      "markers": ["right_eye_covered", "hair_clip_visible", "cup_in_same_hand"]
     }
   ],
   "segment_metadata": {
@@ -104,7 +104,7 @@
         "location": "monastery_tea_room",
         "time_of_day": "afternoon",
         "atmosphere": "serene_muted",
-        "props": ["tea_cup","low_table","traditional_seating"]
+        "props": ["tea_cup", "low_table", "traditional_seating"]
       },
       "camera_direction": {
         "shot_type": "medium_closeup",

@@ -24,13 +24,13 @@ Three rules travel with the files:
 
 ## What is inside
 
-| Kind | Count |
-| :--- | ---: |
-| Character model sheets | 34 |
-| Scene plates and story frames | 14 |
-| Prompt modules | 22 |
-| Video takes | 4 |
-| Total files | 74 |
+| Kind                          | Count |
+| :---------------------------- | ----: |
+| Character model sheets        |    34 |
+| Scene plates and story frames |    14 |
+| Prompt modules                |    22 |
+| Video takes                   |     4 |
+| Total files                   |    74 |
 
 Three casts are covered: the **Knight Gang**, the **Tao Gang**, and the **Pantheon of Three**.
 
