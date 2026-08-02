@@ -105,7 +105,7 @@ xdg-open main.html      # Linux
 start main.html         # Windows
 ```
 
-The page reads the images straight from the folders, so it works offline once cloned. There is no build step and no dependency to install.
+The page reads the images and videos straight from the folders, so there is no build step and nothing to install. Its one network request is the web font stylesheet from Google Fonts. Without a connection the page still works in full and falls back to system fonts.
 
 ### Render a shot
 
