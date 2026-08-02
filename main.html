@@ -1,966 +1,1767 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SKFanartShotSource | Soul Knight Creative Assets</title>
-  
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
-  
-  <style>
-    /* ===== FRESH AIR THEME - BRIGHT & VIBRANT ===== */
-    :root {
-      --sky-light: #E0F7FF;
-      --sky-blue: #87CEEB;
-      --azure: #00B4D8;
-      --ocean: #0077B6;
-      --mint: #95D5B2;
-      --fresh-cyan: #48CAE4;
-      --sunshine: #FFD166;
-      --soft-white: #FAFBFC;
-      --text-dark: #1a3a5c;
-      --text-medium: #4a6fa5;
-      --text-light: #6b9ac4;
-      --glass-fresh: rgba(255, 255, 255, 0.7);
-      --shadow-soft: 0 8px 32px rgba(0, 119, 182, 0.1);
-      --shadow-bright: 0 12px 40px rgba(72, 202, 228, 0.25);
-      --transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    /* ===== GLOBAL TEXT CONTAINMENT SAFETY ===== */
-    html, body {
-      overflow-x: hidden;
-      width: 100%;
-    }
-
-    h1, h2, h3, h4, p, li, span, a, button, div, code {
-      overflow-wrap: break-word;
-      word-wrap: break-word;
-      word-break: break-word;
-      hyphens: auto;
-    }
-
-    body {
-      font-family: 'Outfit', sans-serif;
-      background: linear-gradient(135deg, var(--sky-light) 0%, var(--sky-blue) 50%, var(--fresh-cyan) 100%);
-      background-attachment: fixed;
-      color: var(--text-dark);
-      line-height: 1.7;
-      min-height: 100vh;
-      position: relative;
-    }
-
-    /* Floating particles for fresh air vibe */
-    body::before {
-      content: '';
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: 
-        radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.4) 0%, transparent 50%),
-        radial-gradient(circle at 80% 70%, rgba(149, 213, 178, 0.3) 0%, transparent 40%),
-        radial-gradient(circle at 50% 50%, rgba(255, 209, 102, 0.2) 0%, transparent 60%);
-      pointer-events: none;
-      z-index: 0;
-      animation: float 20s ease-in-out infinite;
-    }
-
-    @keyframes float {
-      0%, 100% { transform: translateY(0) rotate(0deg); }
-      50% { transform: translateY(-20px) rotate(2deg); }
-    }
-
-    /* ===== TYPOGRAPHY ===== */
-    h1, h2, h3, h4 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-weight: 700;
-      line-height: 1.25;
-      color: var(--text-dark);
-    }
-
-    h1 {
-      font-size: clamp(2rem, 5vw, 3.6rem);
-      background: linear-gradient(135deg, var(--ocean), var(--azure), var(--fresh-cyan));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      letter-spacing: -0.02em;
-      padding: 0 0.5rem;
-    }
-
-    h2 {
-      font-size: clamp(1.5rem, 3.2vw, 2.2rem);
-      color: var(--ocean);
-      margin-bottom: 1rem;
-      position: relative;
-      display: inline-block;
-      max-width: 100%;
-    }
-
-    h2::after {
-      content: '';
-      position: absolute;
-      bottom: -10px;
-      left: 0;
-      width: 80px;
-      height: 4px;
-      background: linear-gradient(90deg, var(--mint), var(--fresh-cyan));
-      border-radius: 4px;
-    }
-
-    h3 {
-      font-size: clamp(1.2rem, 2.5vw, 1.5rem);
-      color: var(--azure);
-    }
-
-    p {
-      color: var(--text-medium);
-      font-size: clamp(0.95rem, 2vw, 1.1rem);
-      margin-bottom: 1rem;
-      line-height: 1.8;
-      max-width: 100%;
-    }
-
-    /* ===== HEADER & HERO ===== */
-    header {
-      padding: 3rem 1rem 2rem;
-      text-align: center;
-      position: relative;
-      z-index: 1;
-    }
-
-    .hero {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 1rem;
-    }
-
-    .hero-badge {
-      display: inline-block;
-      background: linear-gradient(135deg, var(--mint), var(--fresh-cyan));
-      color: white;
-      padding: 0.5rem 1.2rem;
-      border-radius: 50px;
-      font-weight: 600;
-      font-size: clamp(0.8rem, 2vw, 0.95rem);
-      margin-bottom: 1.5rem;
-      box-shadow: var(--shadow-bright);
-      animation: pulse-glow 3s ease-in-out infinite;
-    }
-
-    @keyframes pulse-glow {
-      0%, 100% { box-shadow: 0 4px 15px rgba(72, 202, 228, 0.3); }
-      50% { box-shadow: 0 8px 25px rgba(72, 202, 228, 0.5); }
-    }
-
-    .tagline {
-      font-size: clamp(1rem, 2.4vw, 1.3rem);
-      max-width: 800px;
-      margin: 1.5rem auto 2rem;
-      color: var(--text-dark);
-      font-weight: 400;
-      opacity: 0.95;
-      padding: 0 0.5rem;
-    }
-
-    /* ===== NAVIGATION ===== */
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 0.8rem;
-      flex-wrap: wrap;
-      margin: 2rem 0;
-      padding: 0.5rem;
-      max-width: 100%;
-    }
-
-    nav a {
-      padding: 0.6rem 1.2rem;
-      background: var(--glass-fresh);
-      border: 2px solid rgba(255, 255, 255, 0.6);
-      border-radius: 50px;
-      color: var(--ocean);
-      text-decoration: none;
-      font-weight: 600;
-      font-size: clamp(0.85rem, 2vw, 1rem);
-      transition: var(--transition);
-      backdrop-filter: blur(10px);
-      box-shadow: var(--shadow-soft);
-      white-space: nowrap;
-      max-width: 100%;
-      text-align: center;
-    }
-
-    nav a:hover {
-      background: linear-gradient(135deg, var(--fresh-cyan), var(--azure));
-      color: white;
-      transform: translateY(-3px) scale(1.03);
-      box-shadow: var(--shadow-bright);
-      border-color: transparent;
-    }
-
-    /* ===== MAIN CONTENT ===== */
-    main {
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 2rem 1rem 4rem;
-      position: relative;
-      z-index: 1;
-    }
-
-    section {
-      margin: 3rem 0;
-      padding: 2.2rem 2rem;
-      background: var(--glass-fresh);
-      border-radius: 24px;
-      border: 1px solid rgba(255, 255, 255, 0.8);
-      box-shadow: var(--shadow-soft);
-      backdrop-filter: blur(20px);
-      transition: var(--transition);
-      overflow: hidden;
-      position: relative;
-    }
-
-    section::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 4px;
-      background: linear-gradient(90deg, var(--mint), var(--fresh-cyan), var(--azure));
-    }
-
-    section:hover {
-      transform: translateY(-8px);
-      box-shadow: var(--shadow-bright);
-    }
-
-    /* ===== FEATURED COMIC SECTION (HIGHLIGHTED) ===== */
-    .featured-comic {
-      background: linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(224, 247, 255, 0.75));
-      border: 2px solid var(--fresh-cyan);
-    }
-
-    .featured-comic::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      right: -20%;
-      width: 400px;
-      height: 400px;
-      background: radial-gradient(circle, rgba(72, 202, 228, 0.15) 0%, transparent 70%);
-      border-radius: 50%;
-      animation: rotate-slow 30s linear infinite;
-    }
-
-    @keyframes rotate-slow {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
-    }
-
-    .featured-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: linear-gradient(135deg, var(--sunshine), #FF9F1C);
-      color: white;
-      padding: 0.6rem 1.3rem;
-      border-radius: 50px;
-      font-weight: 700;
-      font-size: clamp(0.85rem, 2vw, 1rem);
-      margin-bottom: 1.5rem;
-      box-shadow: 0 4px 15px rgba(255, 159, 28, 0.3);
-      animation: bounce-subtle 2s ease-in-out infinite;
-    }
-
-    @keyframes bounce-subtle {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-5px); }
-    }
-
-    .comic-showcase {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.8rem;
-      margin-top: 2rem;
-      position: relative;
-      z-index: 1;
-    }
-
-    .comic-panel {
-      background: white;
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0, 119, 182, 0.15);
-      transition: var(--transition);
-      border: 3px solid transparent;
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      min-height: 0;
-    }
-
-    .comic-panel::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: linear-gradient(135deg, rgba(72, 202, 228, 0.1), rgba(149, 213, 178, 0.1));
-      opacity: 0;
-      transition: var(--transition);
-      pointer-events: none;
-    }
-
-    .comic-panel:hover {
-      transform: translateY(-10px) scale(1.02);
-      box-shadow: 0 20px 50px rgba(0, 119, 182, 0.25);
-      border-color: var(--fresh-cyan);
-    }
-
-    .comic-panel:hover::after { opacity: 1; }
-
-    .comic-panel img {
-      width: 100%;
-      height: 260px;
-      object-fit: cover;
-      display: block;
-      transition: var(--transition);
-      flex-shrink: 0;
-    }
-
-    .comic-panel:hover img { transform: scale(1.03); }
-
-    .comic-panel-content {
-      padding: 1.4rem;
-      position: relative;
-      z-index: 1;
-      background: white;
-      flex-grow: 1;
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-    }
-
-    .comic-number {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      background: linear-gradient(135deg, var(--azure), var(--fresh-cyan));
-      color: white;
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      font-weight: 700;
-      font-size: 1rem;
-      box-shadow: 0 4px 10px rgba(0, 180, 216, 0.3);
-      flex-shrink: 0;
-    }
-
-    .comic-panel h4 {
-      font-size: clamp(1.05rem, 2.3vw, 1.25rem);
-      color: var(--text-dark);
-      margin: 0;
-      line-height: 1.3;
-    }
-
-    .comic-panel p {
-      font-size: 0.92rem;
-      color: var(--text-light);
-      margin: 0;
-      line-height: 1.5;
-      flex-grow: 1;
-    }
-
-    /* ===== GALLERY GRID ===== */
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.5rem;
-      margin-top: 1.5rem;
-    }
-
-    .gallery-item {
-      background: white;
-      border-radius: 20px;
-      overflow: hidden;
-      border: 2px solid rgba(255, 255, 255, 0.8);
-      transition: var(--transition);
-      box-shadow: var(--shadow-soft);
-      display: flex;
-      flex-direction: column;
-      min-height: 0;
-    }
-
-    .gallery-item:hover {
-      transform: translateY(-6px) scale(1.02);
-      border-color: var(--fresh-cyan);
-      box-shadow: var(--shadow-bright);
-    }
-
-    .gallery-item img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      display: block;
-      transition: var(--transition);
-      flex-shrink: 0;
-    }
-
-    .gallery-item:hover img { transform: scale(1.05); }
-
-    .gallery-caption {
-      padding: 1.1rem;
-      text-align: center;
-      flex-grow: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 0.3rem;
-    }
-
-    .gallery-caption h4 {
-      font-size: clamp(1rem, 2.2vw, 1.15rem);
-      margin: 0;
-      color: var(--text-dark);
-      line-height: 1.3;
-    }
-
-    .gallery-caption p {
-      font-size: 0.88rem;
-      margin: 0;
-      color: var(--text-light);
-      line-height: 1.4;
-    }
-
-    /* ===== PROMPT CARDS ===== */
-    .prompt-cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-      margin-top: 1.5rem;
-    }
-
-    .prompt-card {
-      background: white;
-      border-radius: 20px;
-      padding: 1.5rem;
-      border-left: 5px solid var(--fresh-cyan);
-      transition: var(--transition);
-      box-shadow: var(--shadow-soft);
-      min-height: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 0.6rem;
-    }
-
-    .prompt-card:hover {
-      transform: translateX(6px);
-      box-shadow: var(--shadow-bright);
-      border-left-color: var(--azure);
-    }
-
-    .prompt-card h4 {
-      color: var(--azure);
-      margin: 0;
-      font-size: clamp(1.05rem, 2.2vw, 1.2rem);
-      line-height: 1.3;
-    }
-
-    .prompt-code {
-      background: linear-gradient(135deg, var(--sky-light), var(--soft-white));
-      padding: 1rem;
-      border-radius: 12px;
-      font-family: 'Courier New', monospace;
-      font-size: clamp(0.78rem, 1.8vw, 0.88rem);
-      color: var(--ocean);
-      overflow-x: auto;
-      margin: 0;
-      border: 1px solid rgba(0, 180, 216, 0.2);
-      white-space: pre-wrap;
-      word-break: break-word;
-      line-height: 1.5;
-      flex-grow: 1;
-    }
-
-    /* ===== REPO STRUCTURE (FIXED OVERFLOW) ===== */
-    .folder-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1.2rem;
-      margin-top: 1.5rem;
-    }
-
-    .folder-card {
-      background: white;
-      padding: 1.4rem 1.2rem;
-      border-radius: 16px;
-      border: 2px solid rgba(255, 255, 255, 0.8);
-      transition: var(--transition);
-      box-shadow: var(--shadow-soft);
-      min-height: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-    }
-
-    .folder-card:hover {
-      border-color: var(--fresh-cyan);
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-bright);
-    }
-
-    .folder-card h4 {
-      color: var(--azure);
-      margin: 0;
-      font-size: clamp(1rem, 2.1vw, 1.1rem);
-      line-height: 1.35;
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
-    }
-
-    .folder-card p {
-      font-size: clamp(0.88rem, 1.8vw, 0.98rem);
-      margin: 0;
-      color: var(--text-medium);
-      line-height: 1.6;
-      flex-grow: 1;
-    }
-
-    .folder-card.featured {
-      border-color: var(--fresh-cyan);
-      background: linear-gradient(135deg, rgba(72, 202, 228, 0.12), white);
-    }
-
-    /* ===== CTA SECTION ===== */
-    .cta-section {
-      text-align: center;
-      background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(224, 247, 255, 0.85));
-      margin-top: 2rem;
-      padding: 2.5rem 1.8rem;
-      border: 2px solid var(--fresh-cyan);
-    }
-
-    .cta-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      flex-wrap: wrap;
-      margin-top: 1.5rem;
-    }
-
-    .btn {
-      padding: 0.95rem 2rem;
-      border-radius: 50px;
-      font-weight: 700;
-      font-family: 'Outfit', sans-serif;
-      text-decoration: none;
-      transition: var(--transition);
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.6rem;
-      cursor: pointer;
-      border: none;
-      font-size: clamp(0.95rem, 2vw, 1.05rem);
-      box-shadow: var(--shadow-soft);
-      max-width: 100%;
-      text-align: center;
-    }
-
-    .btn-primary {
-      background: linear-gradient(135deg, var(--azure), var(--fresh-cyan));
-      color: white;
-      box-shadow: 0 6px 20px rgba(0, 180, 216, 0.35);
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-4px) scale(1.04);
-      box-shadow: 0 12px 35px rgba(0, 180, 216, 0.5);
-    }
-
-    .btn-secondary {
-      background: white;
-      color: var(--azure);
-      border: 2px solid var(--fresh-cyan);
-    }
-
-    .btn-secondary:hover {
-      background: linear-gradient(135deg, var(--sky-light), white);
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-bright);
-    }
-
-    .git-command {
-      margin-top: 1.5rem;
-      background: linear-gradient(135deg, var(--text-dark), var(--ocean));
-      padding: 1.1rem 1.5rem;
-      border-radius: 16px;
-      display: inline-block;
-      box-shadow: 0 8px 25px rgba(26, 58, 92, 0.3);
-      max-width: 100%;
-      overflow-x: auto;
-    }
-
-    .git-command code {
-      color: var(--sky-light);
-      font-family: 'Courier New', monospace;
-      font-size: clamp(0.82rem, 1.9vw, 0.95rem);
-      font-weight: 600;
-      white-space: pre-wrap;
-      word-break: break-word;
-    }
-
-    /* ===== FOOTER ===== */
-    footer {
-      text-align: center;
-      padding: 2.5rem 1rem 3rem;
-      color: var(--text-medium);
-      font-size: clamp(0.88rem, 1.9vw, 0.98rem);
-      border-top: 2px solid rgba(255, 255, 255, 0.6);
-      margin-top: 2rem;
-      position: relative;
-      z-index: 1;
-      background: rgba(255, 255, 255, 0.3);
-      line-height: 1.7;
-    }
-
-    footer a {
-      color: var(--azure);
-      text-decoration: none;
-      font-weight: 600;
-      transition: var(--transition);
-    }
-
-    footer a:hover {
-      color: var(--ocean);
-      text-decoration: underline;
-    }
-
-    /* ===== RESPONSIVE ===== */
-    @media (max-width: 768px) {
-      h1 { font-size: 2.1rem; }
-      h2 { font-size: 1.6rem; }
-      .tagline { font-size: 1.05rem; }
-      nav { gap: 0.5rem; padding: 0.3rem; }
-      nav a { padding: 0.5rem 0.9rem; font-size: 0.88rem; }
-      section { padding: 1.8rem 1.2rem; }
-      .comic-showcase { grid-template-columns: 1fr; }
-      .comic-panel img { height: 240px; }
-      .cta-buttons { flex-direction: column; align-items: center; }
-      .btn { width: 100%; max-width: 320px; }
-    }
-
-    @media (max-width: 480px) {
-      .gallery-grid, .prompt-cards, .folder-grid { grid-template-columns: 1fr; }
-      .comic-panel img { height: 220px; }
-    }
-
-    /* ===== ANIMATIONS ===== */
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    section {
-      animation: fadeInUp 0.6s ease-out forwards;
-      opacity: 0;
-    }
-
-    section:nth-child(1) { animation-delay: 0.1s; opacity: 1; }
-    section:nth-child(2) { animation-delay: 0.2s; }
-    section:nth-child(3) { animation-delay: 0.3s; }
-    section:nth-child(4) { animation-delay: 0.4s; }
-    section:nth-child(5) { animation-delay: 0.5s; }
-
-    .hero-badge {
-      animation: float-badge 4s ease-in-out infinite, pulse-glow 3s ease-in-out infinite;
-    }
-
-    @keyframes float-badge {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-8px); }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SKFanartShotSource · Soul Knight Production Archive</title>
+<meta name="description" content="Model sheets, story frames, and prompt modules for Soul Knight fan cinema. Thirty four character sheets, fourteen scene plates, twenty two prompt files, kept under version control.">
+<meta name="theme-color" content="#08090B">
+<meta property="og:title" content="SKFanartShotSource">
+<meta property="og:description" content="A working archive for Soul Knight fan cinema. Model sheets, scene plates, and the prompt library that keeps a cast looking like itself.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="the_pantheon_of_three/the_pantheon_of_three_scene_renders/the_pantheon_of_three_spotlight_entrance.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+/* ==========================================================================
+   SKFanartShotSource
+   Design system: ink ground, jade and gold accents drawn from the artwork,
+   Cormorant Garamond for display, Inter for interface, JetBrains Mono for
+   verbatim source excerpts.
+   ========================================================================== */
+
+:root{
+  /* Ground */
+  --ink-950:#08090b;
+  --ink-900:#0b0d10;
+  --ink-850:#101318;
+  --ink-800:#151920;
+  --ink-750:#1c212a;
+
+  /* Accents pulled from the plates: jade sash, gold hilt, cinnabar tassel */
+  --jade:#43b393;
+  --jade-lit:#7ad9bd;
+  --jade-deep:#1d6b58;
+  --gold:#c8a350;
+  --gold-lit:#e7cd8e;
+  --cinnabar:#b0392c;
+
+  /* Type */
+  --paper:#ece7dd;
+  --paper-dim:#a9b0b6;
+  --paper-faint:#6f767e;
+  --paper-ghost:#4b5158;
+
+  /* Structure */
+  --rule:rgba(236,231,221,.10);
+  --rule-lit:rgba(236,231,221,.20);
+  --gold-rule:rgba(200,163,80,.28);
+
+  --shell:1440px;
+  --gutter:clamp(1.25rem,4vw,4rem);
+
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --ease-out:cubic-bezier(.16,1,.3,1);
+
+  --serif:'Cormorant Garamond',Georgia,'Times New Roman',serif;
+  --sans:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace;
+}
+
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+
+html{
+  scroll-behavior:smooth;
+  -webkit-text-size-adjust:100%;
+}
+
+body{
+  background:var(--ink-950);
+  color:var(--paper);
+  font-family:var(--sans);
+  font-weight:300;
+  font-size:16px;
+  line-height:1.75;
+  overflow-x:clip;
+  max-width:100%;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  text-rendering:optimizeLegibility;
+}
+
+/* Warm film grain over the whole page, very faint */
+body::after{
+  content:'';
+  position:fixed;
+  inset:0;
+  z-index:900;
+  pointer-events:none;
+  opacity:.035;
+  mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+img,video{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
+
+::selection{background:var(--jade-deep);color:var(--paper)}
+
+:focus-visible{
+  outline:1px solid var(--jade);
+  outline-offset:3px;
+}
+
+/* ---------- Scroll progress -------------------------------------------- */
+.rail{
+  position:fixed;top:0;left:0;right:0;height:1px;
+  background:var(--rule);z-index:800;
+}
+.rail span{
+  display:block;height:100%;width:0;
+  background:linear-gradient(90deg,var(--jade-deep),var(--jade),var(--gold));
+  transform-origin:left;
+}
+
+/* ---------- Top bar ------------------------------------------------------ */
+.topbar{
+  position:fixed;top:0;left:0;right:0;z-index:700;
+  display:flex;align-items:center;justify-content:space-between;gap:2rem;
+  padding:1.5rem var(--gutter);
+  transition:padding .5s var(--ease),background .5s var(--ease),border-color .5s var(--ease);
+  border-bottom:1px solid transparent;
+}
+.topbar.pinned{
+  padding:.85rem var(--gutter);
+  background:rgba(8,9,11,.82);
+  backdrop-filter:blur(18px) saturate(140%);
+  -webkit-backdrop-filter:blur(18px) saturate(140%);
+  border-bottom-color:var(--rule);
+}
+
+.wordmark{
+  font-family:var(--serif);
+  font-size:1.15rem;
+  font-weight:500;
+  letter-spacing:.06em;
+  white-space:nowrap;
+}
+.wordmark em{font-style:normal;color:var(--gold)}
+
+.topnav{display:flex;align-items:center;gap:2rem}
+.topnav a{
+  font-size:.7rem;
+  font-weight:400;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  color:var(--paper-dim);
+  position:relative;
+  padding-block:.35rem;
+  transition:color .4s var(--ease);
+}
+.topnav a::after{
+  content:'';position:absolute;left:0;bottom:0;
+  width:100%;height:1px;background:var(--jade);
+  transform:scaleX(0);transform-origin:right;
+  transition:transform .5s var(--ease-out);
+}
+.topnav a:hover{color:var(--paper)}
+.topnav a:hover::after{transform:scaleX(1);transform-origin:left}
+.topnav a.ext{color:var(--gold);}
+@media(max-width:1000px){.topnav a:not(.ext){display:none}}
+
+/* ---------- Hero --------------------------------------------------------- */
+.hero{
+  position:relative;
+  min-height:100svh;
+  display:flex;
+  align-items:flex-end;
+  overflow:hidden;
+  isolation:isolate;
+}
+.hero-plate{
+  position:absolute;inset:0;z-index:-2;
+}
+.hero-plate img{
+  width:100%;height:100%;object-fit:cover;object-position:center 28%;
+  filter:saturate(.82) contrast(1.04) brightness(.72);
+  transform:scale(1.06);
+  animation:driftIn 26s var(--ease-out) infinite alternate;
+}
+@keyframes driftIn{
+  from{transform:scale(1.06) translate3d(0,0,0)}
+  to{transform:scale(1.14) translate3d(0,-1.6%,0)}
+}
+.hero-veil{
+  position:absolute;inset:0;z-index:-1;
+  background:
+    radial-gradient(120% 80% at 50% 34%,transparent 0%,rgba(8,9,11,.55) 62%,rgba(8,9,11,.94) 100%),
+    linear-gradient(to top,var(--ink-950) 2%,rgba(8,9,11,.93) 30%,rgba(8,9,11,.62) 52%,rgba(8,9,11,.22) 72%,rgba(8,9,11,.62) 100%);
+}
+
+.hero-inner{
+  width:100%;max-width:var(--shell);margin:0 auto;
+  padding:0 var(--gutter) clamp(3rem,7vh,5.5rem);
+}
+
+.eyebrow{
+  display:flex;align-items:center;gap:.9rem;flex-wrap:wrap;
+  font-size:clamp(.6rem,1.6vw,.68rem);font-weight:400;
+  letter-spacing:clamp(.16em,.6vw,.34em);text-transform:uppercase;
+  color:var(--gold);
+  margin-bottom:1.6rem;
+}
+.eyebrow::before{
+  content:'';flex:0 0 auto;width:clamp(24px,5vw,56px);height:1px;background:var(--gold);opacity:.6;
+}
+
+.hero-title{
+  font-family:var(--serif);
+  font-weight:300;
+  font-size:clamp(2.6rem,10.5vw,9rem);
+  line-height:.94;
+  letter-spacing:-.025em;
+  margin-bottom:1.6rem;
+  overflow-wrap:anywhere;
+}
+.hero-title .accent{
+  color:var(--gold-lit);
+  font-style:italic;
+  font-weight:300;
+}
+
+.hero-lede{
+  font-family:var(--serif);
+  font-size:clamp(1.2rem,2.5vw,1.85rem);
+  font-weight:300;
+  line-height:1.5;
+  color:var(--paper);
+  max-width:34ch;
+  margin-bottom:2.6rem;
+}
+
+.hero-actions{display:flex;flex-wrap:wrap;gap:1rem;margin-bottom:3.5rem}
+
+.btn{
+  display:inline-flex;align-items:center;gap:.8rem;
+  padding:.95rem 1.9rem;
+  font-size:.72rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;
+  border:1px solid var(--rule-lit);
+  position:relative;overflow:hidden;
+  transition:color .45s var(--ease),border-color .45s var(--ease);
+}
+.btn span{position:relative;z-index:1}
+.btn::before{
+  content:'';position:absolute;inset:0;z-index:0;
+  background:var(--paper);
+  transform:translateY(101%);
+  transition:transform .55s var(--ease-out);
+}
+.btn:hover::before{transform:translateY(0)}
+.btn:hover{color:var(--ink-950);border-color:var(--paper)}
+.btn.solid{
+  background:var(--paper);color:var(--ink-950);border-color:var(--paper);
+}
+.btn.solid::before{background:var(--jade-lit)}
+
+/* Stat rail */
+.stats{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:1px;
+  background:var(--rule);
+  border-top:1px solid var(--rule);
+  border-bottom:1px solid var(--rule);
+}
+.stat{
+  background:var(--ink-950);
+  padding:1.4rem 1.2rem;
+}
+.stat b{
+  display:block;
+  font-family:var(--serif);
+  font-size:clamp(1.9rem,4.2vw,3rem);
+  font-weight:300;
+  line-height:1;
+  color:var(--jade-lit);
+  letter-spacing:-.02em;
+  /* Cormorant defaults to oldstyle figures; force lining so 1 is not read as I */
+  font-variant-numeric:lining-nums tabular-nums;
+  font-feature-settings:"lnum" 1,"tnum" 1;
+}
+.stat i{
+  display:block;margin-top:.5rem;font-style:normal;
+  font-size:.63rem;letter-spacing:.22em;text-transform:uppercase;color:var(--paper-faint);
+}
+@media(max-width:720px){
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+
+.scroll-hint{
+  position:absolute;right:var(--gutter);bottom:clamp(3rem,7vh,5.5rem);
+  writing-mode:vertical-rl;
+  font-size:.62rem;letter-spacing:.32em;text-transform:uppercase;color:var(--paper-faint);
+  display:flex;align-items:center;gap:1rem;
+}
+.scroll-hint::after{
+  content:'';width:1px;height:56px;
+  background:linear-gradient(to bottom,var(--paper-faint),transparent);
+}
+@media(max-width:1200px){.scroll-hint{display:none}}
+
+/* ---------- Section frame ------------------------------------------------ */
+.shell{max-width:var(--shell);margin:0 auto;padding-inline:var(--gutter)}
+
+section.band{
+  padding-block:clamp(5rem,12vh,9rem);
+  border-top:1px solid var(--rule);
+  position:relative;
+}
+
+.head{
+  display:grid;
+  grid-template-columns:auto minmax(0,1fr);
+  gap:clamp(1.5rem,4vw,4rem);
+  align-items:start;
+  margin-bottom:clamp(2.5rem,6vh,4.5rem);
+}
+.head .idx{
+  font-family:var(--mono);
+  font-size:.7rem;
+  letter-spacing:.1em;
+  color:var(--gold);
+  padding-top:.28rem;
+}
+.head h2{
+  font-family:var(--serif);
+  font-weight:300;
+  font-size:clamp(2.1rem,5.5vw,4.2rem);
+  line-height:1.02;
+  letter-spacing:-.02em;
+  margin-bottom:1.1rem;
+}
+.head h2 em{font-style:italic;color:var(--jade-lit)}
+.head .sub{
+  max-width:56ch;
+  color:var(--paper-dim);
+  font-size:clamp(.95rem,1.5vw,1.05rem);
+}
+.kicker{
+  font-size:.66rem;letter-spacing:.3em;text-transform:uppercase;
+  color:var(--paper-faint);margin-bottom:1.2rem;
+}
+
+/* ---------- Premise ------------------------------------------------------ */
+.premise{
+  display:grid;
+  grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);
+  gap:clamp(2rem,6vw,6rem);
+  align-items:start;
+}
+@media(max-width:900px){.premise{grid-template-columns:minmax(0,1fr)}}
+
+.premise-lede{
+  font-family:var(--serif);
+  font-size:clamp(1.35rem,2.6vw,2.05rem);
+  line-height:1.45;
+  font-weight:300;
+  color:var(--paper);
+}
+.premise-lede .lit{color:var(--jade-lit);font-style:italic}
+.premise-body{color:var(--paper-dim);margin-top:1.8rem;max-width:52ch}
+.premise-body p + p{margin-top:1rem}
+
+.tenets{display:grid;gap:1px;background:var(--rule);border-block:1px solid var(--rule)}
+.tenet{background:var(--ink-950);padding:1.7rem 0 1.7rem 0;position:relative;padding-left:3.4rem}
+.tenet::before{
+  content:attr(data-n);
+  position:absolute;left:0;top:1.85rem;
+  font-family:var(--mono);font-size:.68rem;color:var(--gold);
+}
+.tenet h3{
+  font-family:var(--serif);font-size:1.5rem;font-weight:400;line-height:1.2;margin-bottom:.5rem;
+}
+.tenet p{color:var(--paper-dim);font-size:.94rem;max-width:46ch}
+
+/* ---------- Plates (images) --------------------------------------------- */
+.plate{
+  position:relative;
+  display:block;
+  overflow:hidden;
+  background:var(--ink-850);
+  border:1px solid var(--rule);
+  cursor:zoom-in;
+  transition:border-color .6s var(--ease);
+}
+.plate::after{
+  content:'';position:absolute;inset:0;pointer-events:none;
+  box-shadow:inset 0 0 90px rgba(8,9,11,.55);
+  opacity:.7;transition:opacity .6s var(--ease);
+}
+.plate:hover{border-color:var(--gold-rule)}
+.plate:hover::after{opacity:.25}
+.plate img{
+  width:100%;aspect-ratio:4/3;object-fit:cover;
+  transition:transform 1.1s var(--ease-out),filter .6s var(--ease);
+  filter:saturate(.92);
+}
+.plate.wide img{aspect-ratio:16/9}
+.plate.sheet img{aspect-ratio:4/3;object-fit:contain;background:var(--ink-900)}
+.plate:hover img{transform:scale(1.035);filter:saturate(1.03)}
+
+.plate .corner{
+  position:absolute;top:0;right:0;width:22px;height:22px;
+  border-top:1px solid var(--gold-rule);border-right:1px solid var(--gold-rule);
+  opacity:0;transition:opacity .5s var(--ease);
+}
+.plate:hover .corner{opacity:1}
+
+.caption{padding:1rem .2rem 0}
+.caption h4{
+  font-family:var(--serif);font-weight:400;
+  font-size:clamp(1.15rem,2vw,1.45rem);line-height:1.25;
+}
+.caption .meta{
+  font-family:var(--mono);font-size:.66rem;color:var(--paper-ghost);
+  letter-spacing:.02em;margin-top:.4rem;word-break:break-all;
+}
+.caption p{color:var(--paper-dim);font-size:.92rem;margin-top:.7rem;max-width:48ch}
+
+.figure-index{
+  font-family:var(--mono);font-size:.66rem;color:var(--gold);
+  letter-spacing:.14em;margin-bottom:.55rem;
+}
+
+/* ---------- Comic layout ------------------------------------------------- */
+.comic-grid{
+  display:grid;
+  grid-template-columns:repeat(12,minmax(0,1fr));
+  gap:clamp(1.5rem,3vw,2.75rem);
+}
+.comic-grid > *:nth-child(1){grid-column:span 7}
+.comic-grid > *:nth-child(2){grid-column:span 5}
+.comic-grid > *:nth-child(3){grid-column:span 6}
+.comic-grid > *:nth-child(4){grid-column:span 6}
+@media(max-width:940px){
+  .comic-grid > *{grid-column:span 12 !important}
+}
+
+.script{
+  border:1px solid var(--rule);
+  background:
+    linear-gradient(180deg,rgba(67,179,147,.05),transparent 45%),
+    var(--ink-900);
+  padding:clamp(1.6rem,3vw,2.4rem);
+  height:100%;
+  display:flex;flex-direction:column;
+  clip-path:polygon(0 0,calc(100% - 18px) 0,100% 18px,100% 100%,0 100%);
+}
+.script .label{
+  font-size:.63rem;letter-spacing:.3em;text-transform:uppercase;color:var(--paper-faint);
+  padding-bottom:1.1rem;margin-bottom:1.4rem;border-bottom:1px solid var(--rule);
+}
+.line{margin-bottom:1.35rem}
+.line .who{
+  font-family:var(--mono);font-size:.65rem;letter-spacing:.2em;
+  color:var(--jade);margin-bottom:.35rem;
+}
+.line .said{
+  font-family:var(--serif);font-size:clamp(1.05rem,1.9vw,1.35rem);
+  line-height:1.45;color:var(--paper);
+}
+.line .said .q{color:var(--gold-lit);font-style:italic;display:block}
+.script .note{
+  margin-top:auto;padding-top:1.4rem;border-top:1px solid var(--rule);
+  font-size:.78rem;color:var(--paper-faint);line-height:1.65;
+}
+
+/* ---------- Scene: shot list + filmstrip --------------------------------- */
+.scene-split{
+  display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);
+  gap:clamp(2rem,5vw,5rem);align-items:start;margin-bottom:clamp(3rem,7vh,5rem);
+}
+@media(max-width:960px){.scene-split{grid-template-columns:minmax(0,1fr)}}
+
+.shotlist{display:grid;gap:1px;background:var(--rule);border-block:1px solid var(--rule)}
+.shot{
+  background:var(--ink-950);padding:1.5rem 0;
+  display:grid;grid-template-columns:auto minmax(0,1fr);gap:1.4rem;align-items:baseline;
+}
+.shot .seg{
+  font-family:var(--mono);font-size:.68rem;color:var(--gold);letter-spacing:.08em;
+}
+.shot h4{
+  font-family:var(--sans);font-size:.66rem;font-weight:500;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--jade-lit);margin-bottom:.55rem;
+}
+.shot p{color:var(--paper-dim);font-size:.93rem}
+
+.strip-wrap{position:relative;min-width:0}
+.strip-wrap::after{
+  content:'';position:absolute;top:0;bottom:1.25rem;right:0;width:clamp(40px,7vw,90px);
+  background:linear-gradient(90deg,transparent,var(--ink-950));
+  pointer-events:none;opacity:1;transition:opacity .5s var(--ease);
+}
+.strip-wrap[data-end="true"]::after{opacity:0}
+
+.strip-head{
+  display:flex;align-items:baseline;justify-content:space-between;gap:1rem;
+  padding-bottom:1rem;margin-bottom:1.25rem;border-bottom:1px solid var(--rule);
+}
+.strip-head .n{font-family:var(--mono);font-size:.66rem;color:var(--gold);letter-spacing:.12em}
+
+.strip{
+  display:flex;gap:1rem;overflow-x:auto;padding-bottom:1.25rem;min-width:0;
+  scroll-snap-type:x mandatory;
+  scrollbar-width:thin;scrollbar-color:var(--rule-lit) transparent;
+}
+.strip::-webkit-scrollbar{height:2px}
+.strip::-webkit-scrollbar-track{background:var(--rule)}
+.strip::-webkit-scrollbar-thumb{background:var(--jade-deep)}
+.strip figure{flex:0 0 clamp(240px,32vw,380px);scroll-snap-align:start}
+.strip .plate img{aspect-ratio:4/3}
+.strip figcaption{
+  margin-top:.7rem;
+  font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;
+  color:var(--paper-faint);text-transform:uppercase;
+}
+.strip figcaption b{display:block;font-family:var(--sans);font-weight:400;font-size:.82rem;
+  letter-spacing:0;text-transform:none;color:var(--paper);margin-bottom:.25rem}
+
+.takes{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:clamp(1.25rem,2.5vw,2rem);
+}
+.take{border:1px solid var(--rule);background:var(--ink-900);transition:border-color .6s var(--ease)}
+.take:hover{border-color:var(--gold-rule)}
+.take video{width:100%;aspect-ratio:4/3;object-fit:cover;background:var(--ink-850)}
+.take .bar{
+  display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  padding:.85rem 1rem;border-top:1px solid var(--rule);
+}
+.take .bar span{font-family:var(--mono);font-size:.63rem;color:var(--paper-faint);letter-spacing:.06em}
+.take .bar em{
+  font-style:normal;font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--cinnabar);border:1px solid rgba(176,57,44,.4);padding:.2rem .5rem;
+}
+
+/* ---------- Pantheon ----------------------------------------------------- */
+.pantheon-lead{
+  display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);
+  gap:clamp(1.5rem,3vw,2.75rem);align-items:end;margin-bottom:clamp(2rem,4vw,3rem);
+}
+@media(max-width:900px){.pantheon-lead{grid-template-columns:minmax(0,1fr)}}
+
+.spec{border-top:1px solid var(--gold-rule);padding-top:1.3rem}
+.spec dl{display:grid;grid-template-columns:auto minmax(0,1fr);gap:.55rem 1.6rem;font-size:.85rem}
+.spec dt{
+  font-family:var(--mono);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--paper-faint);padding-top:.2rem;
+}
+.spec dd{color:var(--paper)}
+
+/* ---------- Cast gallery ------------------------------------------------- */
+.tabs{
+  display:flex;flex-wrap:wrap;gap:.4rem 2.2rem;align-items:baseline;
+  border-bottom:1px solid var(--rule);
+  margin-bottom:clamp(2rem,4vw,3rem);
+}
+.tab{
+  position:relative;padding:0 0 1.1rem;
+  font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--paper-faint);transition:color .4s var(--ease);
+}
+.tab sup{
+  font-family:var(--mono);font-size:.58rem;letter-spacing:0;
+  margin-left:.45rem;color:var(--gold);opacity:.65;top:-.6em;position:relative;
+}
+.tab::after{
+  content:'';position:absolute;left:0;bottom:-1px;width:100%;height:1px;
+  background:var(--jade);transform:scaleX(0);transform-origin:left;
+  transition:transform .55s var(--ease-out);
+}
+.tab:hover{color:var(--paper-dim)}
+.tab[aria-selected="true"]{color:var(--paper)}
+.tab[aria-selected="true"]::after{transform:scaleX(1)}
+.tab[aria-selected="true"] sup{opacity:1}
+
+.panel[hidden]{display:none}
+.grid-sheets{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(clamp(240px,26vw,330px),1fr));
+  gap:clamp(1.5rem,3vw,2.5rem);
+}
+.grid-sheets .caption{padding-top:.85rem}
+.grid-sheets .caption h4{font-size:1.2rem}
+
+/* ---------- Prompt library ---------------------------------------------- */
+.reader{
+  display:grid;grid-template-columns:minmax(0,.62fr) minmax(0,1.38fr);
+  border:1px solid var(--rule);
+  background:var(--ink-900);
+}
+@media(max-width:900px){.reader{grid-template-columns:minmax(0,1fr)}}
+
+.reader-list{border-right:1px solid var(--rule)}
+@media(max-width:900px){.reader-list{border-right:none;border-bottom:1px solid var(--rule)}}
+
+.file{
+  display:block;width:100%;text-align:left;
+  padding:1.35rem clamp(1.2rem,2vw,1.8rem);
+  border-bottom:1px solid var(--rule);
+  position:relative;
+  transition:background .45s var(--ease);
+}
+.file:last-child{border-bottom:none}
+.file::before{
+  content:'';position:absolute;left:0;top:0;bottom:0;width:2px;
+  background:var(--jade);transform:scaleY(0);transform-origin:top;
+  transition:transform .5s var(--ease-out);
+}
+.file:hover{background:rgba(236,231,221,.02)}
+.file[aria-selected="true"]{background:rgba(67,179,147,.045)}
+.file[aria-selected="true"]::before{transform:scaleY(1)}
+.file b{
+  display:block;font-family:var(--serif);font-weight:400;font-size:1.18rem;
+  line-height:1.25;margin-bottom:.35rem;
+}
+.file span{
+  display:block;font-family:var(--mono);font-size:.63rem;color:var(--paper-ghost);
+  word-break:break-all;line-height:1.6;
+}
+.file[aria-selected="true"] span{color:var(--paper-faint)}
+
+.reader-view{display:flex;flex-direction:column;min-width:0}
+.reader-bar{
+  display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  padding:.9rem clamp(1.2rem,2vw,1.8rem);
+  border-bottom:1px solid var(--rule);
+}
+.reader-bar .tag{
+  font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--paper-faint);
+}
+.copy{
+  display:inline-flex;align-items:center;gap:.5rem;
+  font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--paper-dim);border:1px solid var(--rule-lit);
+  padding:.42rem .9rem;transition:color .4s var(--ease),border-color .4s var(--ease);
+}
+.copy:hover{color:var(--jade-lit);border-color:var(--jade-deep)}
+.copy.done{color:var(--jade-lit);border-color:var(--jade)}
+
+.reader-view pre{
+  margin:0;padding:clamp(1.2rem,2.4vw,2rem);
+  overflow-x:auto;flex:1;
+  font-family:var(--mono);font-size:.78rem;line-height:1.85;
+  color:var(--paper-dim);
+  tab-size:2;
+  scrollbar-width:thin;scrollbar-color:var(--rule-lit) transparent;
+}
+.reader-view pre::-webkit-scrollbar{height:3px;width:3px}
+.reader-view pre::-webkit-scrollbar-thumb{background:var(--rule-lit)}
+.reader-view code{white-space:pre}
+.t{color:var(--jade)}       /* tag or key */
+.v{color:var(--gold-lit)}   /* value */
+.c{color:var(--paper-ghost)}/* comment or punctuation */
+.k{color:var(--cinnabar)}   /* emphasis */
+
+/* ---------- Repository map ---------------------------------------------- */
+.map{display:grid;gap:1px;background:var(--rule);border-block:1px solid var(--rule)}
+.node{
+  background:var(--ink-950);
+  display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.4fr) auto;
+  gap:1rem clamp(1.5rem,4vw,3.5rem);align-items:baseline;
+  padding:1.6rem 0;
+  transition:background .5s var(--ease);
+}
+.node:hover{background:var(--ink-900)}
+.node .path{
+  font-family:var(--mono);font-size:.82rem;color:var(--paper);word-break:break-all;
+}
+.node .path b{color:var(--jade-lit);font-weight:400}
+.node p{color:var(--paper-dim);font-size:.92rem}
+.node .count{
+  font-family:var(--mono);font-size:.66rem;color:var(--paper-ghost);
+  letter-spacing:.12em;text-transform:uppercase;white-space:nowrap;
+}
+@media(max-width:820px){
+  .node{grid-template-columns:minmax(0,1fr);gap:.5rem}
+  .node .count{order:-1;color:var(--gold);opacity:.7}
+}
+
+/* ---------- Closing ------------------------------------------------------ */
+.closing{
+  text-align:center;
+  padding-block:clamp(6rem,14vh,11rem);
+  border-top:1px solid var(--rule);
+  background:
+    radial-gradient(80% 100% at 50% 100%,rgba(67,179,147,.07),transparent 65%),
+    var(--ink-950);
+}
+.closing h2{
+  font-family:var(--serif);font-weight:300;
+  font-size:clamp(2.4rem,7vw,5.5rem);line-height:1;letter-spacing:-.025em;
+  margin-bottom:1.4rem;
+}
+.closing h2 em{font-style:italic;color:var(--gold-lit)}
+.closing p{color:var(--paper-dim);max-width:46ch;margin:0 auto 2.6rem}
+
+.terminal{
+  display:inline-flex;align-items:center;gap:1.2rem;
+  border:1px solid var(--rule-lit);
+  padding:.9rem 1rem .9rem 1.4rem;
+  max-width:100%;
+  transition:border-color .5s var(--ease);
+}
+.terminal:hover{border-color:var(--gold-rule)}
+.terminal code{
+  font-family:var(--mono);font-size:clamp(.68rem,1.7vw,.82rem);
+  color:var(--paper-dim);white-space:nowrap;overflow-x:auto;
+  min-width:0;scrollbar-width:none;
+}
+.terminal code::-webkit-scrollbar{display:none}
+.terminal .copy{flex:0 0 auto}
+.terminal code b{color:var(--jade-lit);font-weight:400}
+
+footer{
+  border-top:1px solid var(--rule);
+  padding:clamp(2.5rem,5vh,3.5rem) 0;
+}
+.foot{
+  display:flex;flex-wrap:wrap;gap:1.5rem 3rem;align-items:baseline;justify-content:space-between;
+  font-size:.78rem;color:var(--paper-faint);
+}
+.foot a{color:var(--paper-dim);border-bottom:1px solid transparent;transition:border-color .4s var(--ease),color .4s var(--ease)}
+.foot a:hover{color:var(--jade-lit);border-bottom-color:var(--jade-deep)}
+.foot .legal{max-width:52ch;line-height:1.7}
+
+/* ---------- Lightbox ----------------------------------------------------- */
+.lightbox{
+  position:fixed;inset:0;z-index:1000;
+  background:rgba(6,7,9,.96);
+  backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  display:flex;align-items:center;justify-content:center;
+  padding:clamp(1rem,4vw,3.5rem);
+  opacity:0;visibility:hidden;
+  transition:opacity .5s var(--ease),visibility .5s var(--ease);
+}
+.lightbox.open{opacity:1;visibility:visible}
+.lightbox img{
+  max-width:100%;max-height:78vh;object-fit:contain;
+  border:1px solid var(--rule);
+  transform:scale(.98);transition:transform .6s var(--ease-out);
+}
+.lightbox.open img{transform:scale(1)}
+.lb-cap{
+  position:absolute;left:0;right:0;bottom:clamp(1rem,3vh,2.2rem);
+  text-align:center;padding-inline:1.5rem;
+}
+.lb-cap h5{font-family:var(--serif);font-weight:400;font-size:1.35rem}
+.lb-cap span{font-family:var(--mono);font-size:.63rem;color:var(--paper-ghost);word-break:break-all}
+.lb-close{
+  position:absolute;top:clamp(1rem,3vh,2rem);right:clamp(1rem,3vw,2.4rem);
+  width:44px;height:44px;display:grid;place-items:center;
+  border:1px solid var(--rule-lit);color:var(--paper-dim);
+  transition:color .4s var(--ease),border-color .4s var(--ease),transform .4s var(--ease);
+}
+.lb-close:hover{color:var(--paper);border-color:var(--paper);transform:rotate(90deg)}
+.lb-nav{
+  position:absolute;top:50%;transform:translateY(-50%);
+  width:52px;height:52px;display:grid;place-items:center;
+  color:var(--paper-faint);font-size:1.4rem;
+  transition:color .4s var(--ease)}
+.lb-nav:hover{color:var(--paper)}
+.lb-prev{left:clamp(.4rem,2vw,1.6rem)}
+.lb-next{right:clamp(.4rem,2vw,1.6rem)}
+@media(max-width:640px){.lb-nav{display:none}}
+
+/* ---------- Small screens ------------------------------------------------ */
+@media(max-width:620px){
+  .hero{min-height:auto;padding-top:6.5rem}
+  .hero-inner{padding-bottom:3rem}
+  .hero-lede{max-width:none}
+  .hero-actions{gap:.75rem;margin-bottom:2.75rem}
+  .btn{width:100%;justify-content:center;padding-inline:1.2rem}
+
+  .head{grid-template-columns:minmax(0,1fr);gap:.35rem}
+  .head .idx{padding-top:0}
+
+  .tenet{padding-left:2.4rem}
+  .shot{grid-template-columns:minmax(0,1fr);gap:.35rem}
+
+  .script{clip-path:none}
+  .reader-view pre{font-size:.7rem}
+
+  .terminal{width:100%;justify-content:space-between;gap:.75rem;padding-inline:1rem}
+  .foot{flex-direction:column;gap:1.1rem}
+}
+
+/* ---------- Reveal ------------------------------------------------------- */
+.rv{opacity:0;transform:translateY(18px);transition:opacity 1s var(--ease-out),transform 1s var(--ease-out)}
+.rv.in{opacity:1;transform:none}
+
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important}
+  html{scroll-behavior:auto}
+  .rv{opacity:1;transform:none}
+}
+</style>
 </head>
+
 <body>
 
-  <!-- ===== HEADER ===== -->
-  <header>
-    <div class="hero">
-      <div class="hero-badge">✨ Fresh Creative Assets</div>
-      <h1>⚔️ SKFanartShotSource</h1>
-      <p class="tagline">
-        Breathe life into your Soul Knight creations with our <strong>open-source collection</strong> of 
-        model sheets, comic panels, and creative prompts. Fresh, vibrant, and ready to inspire.
-      </p>
-      
-      <nav>
-        <a href="#comics">🎨 Featured Comics</a>
-        <a href="#gallery">🖼️ Model Sheets</a>
-        <a href="#prompts">💬 Prompts</a>
-        <a href="#structure">📁 Structure</a>
-        <a href="https://github.com/Funny-Youngster/SKFanartShotSource" target="_blank">🔗 GitHub</a>
-      </nav>
+<div class="rail"><span id="railFill"></span></div>
+
+<header class="topbar" id="topbar">
+  <a class="wordmark" href="#top"><em>SK</em>FanartShotSource</a>
+  <nav class="topnav">
+    <a href="#premise">Premise</a>
+    <a href="#comic">Comic</a>
+    <a href="#scene">Scene</a>
+    <a href="#pantheon">Pantheon</a>
+    <a href="#cast">Cast</a>
+    <a href="#prompts">Prompts</a>
+    <a class="ext" href="https://github.com/Funny-Youngster/SKFanartShotSource" target="_blank" rel="noopener">GitHub</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero">
+    <div class="hero-plate">
+      <img src="the_pantheon_of_three/the_pantheon_of_three_scene_renders/the_pantheon_of_three_spotlight_entrance.png"
+           alt="The Pantheon of Three walking a red carpet under volumetric backlight" fetchpriority="high" decoding="async">
     </div>
-  </header>
+    <div class="hero-veil"></div>
 
-  <!-- ===== MAIN CONTENT ===== -->
-  <main>
+    <div class="hero-inner">
+      <p class="eyebrow">Soul Knight · Fan Production Archive</p>
+      <h1 class="hero-title">SKFanart<wbr><span class="accent">ShotSource</span></h1>
+      <p class="hero-lede">Model sheets, story plates, and the prompt library that keeps a cast looking like itself in every shot.</p>
 
-    <!-- ===== FEATURED COMIC PANELS (HIGHLIGHTED) ===== -->
-    <section id="comics" class="featured-comic">
-      <div class="featured-badge">
-        <span>🌟</span>
-        <span>Featured: Tao Gang Meetup Comic</span>
+      <div class="hero-actions">
+        <a class="btn solid" href="#comic"><span>Enter the archive</span></a>
+        <a class="btn" href="https://github.com/Funny-Youngster/SKFanartShotSource" target="_blank" rel="noopener"><span>View source</span></a>
       </div>
-      <h2>📖 Epic Comic Panels</h2>
-      <p style="font-size: 1.1rem; max-width: 800px; margin: 0 auto 1rem;">
-        Stunning sequential art from the <strong>tao_gang_meetup_comic_assets</strong> collection. 
-        Experience the story unfold through these beautifully crafted panels.
-      </p>
-      
-      <div class="comic-showcase">
-        <!-- Panel 1 -->
-        <div class="comic-panel">
-          <img src="tao_gang_meetup_comic_assets/tao_gang_meetup_comic_images/Rogue%27s%20Reputation%20Over%20Tea.png" 
-               alt="Rogue's Reputation Over Tea" 
-               onerror="this.src='https://via.placeholder.com/600x400/87CEEB/1a3a5c?text=Rogue+Reputation+Over+Tea'">
-          <div class="comic-panel-content">
-            <div class="comic-number">1</div>
+
+      <div class="stats">
+        <div class="stat"><b>34</b><i>Model sheets</i></div>
+        <div class="stat"><b>14</b><i>Scene plates</i></div>
+        <div class="stat"><b>22</b><i>Prompt modules</i></div>
+        <div class="stat"><b>04</b><i>Video takes</i></div>
+      </div>
+    </div>
+
+    <div class="scroll-hint">Scroll</div>
+  </section>
+
+  <!-- ===================== 01 PREMISE ===================== -->
+  <section class="band" id="premise">
+    <div class="shell">
+      <div class="head rv">
+        <div class="idx">01</div>
+        <div>
+          <p class="kicker">Why this exists</p>
+          <h2>A cast that <em>holds its shape</em></h2>
+        </div>
+      </div>
+
+      <div class="premise">
+        <div class="rv">
+          <p class="premise-lede">
+            Generated characters drift. Hair loses a hand of length between panels, a sash forgets its trim,
+            someone gains two inches the moment the camera moves. This archive exists to
+            <span class="lit">stop the drift</span> before it reaches the render.
+          </p>
+          <div class="premise-body">
+            <p>Every character here has one sheet, and that sheet is the only thing a prompt is allowed to describe from. The prompts do not paraphrase the design. They point at it and refuse substitutions.</p>
+            <p>What follows is the working set behind three casts: the Knight Gang, the Tao Gang, and the Pantheon of Three. Finished plates, the frames between them, the takes that were cut, and the source files that produced all of it.</p>
+          </div>
+        </div>
+
+        <div class="tenets rv">
+          <article class="tenet" data-n="i.">
+            <h3>Sheet authority</h3>
+            <p>The model sheets are the sole reference for every visual attribute. Nothing reaches a render unless it appears on the sheet first, and no detail is invented, altered, or quietly dropped.</p>
+          </article>
+          <article class="tenet" data-n="ii.">
+            <h3>Locked continuity</h3>
+            <p>Retrieval anchors hold appearance, environment, lighting direction, and eye level steady from one panel to the next. Weapons stay static props unless a shot calls for them.</p>
+          </article>
+          <article class="tenet" data-n="iii.">
+            <h3>Read in the open</h3>
+            <p>Costume revisions arrive as commits and pull requests, so the canon carries a history you can read rather than a folder of files named final and final two.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 02 COMIC ===================== -->
+  <section class="band" id="comic">
+    <div class="shell">
+      <div class="head rv">
+        <div class="idx">02</div>
+        <div>
+          <p class="kicker">Featured sequence · tao_gang_meetup_comic_assets</p>
+          <h2>The Tao Gang <em>meetup</em></h2>
+          <p class="sub">Tea, gossip, and a reputation that arrives well ahead of its owner. Three finished plates, each carrying the same continuity locks: her right eye behind her bangs, the pale green clip visible, both weapons resting where they were left.</p>
+        </div>
+      </div>
+
+      <div class="comic-grid">
+
+        <figure class="rv">
+          <a class="plate" data-lb
+             data-src="tao_gang_meetup_comic_assets/tao_gang_meetup_comic_images/Rogue%27s%20Reputation%20Over%20Tea.png"
+             data-title="Rogue's Reputation Over Tea"
+             data-file="tao_gang_meetup_comic_assets/tao_gang_meetup_comic_images/">
+            <img src="tao_gang_meetup_comic_assets/tao_gang_meetup_comic_images/Rogue%27s%20Reputation%20Over%20Tea.png"
+                 alt="Four comic panels of the Swordmaster and the Lancer talking over tea" loading="lazy" decoding="async">
+            <span class="corner"></span>
+          </a>
+          <figcaption class="caption">
+            <div class="figure-index">Plate 01</div>
             <h4>Rogue's Reputation Over Tea</h4>
-            <p>The warriors sit in quiet contemplation over their tea, well aware that the Rogue's fame has traveled ahead of him.</p>
+            <p>She raises her cup and asks whether he has heard of a man called Rogue. Her glowing blade stays leaning on the stone bench beside her. It is never held.</p>
+          </figcaption>
+        </figure>
+
+        <div class="script rv">
+          <div class="label">scene_dialogue_text / dialogue.txt</div>
+
+          <div class="line">
+            <div class="who">Swordmaster</div>
+            <div class="said">Have you heard of a guy named Rogue?</div>
           </div>
+
+          <div class="line">
+            <div class="who">Lancer</div>
+            <div class="said">No. What happened?</div>
+          </div>
+
+          <div class="line">
+            <div class="who">Swordmaster</div>
+            <div class="said">
+              He has been giving himself a whole list of titles.
+              <span class="q">“The OG of the Knight Gang.”</span>
+              <span class="q">“The true believer of Interdimensionalism.”</span>
+              <span class="q">“Representative of the House of Knight.”</span>
+            </div>
+          </div>
+
+          <p class="note">Delivered in English with an Asian American reading. The line is locked at the script level and is never translated or reworded downstream.</p>
         </div>
 
-        <!-- Panel 2 -->
-        <div class="comic-panel">
-          <img src="tao_gang_meetup_comic_assets/tao_gang_meetup_comic_images/Rogue%27s%20Arrival%20Foretold.png" 
-               alt="Rogue's Arrival Foretold" 
-               onerror="this.src='https://via.placeholder.com/600x400/00B4D8/1a3a5c?text=Rogue+Arrival+Foretold'">
-          <div class="comic-panel-content">
-            <div class="comic-number">2</div>
+        <figure class="rv">
+          <a class="plate" data-lb
+             data-src="tao_gang_meetup_comic_assets/tao_gang_meetup_comic_images/Rogue%27s%20Arrival%20Foretold.png"
+             data-title="Rogue's Arrival Foretold"
+             data-file="tao_gang_meetup_comic_assets/tao_gang_meetup_comic_images/">
+            <img src="tao_gang_meetup_comic_assets/tao_gang_meetup_comic_images/Rogue%27s%20Arrival%20Foretold.png"
+                 alt="Comic plate in which the Lancer recognises the name Rogue" loading="lazy" decoding="async">
+            <span class="corner"></span>
+          </a>
+          <figcaption class="caption">
+            <div class="figure-index">Plate 02</div>
             <h4>Rogue's Arrival Foretold</h4>
-            <p>Prophecies and whispers spread through the Tao Gang as the Rogue's imminent arrival is sensed.</p>
-          </div>
+            <p>The Lancer places the name. He remembers who pulled the Airbender back from the Abyss of Turbid Qi, and finds he respects the man underneath the titles.</p>
+          </figcaption>
+        </figure>
+
+        <figure class="rv">
+          <a class="plate" data-lb
+             data-src="tao_gang_meetup_comic_assets/tao_gang_meetup_comic_images/Inter%E2%80%91Dimensionalism%20in%20the%20Quiet%20Garden.png"
+             data-title="Interdimensionalism in the Quiet Garden"
+             data-file="tao_gang_meetup_comic_assets/tao_gang_meetup_comic_images/">
+            <img src="tao_gang_meetup_comic_assets/tao_gang_meetup_comic_images/Inter%E2%80%91Dimensionalism%20in%20the%20Quiet%20Garden.png"
+                 alt="Comic plate of the Airbender and the Rogue arriving in the garden" loading="lazy" decoding="async">
+            <span class="corner"></span>
+          </a>
+          <figcaption class="caption">
+            <div class="figure-index">Plate 03</div>
+            <h4>Interdimensionalism in the Quiet Garden</h4>
+            <p>The Airbender and the Rogue step in together at matching eye level, staged so neither reads as the taller of the two on level ground.</p>
+          </figcaption>
+        </figure>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 03 SCENE ===================== -->
+  <section class="band" id="scene">
+    <div class="shell">
+      <div class="head rv">
+        <div class="idx">03</div>
+        <div>
+          <p class="kicker">Scene file · scene_introduce_rogue_to_tao_gang</p>
+          <h2>Talk About <em>the Rogue</em></h2>
+          <p class="sub">A monastery tea room, afternoon light from the left, cut as three continuous segments. The folder carries the opening frames, the transition frames that hand one shot to the next, the closing frame, and four takes that never made it in.</p>
+        </div>
+      </div>
+
+      <div class="scene-split">
+        <div class="shotlist rv">
+          <article class="shot">
+            <div class="seg">01</div>
+            <div>
+              <h4>Medium · Eye level</h4>
+              <p>She sits and lifts her cup. The camera pushes in slowly on a shallow plane, focus resting on her visible eye and the clip, composition balanced on thirds.</p>
+            </div>
+          </article>
+          <article class="shot">
+            <div class="seg">02</div>
+            <div>
+              <h4>Closeup · 85mm</h4>
+              <p>He turns toward her, static frame carrying a faint handheld tremor. It opens out to a three quarter at 50mm as his tone moves from doubt to respect.</p>
+            </div>
+          </article>
+          <article class="shot">
+            <div class="seg">03</div>
+            <div>
+              <h4>Closeup · 85mm prime</h4>
+              <p>A slow tilt follows the cup down to the table. She sets the meeting, and the scene closes on the weight a Taoist puts behind the word champion.</p>
+            </div>
+          </article>
         </div>
 
-        <!-- Panel 3 -->
-        <div class="comic-panel">
-          <img src="tao_gang_meetup_comic_assets/tao_gang_meetup_comic_images/Inter%E2%80%91Dimensionalism%20in%20the%20Quiet%20Garden.png" 
-               alt="Inter-Dimensionalism in the Quiet Garden" 
-               onerror="this.src='https://via.placeholder.com/600x400/95D5B2/1a3a5c?text=Inter-Dimensionalism+Garden'">
-          <div class="comic-panel-content">
-            <div class="comic-number">3</div>
-            <h4>Inter-Dimensionalism in the Quiet Garden</h4>
-            <p>Reality bends in the serene garden as dimensions converge for an extraordinary encounter.</p>
+        <div class="rv">
+          <div class="strip-head">
+            <span class="kicker" style="margin:0">Frames in order</span>
+            <span class="n">07 · drag to scan</span>
+          </div>
+          <div class="strip-wrap">
+          <div class="strip">
+
+            <figure>
+              <a class="plate" data-lb
+                 data-src="scene_introduce_rogue_to_tao_gang/scene_opening_frames/Talk%20About%20the%20Rogue%20-%20Opening%20Scene.png"
+                 data-title="Opening Scene"
+                 data-file="scene_opening_frames/">
+                <img src="scene_introduce_rogue_to_tao_gang/scene_opening_frames/Talk%20About%20the%20Rogue%20-%20Opening%20Scene.png"
+                     alt="Opening frame of the tea room scene" loading="lazy" decoding="async"><span class="corner"></span>
+              </a>
+              <figcaption><b>Opening Scene</b>scene_opening_frames</figcaption>
+            </figure>
+
+            <figure>
+              <a class="plate" data-lb
+                 data-src="scene_introduce_rogue_to_tao_gang/scene_opening_frames/tea_chat_between_sword_master_and_lancer.png"
+                 data-title="Tea Chat"
+                 data-file="scene_opening_frames/">
+                <img src="scene_introduce_rogue_to_tao_gang/scene_opening_frames/tea_chat_between_sword_master_and_lancer.png"
+                     alt="The Swordmaster and the Lancer seated at the low table" loading="lazy" decoding="async"><span class="corner"></span>
+              </a>
+              <figcaption><b>Tea Chat</b>scene_opening_frames</figcaption>
+            </figure>
+
+            <figure>
+              <a class="plate" data-lb
+                 data-src="scene_introduce_rogue_to_tao_gang/scene_opening_frames/Lancer%27s%20Opinion%20on%20Rogue%20-%20Opening%20Frame.jpeg"
+                 data-title="Lancer's Opinion on Rogue"
+                 data-file="scene_opening_frames/">
+                <img src="scene_introduce_rogue_to_tao_gang/scene_opening_frames/Lancer%27s%20Opinion%20on%20Rogue%20-%20Opening%20Frame.jpeg"
+                     alt="Opening frame for the Lancer reply" loading="lazy" decoding="async"><span class="corner"></span>
+              </a>
+              <figcaption><b>Lancer's Opinion</b>scene_opening_frames</figcaption>
+            </figure>
+
+            <figure>
+              <a class="plate" data-lb
+                 data-src="scene_introduce_rogue_to_tao_gang/scene_transition_frames/sword_master_eyelevel_frame.jpeg"
+                 data-title="Swordmaster, eye level"
+                 data-file="scene_transition_frames/">
+                <img src="scene_introduce_rogue_to_tao_gang/scene_transition_frames/sword_master_eyelevel_frame.jpeg"
+                     alt="Eye level transition frame of the Swordmaster" loading="lazy" decoding="async"><span class="corner"></span>
+              </a>
+              <figcaption><b>Swordmaster, eye level</b>scene_transition_frames</figcaption>
+            </figure>
+
+            <figure>
+              <a class="plate" data-lb
+                 data-src="scene_introduce_rogue_to_tao_gang/scene_transition_frames/lancer_eyelevel_frame.jpeg"
+                 data-title="Lancer, eye level"
+                 data-file="scene_transition_frames/">
+                <img src="scene_introduce_rogue_to_tao_gang/scene_transition_frames/lancer_eyelevel_frame.jpeg"
+                     alt="Eye level transition frame of the Lancer" loading="lazy" decoding="async"><span class="corner"></span>
+              </a>
+              <figcaption><b>Lancer, eye level</b>scene_transition_frames</figcaption>
+            </figure>
+
+            <figure>
+              <a class="plate" data-lb
+                 data-src="scene_introduce_rogue_to_tao_gang/scene_transition_frames/lancer_floorup_frame.jpeg"
+                 data-title="Lancer, low angle"
+                 data-file="scene_transition_frames/">
+                <img src="scene_introduce_rogue_to_tao_gang/scene_transition_frames/lancer_floorup_frame.jpeg"
+                     alt="Low angle transition frame of the Lancer" loading="lazy" decoding="async"><span class="corner"></span>
+              </a>
+              <figcaption><b>Lancer, low angle</b>scene_transition_frames</figcaption>
+            </figure>
+
+            <figure>
+              <a class="plate" data-lb
+                 data-src="scene_introduce_rogue_to_tao_gang/scene_closing_frames/Talk%20About%20the%20Rogue%20%E2%80%93%20Closing%20Scene.png"
+                 data-title="Closing Scene"
+                 data-file="scene_closing_frames/">
+                <img src="scene_introduce_rogue_to_tao_gang/scene_closing_frames/Talk%20About%20the%20Rogue%20%E2%80%93%20Closing%20Scene.png"
+                     alt="Closing frame of the tea room scene" loading="lazy" decoding="async"><span class="corner"></span>
+              </a>
+              <figcaption><b>Closing Scene</b>scene_closing_frames</figcaption>
+            </figure>
+
+          </div>
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- ===== CHARACTER MODEL SHEETS ===== -->
-    <section id="gallery">
-      <h2>🎨 Character Model Sheets</h2>
-      <p>Core reference images for the Knight Gang cast — perfect for character consistency and prompt engineering.</p>
-      
-      <div class="gallery-grid">
-        <div class="gallery-item">
-          <img src="KnightGangRefs/knight_model_sheet.png" alt="Knight Model Sheet" onerror="this.src='https://via.placeholder.com/400x300/0077B6/FFFFFF?text=Knight+Sheet'">
-          <div class="gallery-caption">
-            <h4>Knight</h4>
-            <p>Armor variations and weapon references</p>
+      <div class="rv">
+        <p class="kicker" style="margin-bottom:1.4rem">Takes held back from the cut</p>
+        <div class="takes">
+
+          <div class="take">
+            <video controls preload="none" playsinline
+                   poster="scene_introduce_rogue_to_tao_gang/scene_opening_frames/tea_chat_between_sword_master_and_lancer.png">
+              <source src="scene_introduce_rogue_to_tao_gang/scene_video_materials/conversation_about_rogue_unused_v1a.mp4" type="video/mp4">
+            </video>
+            <div class="bar"><span>conversation_about_rogue v1a</span><em>unused</em></div>
           </div>
-        </div>
-        <div class="gallery-item">
-          <img src="KnightGangRefs/rogue_model_sheet.png" alt="Rogue Model Sheet" onerror="this.src='https://via.placeholder.com/400x300/00B4D8/FFFFFF?text=Rogue+Sheet'">
-          <div class="gallery-caption">
-            <h4>Rogue</h4>
-            <p>Agile poses and signature weapon Aurora</p>
+
+          <div class="take">
+            <video controls preload="none" playsinline
+                   poster="scene_introduce_rogue_to_tao_gang/scene_opening_frames/Talk%20About%20the%20Rogue%20-%20Opening%20Scene.png">
+              <source src="scene_introduce_rogue_to_tao_gang/scene_video_materials/conversation_about_rogue_unused_v1b.mp4" type="video/mp4">
+            </video>
+            <div class="bar"><span>conversation_about_rogue v1b</span><em>unused</em></div>
           </div>
-        </div>
-        <div class="gallery-item">
-          <img src="KnightGangRefs/wizard_model_sheet.png" alt="Wizard Model Sheet" onerror="this.src='https://via.placeholder.com/400x300/48CAE4/FFFFFF?text=Wizard+Sheet'">
-          <div class="gallery-caption">
-            <h4>Wizard</h4>
-            <p>Spell-casting stances and magical effects</p>
+
+          <div class="take">
+            <video controls preload="none" playsinline
+                   poster="scene_introduce_rogue_to_tao_gang/scene_transition_frames/sword_master_eyelevel_frame.jpeg">
+              <source src="scene_introduce_rogue_to_tao_gang/scene_video_materials/conversation_about_rogue_unused_v1c.mp4" type="video/mp4">
+            </video>
+            <div class="bar"><span>conversation_about_rogue v1c</span><em>unused</em></div>
           </div>
+
+          <div class="take">
+            <video controls preload="none" playsinline
+                   poster="scene_introduce_rogue_to_tao_gang/scene_transition_frames/lancer_eyelevel_frame.jpeg">
+              <source src="scene_introduce_rogue_to_tao_gang/scene_video_materials/lancer_on_rogue_unused_v1a.mp4" type="video/mp4">
+            </video>
+            <div class="bar"><span>lancer_on_rogue v1a</span><em>unused</em></div>
+          </div>
+
         </div>
-        <div class="gallery-item">
-          <img src="KnightGangRefs/assassin_model_sheet.png" alt="Assassin Model Sheet" onerror="this.src='https://via.placeholder.com/400x300/95D5B2/FFFFFF?text=Assassin+Sheet'">
-          <div class="gallery-caption">
-            <h4>Assassin</h4>
-            <p>Model sheet with pose variants & scarf details</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 04 PANTHEON ===================== -->
+  <section class="band" id="pantheon">
+    <div class="shell">
+      <div class="head rv">
+        <div class="idx">04</div>
+        <div>
+          <p class="kicker">Key art · the_pantheon_of_three</p>
+          <h2>The Pantheon <em>of Three</em></h2>
+          <p class="sub">Costume Prince leads at the front plane. Warliege and Trickster share the plane behind him. All three stand at the same height with aligned eye levels, walking one red carpet under volumetric backlight.</p>
+        </div>
+      </div>
+
+      <div class="pantheon-lead">
+        <figure class="rv">
+          <a class="plate" data-lb
+             data-src="the_pantheon_of_three/the_pantheon_of_three_scene_renders/the_pantheon_of_three_spotlight_entrance.png"
+             data-title="Spotlight Entrance"
+             data-file="the_pantheon_of_three_scene_renders/">
+            <img src="the_pantheon_of_three/the_pantheon_of_three_scene_renders/the_pantheon_of_three_spotlight_entrance.png"
+                 alt="The three walking forward on a red carpet through a grand hall" loading="lazy" decoding="async"><span class="corner"></span>
+          </a>
+          <figcaption class="caption">
+            <div class="figure-index">Final key art</div>
+            <h4>Spotlight Entrance</h4>
+          </figcaption>
+        </figure>
+
+        <div class="rv">
+          <figure>
+            <a class="plate wide" data-lb
+               data-src="the_pantheon_of_three/the_pantheon_of_three_scene_renders/the_pantheon_of_three_background_setting.png"
+               data-title="Background Setting"
+               data-file="the_pantheon_of_three_scene_renders/">
+              <img src="the_pantheon_of_three/the_pantheon_of_three_scene_renders/the_pantheon_of_three_background_setting.png"
+                   alt="The grand hall entrance without characters" loading="lazy" decoding="async"><span class="corner"></span>
+            </a>
+            <figcaption class="caption">
+              <div class="figure-index">Plate, cleared</div>
+              <h4>Background Setting</h4>
+            </figcaption>
+          </figure>
+
+          <div class="spec" style="margin-top:1.8rem">
+            <dl>
+              <dt>Format</dt><dd>Horizontal, 4:3, three quarters view</dd>
+              <dt>Depth</dt><dd>Costume Prince on level one, the other two on level two</dd>
+              <dt>Light</dt><dd>Strong backlight with volumetric rays, cinematic haze</dd>
+              <dt>Hands</dt><dd>Five separated fingers, hard override on every panel</dd>
+            </dl>
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- ===== PROMPT MODULES ===== -->
-    <section id="prompts">
-      <h2>💡 Creative Prompt Modules</h2>
-      <p>Modular, plug-and-play prompt snippets organized by scene, character, and shot type.</p>
-      
-      <div class="prompt-cards">
-        <div class="prompt-card">
-          <h4>🤳 Selfie-Style Shot</h4>
-          <p>Character-focused close-ups with dynamic angles:</p>
-          <div class="prompt-code">
-[character: Rogue], selfie angle, dynamic pose, holding Aurora, 
-glowing blue aura, cinematic lighting, Soul Knight art style, 
-detailed character design, vibrant colors --ar 3:4
-          </div>
-        </div>
-        
-        <div class="prompt-card">
-          <h4>🎬 Scene: Rogue Meets Tao Gang</h4>
-          <p>Narrative setup for cinematic generation:</p>
-          <div class="prompt-code">
-wide shot, Rogue entering Tao Gang hideout, 
-dim lantern lighting, suspicious glances, 
-Soul Knight pixel-art inspired, atmospheric fog, 
-character interaction, storyboarding style --ar 16:9
-          </div>
-        </div>
-        
-        <div class="prompt-card">
-          <h4>📚 Tao Gang Selfie Spec (JSON)</h4>
-          <p>Structured prompt parameters for batch generation:</p>
-          <div class="prompt-code">
-{
-  "character": "Tao Gang Member",
-  "shot_type": "selfie",
-  "mood": "confident",
-  "lighting": "neon_glow",
-  "background": "urban_dungeon",
-  "style_tags": ["soul_knight", "pixel_art", "vibrant"]
-}
-          </div>
+      <div class="grid-sheets rv">
+        <figure>
+          <a class="plate sheet" data-lb data-src="the_pantheon_of_three/the_pantheon_of_three_model_sheets/costume_prince_model_sheet.png" data-title="Costume Prince" data-file="the_pantheon_of_three_model_sheets/costume_prince_model_sheet.png">
+            <img src="the_pantheon_of_three/the_pantheon_of_three_model_sheets/costume_prince_model_sheet.png" alt="Costume Prince model sheet" loading="lazy" decoding="async"><span class="corner"></span>
+          </a>
+          <figcaption class="caption"><h4>Costume Prince</h4><div class="meta">costume_prince_model_sheet.png</div></figcaption>
+        </figure>
+        <figure>
+          <a class="plate sheet" data-lb data-src="the_pantheon_of_three/the_pantheon_of_three_model_sheets/warliege_model_sheet.png" data-title="Warliege" data-file="the_pantheon_of_three_model_sheets/warliege_model_sheet.png">
+            <img src="the_pantheon_of_three/the_pantheon_of_three_model_sheets/warliege_model_sheet.png" alt="Warliege model sheet" loading="lazy" decoding="async"><span class="corner"></span>
+          </a>
+          <figcaption class="caption"><h4>Warliege</h4><div class="meta">warliege_model_sheet.png</div></figcaption>
+        </figure>
+        <figure>
+          <a class="plate sheet" data-lb data-src="the_pantheon_of_three/the_pantheon_of_three_model_sheets/trickster_model_sheet.png" data-title="Trickster" data-file="the_pantheon_of_three_model_sheets/trickster_model_sheet.png">
+            <img src="the_pantheon_of_three/the_pantheon_of_three_model_sheets/trickster_model_sheet.png" alt="Trickster model sheet" loading="lazy" decoding="async"><span class="corner"></span>
+          </a>
+          <figcaption class="caption"><h4>Trickster</h4><div class="meta">trickster_model_sheet.png</div></figcaption>
+        </figure>
+        <figure>
+          <a class="plate sheet" data-lb data-src="the_pantheon_of_three/the_pantheon_of_three_model_sheets/trickster_model_sheet_2.png" data-title="Trickster, second pass" data-file="the_pantheon_of_three_model_sheets/trickster_model_sheet_2.png">
+            <img src="the_pantheon_of_three/the_pantheon_of_three_model_sheets/trickster_model_sheet_2.png" alt="Trickster model sheet, second pass" loading="lazy" decoding="async"><span class="corner"></span>
+          </a>
+          <figcaption class="caption"><h4>Trickster, second pass</h4><div class="meta">trickster_model_sheet_2.png</div></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 05 CAST ===================== -->
+  <section class="band" id="cast">
+    <div class="shell">
+      <div class="head rv">
+        <div class="idx">05</div>
+        <div>
+          <p class="kicker">Reference library</p>
+          <h2>The <em>cast</em></h2>
+          <p class="sub">Thirty four sheets across three casts, each drawn as a full turnaround so a prompt can be held to the front, both profiles, and the back. Select any sheet to read it at full size.</p>
         </div>
       </div>
-    </section>
 
-    <!-- ===== REPO STRUCTURE ===== -->
-    <section id="structure">
-      <h2>📁 Repository Structure</h2>
-      <p>Organized for easy navigation, version control, and collaboration.</p>
-      
-      <div class="folder-grid">
-        <div class="folder-card">
-          <h4>🗡️ KnightGangRefs/</h4>
-          <p>Core reference sheets for Knight Gang characters. Ensures visual consistency across panels.</p>
-        </div>
-        <div class="folder-card">
-          <h4>☯️ TaoGang_ModelSheets/</h4>
-          <p>Model sheets for Tao Gang cast. Perfect for pose, outfit, and proportion reference.</p>
-        </div>
-        <div class="folder-card">
-          <h4>🎁 no_discord_no_concord_assets/</h4>
-          <p>Curated misc assets originally bundled to bypass Discord upload limits.</p>
-        </div>
-        <div class="folder-card">
-          <h4>🎭 scene_introduce_rogue_to_tao_gang/</h4>
-          <p>Storyboard assets and prompts for the "Rogue meets Tao Gang" narrative scene.</p>
-        </div>
-        <div class="folder-card">
-          <h4>🤳 selfie_prompt_modules/</h4>
-          <p>Reusable prompt blocks for character-focused selfie-style shots.</p>
-        </div>
-        <div class="folder-card featured">
-          <h4>📰 tao_gang_meetup_comic_assets/</h4>
-          <p><strong>Featured!</strong> Multi-panel comic generation assets with continuity-preserving prompts and stunning sequential art.</p>
+      <div class="tabs rv" role="tablist" aria-label="Character collections">
+        <button class="tab" role="tab" aria-selected="true" aria-controls="p-knight" id="t-knight">Knight Gang<sup>20</sup></button>
+        <button class="tab" role="tab" aria-selected="false" aria-controls="p-tao" id="t-tao">Tao Gang<sup>10</sup></button>
+        <button class="tab" role="tab" aria-selected="false" aria-controls="p-group" id="t-group">Group plates<sup>02</sup></button>
+      </div>
+
+      <!-- Knight Gang -->
+      <div class="panel rv" id="p-knight" role="tabpanel" aria-labelledby="t-knight">
+        <div class="grid-sheets">
+          <figure><a class="plate sheet" data-lb data-src="KnightGangRefs/knight_model_sheet.png" data-title="Knight" data-file="KnightGangRefs/knight_model_sheet.png"><img src="KnightGangRefs/knight_model_sheet.png" alt="Knight model sheet" loading="lazy" decoding="async"><span class="corner"></span></a><figcaption class="caption"><h4>Knight</h4><div class="meta">knight_model_sheet.png</div></figcaption></figure>
+          <figure><a class="plate sheet" data-lb data-src="KnightGangRefs/rogue_model_sheet.png" data-title="Rogue" data-file="KnightGangRefs/rogue_model_sheet.png"><img src="KnightGangRefs/rogue_model_sheet.png" alt="Rogue model sheet" loading="lazy" decoding="async"><span class="corner"></span></a><figcaption class="caption"><h4>Rogue</h4><div class="meta">rogue_model_sheet.png</div></figcaption></figure>
+          <figure><a class="plate sheet" data-lb data-src="KnightGangRefs/wizard_model_sheet.png" data-title="Wizard" data-file="KnightGangRefs/wizard_model_sheet.png"><img src="KnightGangRefs/wizard_model_sheet.png" alt="Wizard model sheet" loading="lazy" decoding="async"><span class="corner"></span></a><figcaption class="caption"><h4>Wizard</h4><div class="meta">wizard_model_sheet.png</div></figcaption></figure>
+          <figure><a class="plate sheet" data-lb data-src="KnightGangRefs/assassin_model_sheet.png" data-title="Assassin" data-file="KnightGangRefs/assassin_model_sheet.png"><img src="KnightGangRefs/assassin_model_sheet.png" alt="Assassin model sheet" loading="lazy" decoding="async"><span class="corner"></span></a><figcaption class="caption"><h4>Assassin</h4><div class="meta">assassin_model_sheet.png</div></figcaption></figure>
+          <figure><a class="plate sheet" data-lb data-src="KnightGangRefs/paladin_model_sheet.png" data-title="Paladin" data-file="KnightGangRefs/paladin_model_sheet.png"><img src="KnightGangRefs/paladin_model_sheet.png" alt="Paladin model sheet" loading="lazy" decoding="async"><span class="corner"></span></a><figcaption class="caption"><h4>Paladin</h4><div class="meta">paladin_model_sheet.png</div></figcaption></figure>
+          <figure><a class="plate sheet" data-lb data-src="KnightGangRefs/priestess_model_sheet.png" data-title="Priestess" data-file="KnightGangRefs/priestess_model_sheet.png"><img src="KnightGangRefs/priestess_model_sheet.png" alt="Priestess model sheet" loading="lazy" decoding="async"><span class="corner"></span></a><figcaption class="caption"><h4>Priestess</h4><div class="meta">priestess_model_sheet.png</div></figcaption></figure>
+          <figure><a class="plate sheet" data-lb data-src="KnightGangRefs/berserker_model_sheet.png" data-title="Berserker" data-file="KnightGangRefs/berserker_model_sheet.png"><img src="KnightGangRefs/berserker_model_sheet.png" alt="Berserker model sheet" loading="lazy" decoding="async"><span class="corner"></span></a><figcaption class="caption"><h4>Berserker</h4><div class="meta">berserker_model_sheet.png</div></figcaption></figure>
+          <figure><a class="plate sheet" data-lb data-src="KnightGangRefs/necromancer_model_sheet.png" data-title="Necromancer" data-file="KnightGangRefs/necromancer_model_sheet.png"><img src="KnightGangRefs/necromancer_model_sheet.png" alt="Necromancer model sheet" loading="lazy" decoding="async"><span class="corner"></span></a><figcaption class="caption"><h4>Necromancer</h4><div class="meta">necromancer_model_sheet.png</div></figcaption></figure>
+          <figure><a class="plate sheet" data-lb data-src="KnightGangRefs/demonmancer_model_sheet.jpeg" data-title="Demonmancer" data-file="KnightGangRefs/demonmancer_model_sheet.jpeg"><img src="KnightGangRefs/demonmancer_model_sheet.jpeg" alt="Demonmancer model sheet" loading="lazy" decoding="async"><span class="corner"></span></a><figcaption class="caption"><h4>Demonmancer</h4><div class="meta">demonmancer_model_sheet.jpeg</div></figcaption></figure>
+          <figure><a class="plate sheet" data-lb data-src="KnightGangRefs/alchemist_model_sheet.png" data-title="Alchemist" data-file="KnightGangRefs/alchemist_model_sheet.png"><img src="KnightGangRefs/alchemist_model_sheet.png" alt="Alchemist model sheet" loading="lazy" decoding="async"><span class="corner"></span></a><figcaption class="caption"><h4>Alchemist</h4><div class="meta">alchemist_model_sheet.png</div></figcaption></figure>
+          <figure><a class="plate sheet" data-lb data-src="KnightGangRefs/druid_model_sheet.png" data-title="Druid" data-file="KnightGangRefs/druid_model_sheet.png"><img src="KnightGangRefs/druid_model_sheet.png" alt="Druid model sheet" loading="lazy" decoding="async"><span class="corner"></span></a><figcaption class="caption"><h4>Druid</h4><div class="meta">druid_model_sheet.png</div></figcaption></figure>
+          <figure><a class="plate sheet" data-lb data-src="KnightGangRefs/elf_model_sheet.png" data-title="Elf" data-file="KnightGangRefs/elf_model_sheet.png"><img src="KnightGangRefs/elf_model_sheet.png" alt="Elf model sheet" loading="lazy" decoding="async"><span class="corner"></span></a><figcaption class="caption"><h4>Elf</h4><div class="meta">elf_model_sheet.png</div></figcaption></figure>
+          <figure><a class="plate sheet" data-lb data-src="KnightGangRefs/element_envoy_model_sheet.jpeg" data-title="Element Envoy" data-file="KnightGangRefs/element_envoy_model_sheet.jpeg"><img src="KnightGangRefs/element_envoy_model_sheet.jpeg" alt="Element Envoy model sheet" loading="lazy" decoding="async"><span class="corner"></span></a><figcaption class="caption"><h4>Element Envoy</h4><div class="meta">element_envoy_model_sheet.jpeg</div></figcaption></figure>
+          <figure><a class="plate sheet" data-lb data-src="KnightGangRefs/vampire_model_sheet.png" data-title="Vampire" data-file="KnightGangRefs/vampire_model_sheet.png"><img src="KnightGangRefs/vampire_model_sheet.png" alt="Vampire model sheet" loading="lazy" decoding="async"><span class="corner"></span></a><figcaption class="caption"><h4>Vampire</h4><div class="meta">vampire_model_sheet.png</div></figcaption></figure>
+          <figure><a class="plate sheet" data-lb data-src="KnightGangRefs/werewolf_model_sheet.png" data-title="Werewolf" data-file="KnightGangRefs/werewolf_model_sheet.png"><img src="KnightGangRefs/werewolf_model_sheet.png" alt="Werewolf model sheet" loading="lazy" decoding="async"><span class="corner"></span></a><figcaption class="caption"><h4>Werewolf</h4><div class="meta">werewolf_model_sheet.png</div></figcaption></figure>
+          <figure><a class="plate sheet" data-lb data-src="KnightGangRefs/robot_model_sheet.png" data-title="Robot" data-file="KnightGangRefs/robot_model_sheet.png"><img src="KnightGangRefs/robot_model_sheet.png" alt="Robot model sheet" loading="lazy" decoding="async"><span class="corner"></span></a><figcaption class="caption"><h4>Robot</h4><div class="meta">robot_model_sheet.png</div></figcaption></figure>
+          <figure><a class="plate sheet" data-lb data-src="KnightGangRefs/engineer_model_sheet.png" data-title="Engineer" data-file="KnightGangRefs/engineer_model_sheet.png"><img src="KnightGangRefs/engineer_model_sheet.png" alt="Engineer model sheet" loading="lazy" decoding="async"><span class="corner"></span></a><figcaption class="caption"><h4>Engineer</h4><div class="meta">engineer_model_sheet.png</div></figcaption></figure>
+          <figure><a class="plate sheet" data-lb data-src="KnightGangRefs/officer_model_sheet.png" data-title="Officer" data-file="KnightGangRefs/officer_model_sheet.png"><img src="KnightGangRefs/officer_model_sheet.png" alt="Officer model sheet" loading="lazy" decoding="async"><span class="corner"></span></a><figcaption class="caption"><h4>Officer</h4><div class="meta">officer_model_sheet.png</div></figcaption></figure>
+          <figure><a class="plate sheet" data-lb data-src="KnightGangRefs/time_traveling_ninja_model_sheet.png" data-title="Time Traveling Ninja" data-file="KnightGangRefs/time_traveling_ninja_model_sheet.png"><img src="KnightGangRefs/time_traveling_ninja_model_sheet.png" alt="Time Traveling Ninja model sheet" loading="lazy" decoding="async"><span class="corner"></span></a><figcaption class="caption"><h4>Time Traveling Ninja</h4><div class="meta">time_traveling_ninja_model_sheet.png</div></figcaption></figure>
+          <figure><a class="plate sheet" data-lb data-src="KnightGangRefs/interdimensional_traveler_model_sheet.png" data-title="Interdimensional Traveler" data-file="KnightGangRefs/interdimensional_traveler_model_sheet.png"><img src="KnightGangRefs/interdimensional_traveler_model_sheet.png" alt="Interdimensional Traveler model sheet" loading="lazy" decoding="async"><span class="corner"></span></a><figcaption class="caption"><h4>Interdimensional Traveler</h4><div class="meta">interdimensional_traveler_model_sheet.png</div></figcaption></figure>
         </div>
       </div>
-    </section>
 
-    <!-- ===== CALL TO ACTION ===== -->
-    <section class="cta-section">
-      <h2>🚀 Start Creating Today</h2>
-      <p style="font-size: 1.1rem; max-width: 700px; margin: 0 auto 1rem;">
-        Clone the repository and breathe fresh life into your Soul Knight fanart with professional-grade references and prompts.
+      <!-- Tao Gang -->
+      <div class="panel rv" id="p-tao" role="tabpanel" aria-labelledby="t-tao" hidden>
+        <div class="grid-sheets">
+          <figure><a class="plate sheet" data-lb data-src="TaoGang_ModelSheets/sword_master_model_sheet.png" data-title="Sword Master" data-file="TaoGang_ModelSheets/sword_master_model_sheet.png"><img src="TaoGang_ModelSheets/sword_master_model_sheet.png" alt="Sword Master model sheet" loading="lazy" decoding="async"><span class="corner"></span></a><figcaption class="caption"><h4>Sword Master</h4><div class="meta">sword_master_model_sheet.png</div></figcaption></figure>
+          <figure><a class="plate sheet" data-lb data-src="TaoGang_ModelSheets/sword_master_model_sheet_unarmed.jpeg" data-title="Sword Master, unarmed" data-file="TaoGang_ModelSheets/sword_master_model_sheet_unarmed.jpeg"><img src="TaoGang_ModelSheets/sword_master_model_sheet_unarmed.jpeg" alt="Sword Master model sheet without weapon" loading="lazy" decoding="async"><span class="corner"></span></a><figcaption class="caption"><h4>Sword Master, unarmed</h4><div class="meta">sword_master_model_sheet_unarmed.jpeg</div></figcaption></figure>
+          <figure><a class="plate sheet" data-lb data-src="TaoGang_ModelSheets/lancer_model_sheet.png" data-title="Lancer" data-file="TaoGang_ModelSheets/lancer_model_sheet.png"><img src="TaoGang_ModelSheets/lancer_model_sheet.png" alt="Lancer model sheet" loading="lazy" decoding="async"><span class="corner"></span></a><figcaption class="caption"><h4>Lancer</h4><div class="meta">lancer_model_sheet.png</div></figcaption></figure>
+          <figure><a class="plate sheet" data-lb data-src="TaoGang_ModelSheets/rogue_model_sheet.png" data-title="Rogue" data-file="TaoGang_ModelSheets/rogue_model_sheet.png"><img src="TaoGang_ModelSheets/rogue_model_sheet.png" alt="Rogue model sheet" loading="lazy" decoding="async"><span class="corner"></span></a><figcaption class="caption"><h4>Rogue</h4><div class="meta">rogue_model_sheet.png</div></figcaption></figure>
+          <figure><a class="plate sheet" data-lb data-src="TaoGang_ModelSheets/airbender_model_sheet.png" data-title="Airbender" data-file="TaoGang_ModelSheets/airbender_model_sheet.png"><img src="TaoGang_ModelSheets/airbender_model_sheet.png" alt="Airbender model sheet" loading="lazy" decoding="async"><span class="corner"></span></a><figcaption class="caption"><h4>Airbender</h4><div class="meta">airbender_model_sheet.png</div></figcaption></figure>
+          <figure><a class="plate sheet" data-lb data-src="TaoGang_ModelSheets/evil_airbender_model_sheet.png" data-title="Airbender, turbid qi" data-file="TaoGang_ModelSheets/evil_airbender_model_sheet.png"><img src="TaoGang_ModelSheets/evil_airbender_model_sheet.png" alt="Evil Airbender model sheet" loading="lazy" decoding="async"><span class="corner"></span></a><figcaption class="caption"><h4>Airbender, turbid qi</h4><div class="meta">evil_airbender_model_sheet.png</div></figcaption></figure>
+          <figure><a class="plate sheet" data-lb data-src="TaoGang_ModelSheets/taoist_model_sheet.png" data-title="Taoist" data-file="TaoGang_ModelSheets/taoist_model_sheet.png"><img src="TaoGang_ModelSheets/taoist_model_sheet.png" alt="Taoist model sheet" loading="lazy" decoding="async"><span class="corner"></span></a><figcaption class="caption"><h4>Taoist</h4><div class="meta">taoist_model_sheet.png</div></figcaption></figure>
+          <figure><a class="plate sheet" data-lb data-src="TaoGang_ModelSheets/fighter_model_sheet.png" data-title="Fighter" data-file="TaoGang_ModelSheets/fighter_model_sheet.png"><img src="TaoGang_ModelSheets/fighter_model_sheet.png" alt="Fighter model sheet" loading="lazy" decoding="async"><span class="corner"></span></a><figcaption class="caption"><h4>Fighter</h4><div class="meta">fighter_model_sheet.png</div></figcaption></figure>
+          <figure><a class="plate sheet" data-lb data-src="TaoGang_ModelSheets/yin_yang_adept_model_sheet.png" data-title="Yin Yang Adept" data-file="TaoGang_ModelSheets/yin_yang_adept_model_sheet.png"><img src="TaoGang_ModelSheets/yin_yang_adept_model_sheet.png" alt="Yin Yang Adept model sheet" loading="lazy" decoding="async"><span class="corner"></span></a><figcaption class="caption"><h4>Yin Yang Adept</h4><div class="meta">yin_yang_adept_model_sheet.png</div></figcaption></figure>
+          <figure><a class="plate sheet" data-lb data-src="TaoGang_ModelSheets/yin_yang_adept_model_sheet_2.png" data-title="Yin Yang Adept, second pass" data-file="TaoGang_ModelSheets/yin_yang_adept_model_sheet_2.png"><img src="TaoGang_ModelSheets/yin_yang_adept_model_sheet_2.png" alt="Yin Yang Adept model sheet, second pass" loading="lazy" decoding="async"><span class="corner"></span></a><figcaption class="caption"><h4>Yin Yang Adept, second pass</h4><div class="meta">yin_yang_adept_model_sheet_2.png</div></figcaption></figure>
+        </div>
+      </div>
+
+      <!-- Group plates -->
+      <div class="panel rv" id="p-group" role="tabpanel" aria-labelledby="t-group" hidden>
+        <div class="grid-sheets">
+          <figure>
+            <a class="plate" data-lb data-src="knight-gang-selfie-assets/knight-gang-selfie-images/knight-gang-founding-four-selfie.png" data-title="The founding four" data-file="knight-gang-selfie-images/knight-gang-founding-four-selfie.png">
+              <img src="knight-gang-selfie-assets/knight-gang-selfie-images/knight-gang-founding-four-selfie.png" alt="Knight, Rogue, Wizard and Assassin posed together for a selfie" loading="lazy" decoding="async"><span class="corner"></span>
+            </a>
+            <figcaption class="caption">
+              <h4>The founding four</h4>
+              <p>Knight, Rogue, Wizard, and Assassin at arm's length in an empty room. One of them holds the camera, and the camera itself never enters the frame.</p>
+            </figcaption>
+          </figure>
+          <figure>
+            <a class="plate" data-lb data-src="no_discord_no_concord_assets/setting_reference_images/no_discord_no_concord.png" data-title="No Discord, No Concord" data-file="setting_reference_images/no_discord_no_concord.png">
+              <img src="no_discord_no_concord_assets/setting_reference_images/no_discord_no_concord.png" alt="The Rogue charging the turbid Airbender among golden pyramids" loading="lazy" decoding="async"><span class="corner"></span>
+            </a>
+            <figcaption class="caption">
+              <h4>No Discord, No Concord</h4>
+              <p>The setting plate for an eight second confrontation. Silver and red blades against turbid qi, staged among light gold Maya pyramids and coconut palms.</p>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 06 PROMPTS ===================== -->
+  <section class="band" id="prompts">
+    <div class="shell">
+      <div class="head rv">
+        <div class="idx">06</div>
+        <div>
+          <p class="kicker">Prompt library</p>
+          <h2>How a shot is <em>specified</em></h2>
+          <p class="sub">Twenty two files describe the rendering, the staging, and the rules that must never bend. These are verbatim excerpts. Select a file to read it, and copy it straight into your own pipeline.</p>
+        </div>
+      </div>
+
+      <div class="reader rv">
+        <div class="reader-list" role="tablist" aria-label="Prompt files">
+
+          <button class="file" role="tab" aria-selected="true" data-doc="doc-authority">
+            <b>Sheet authority</b>
+            <span>tao_gang_selfie_spec.json</span>
+          </button>
+
+          <button class="file" role="tab" aria-selected="false" data-doc="doc-walk">
+            <b>Staging rules</b>
+            <span>the_pantheon_of_three_spotlight_walk_prompt_file.xml</span>
+          </button>
+
+          <button class="file" role="tab" aria-selected="false" data-doc="doc-continuity">
+            <b>Panel continuity</b>
+            <span>rogueIntro_globalContinuity_rootScene.txt</span>
+          </button>
+
+          <button class="file" role="tab" aria-selected="false" data-doc="doc-parse">
+            <b>Scene parser</b>
+            <span>visual_parse_schema.txt</span>
+          </button>
+
+        </div>
+
+        <div class="reader-view">
+          <div class="reader-bar">
+            <span class="tag" id="docTag">json · excerpt</span>
+            <button class="copy" id="copyBtn"><span>Copy</span></button>
+          </div>
+
+<pre id="doc-authority"><code><span class="c">{</span>
+  <span class="t">"model_sheet_authority"</span><span class="c">:</span> <span class="c">{</span>
+    <span class="t">"priority_level"</span><span class="c">:</span> <span class="v">"critical"</span><span class="c">,</span>
+    <span class="t">"source_count"</span><span class="c">:</span> <span class="v">7</span><span class="c">,</span>
+    <span class="t">"authority_source"</span><span class="c">:</span> <span class="v">"Model sheets are the sole and exclusive
+                          reference for all visual attributes."</span><span class="c">,</span>
+    <span class="t">"restrictions"</span><span class="c">:</span> <span class="c">[</span>
+      <span class="v">"Use the exact facial structure and features shown in the
+        model sheets. No deviations."</span><span class="c">,</span>
+      <span class="v">"Use the exact eye shapes and colors only. No substitutions."</span><span class="c">,</span>
+      <span class="v">"Use the exact hair colors, lengths, styles, bangs, and
+        accessories only. No alterations."</span><span class="c">,</span>
+      <span class="v">"Use the exact clothing, fabrics, patterns, and armor only.
+        No redesigns."</span><span class="c">,</span>
+      <span class="v">"Use the exact body proportions and height relationships only.
+        No reinterpretation."</span><span class="c">,</span>
+      <span class="v">"No invented, modified, or omitted details under any
+        circumstances."</span>
+    <span class="c">]</span><span class="c">,</span>
+    <span class="t">"retrieval_emphasis"</span><span class="c">:</span> <span class="c">[</span>
+      <span class="v">"No attribute may appear unless it exists in the model sheets."</span><span class="c">,</span>
+      <span class="v">"No hallucinated clothing, accessories, colors, or features."</span><span class="c">,</span>
+      <span class="k">"Model sheet fidelity overrides all other instructions
+        without exception."</span>
+    <span class="c">]</span>
+  <span class="c">}</span>
+<span class="c">}</span></code></pre>
+
+<pre id="doc-walk" hidden><code><span class="c">&lt;</span><span class="t">global_rules</span><span class="c">&gt;</span>
+
+  <span class="c">&lt;</span><span class="t">five_finger_rule</span><span class="c">&gt;</span>
+    <span class="c">&lt;</span><span class="t">rule</span><span class="c">&gt;</span><span class="v">All characters MUST have exactly five fingers on each hand.</span><span class="c">&lt;/</span><span class="t">rule</span><span class="c">&gt;</span>
+    <span class="c">&lt;</span><span class="t">rule</span><span class="c">&gt;</span><span class="v">Each finger MUST be fully separated with correct anatomy.</span><span class="c">&lt;/</span><span class="t">rule</span><span class="c">&gt;</span>
+    <span class="c">&lt;</span><span class="t">priority</span><span class="c">&gt;</span><span class="k">HARD_OVERRIDE</span><span class="c">&lt;/</span><span class="t">priority</span><span class="c">&gt;</span>
+  <span class="c">&lt;/</span><span class="t">five_finger_rule</span><span class="c">&gt;</span>
+
+  <span class="c">&lt;</span><span class="t">depth_levels</span><span class="c">&gt;</span>
+    <span class="c">&lt;</span><span class="t">costume_prince</span><span class="c">&gt;</span><span class="v">LEVEL_1</span><span class="c">&lt;/</span><span class="t">costume_prince</span><span class="c">&gt;</span>
+    <span class="c">&lt;</span><span class="t">warliege</span><span class="c">&gt;</span><span class="v">LEVEL_2</span><span class="c">&lt;/</span><span class="t">warliege</span><span class="c">&gt;</span>
+    <span class="c">&lt;</span><span class="t">trickster</span><span class="c">&gt;</span><span class="v">LEVEL_2</span><span class="c">&lt;/</span><span class="t">trickster</span><span class="c">&gt;</span>
+    <span class="c">&lt;</span><span class="t">rule</span><span class="c">&gt;</span><span class="v">Warliege and Trickster share the same depth plane.</span><span class="c">&lt;/</span><span class="t">rule</span><span class="c">&gt;</span>
+    <span class="c">&lt;</span><span class="t">rule</span><span class="c">&gt;</span><span class="v">Costume Prince overlaps both Level 2 characters.</span><span class="c">&lt;/</span><span class="t">rule</span><span class="c">&gt;</span>
+  <span class="c">&lt;/</span><span class="t">depth_levels</span><span class="c">&gt;</span>
+
+  <span class="c">&lt;</span><span class="t">height</span><span class="c">&gt;</span><span class="v">All characters are 5_11 with aligned eye levels.</span><span class="c">&lt;/</span><span class="t">height</span><span class="c">&gt;</span>
+
+  <span class="c">&lt;</span><span class="t">reference_rules</span><span class="c">&gt;</span>
+    <span class="c">&lt;</span><span class="t">rule</span><span class="c">&gt;</span><span class="v">All clothing, accessories, weapons, and appearance
+          match reference sheets exactly.</span><span class="c">&lt;/</span><span class="t">rule</span><span class="c">&gt;</span>
+    <span class="c">&lt;</span><span class="t">rule</span><span class="c">&gt;</span><span class="k">No redesigns, no missing items, no new items.</span><span class="c">&lt;/</span><span class="t">rule</span><span class="c">&gt;</span>
+  <span class="c">&lt;/</span><span class="t">reference_rules</span><span class="c">&gt;</span>
+
+<span class="c">&lt;/</span><span class="t">global_rules</span><span class="c">&gt;</span></code></pre>
+
+<pre id="doc-continuity" hidden><code><span class="c">&lt;</span><span class="t">identificationRules</span><span class="c">&gt;</span>
+  <span class="c">&lt;</span><span class="t">step</span><span class="c">&gt;</span><span class="v">Analyze all three images before generating any panel.</span><span class="c">&lt;/</span><span class="t">step</span><span class="c">&gt;</span>
+  <span class="c">&lt;</span><span class="t">step</span><span class="c">&gt;</span><span class="v">Identify the SWORDMASTER model sheet (Image 1).</span><span class="c">&lt;/</span><span class="t">step</span><span class="c">&gt;</span>
+  <span class="c">&lt;</span><span class="t">step</span><span class="c">&gt;</span><span class="v">Identify the LANCER model sheet (Image 2).</span><span class="c">&lt;/</span><span class="t">step</span><span class="c">&gt;</span>
+  <span class="c">&lt;</span><span class="t">step</span><span class="c">&gt;</span><span class="v">Identify the start scene environment reference (Image 0).</span><span class="c">&lt;/</span><span class="t">step</span><span class="c">&gt;</span>
+  <span class="c">&lt;</span><span class="t">step</span><span class="c">&gt;</span><span class="v">Use these assignments consistently for all panels.</span><span class="c">&lt;/</span><span class="t">step</span><span class="c">&gt;</span>
+<span class="c">&lt;/</span><span class="t">identificationRules</span><span class="c">&gt;</span>
+
+<span class="c">&lt;</span><span class="t">retrievalRules</span><span class="c">&gt;</span>
+  <span class="c">&lt;</span><span class="t">rule</span><span class="c">&gt;</span><span class="v">Characters must match their model sheets exactly.</span><span class="c">&lt;/</span><span class="t">rule</span><span class="c">&gt;</span>
+  <span class="c">&lt;</span><span class="t">rule</span><span class="c">&gt;</span><span class="v">Environment must match the start scene exactly.</span><span class="c">&lt;/</span><span class="t">rule</span><span class="c">&gt;</span>
+  <span class="c">&lt;</span><span class="t">rule</span><span class="c">&gt;</span><span class="v">No new outfits, colors, or missing accessories.</span><span class="c">&lt;/</span><span class="t">rule</span><span class="c">&gt;</span>
+  <span class="c">&lt;</span><span class="t">rule</span><span class="c">&gt;</span><span class="v">Maintain perfect recognition continuity across all panels.</span><span class="c">&lt;/</span><span class="t">rule</span><span class="c">&gt;</span>
+  <span class="c">&lt;</span><span class="t">rule</span><span class="c">&gt;</span><span class="k">CRITICAL: Weapons are STATIC PROPS. Do not generate
+        characters holding weapons unless specified.</span><span class="c">&lt;/</span><span class="t">rule</span><span class="c">&gt;</span>
+<span class="c">&lt;/</span><span class="t">retrievalRules</span><span class="c">&gt;</span>
+
+<span class="c">&lt;</span><span class="t">environment</span><span class="c">&gt;</span>
+  <span class="c">&lt;</span><span class="t">continuity</span><span class="c">&gt;</span><span class="v">match SCENE_CANON lighting, palette, and layout</span><span class="c">&lt;/</span><span class="t">continuity</span><span class="c">&gt;</span>
+<span class="c">&lt;/</span><span class="t">environment</span><span class="c">&gt;</span></code></pre>
+
+<pre id="doc-parse" hidden><code><span class="v">Analyze this image and convert all visually observable information
+into a highly detailed, structured JSON format.</span>
+
+<span class="t">Your analysis must isolate:</span>
+  <span class="c">1.</span> All inanimate objects (furniture, decor, architecture, props)
+  <span class="c">2.</span> All animate entities (humans, animals, fictional characters)
+  <span class="c">3.</span> All environmental and compositional elements
+     (lighting, shadows, reflections, depth, perspective)
+
+<span class="k">When uncertain, do NOT guess.</span>
+If any detail cannot be visually confirmed, explicitly mark it as:
+  <span class="v">"unknown"</span><span class="c">,</span> <span class="v">"partially_visible"</span><span class="c">,</span> or <span class="v">"occluded"</span><span class="c">.</span>
+
+<span class="k">Never invent details.</span>
+
+<span class="t">For each object, extract:</span>
+  <span class="c">·</span> name, color, material, position_in_room, object_state
+  <span class="c">·</span> texture_details: pattern_type, pattern_scale, surface_texture
+  <span class="c">·</span> material_optics: reflectivity, transparency, glossiness
+  <span class="c">·</span> object_relationships: supported_by, attached_to,
+    contained_within, overlapping_with</code></pre>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 07 REPOSITORY ===================== -->
+  <section class="band" id="repo">
+    <div class="shell">
+      <div class="head rv">
+        <div class="idx">07</div>
+        <div>
+          <p class="kicker">Repository</p>
+          <h2>Where everything <em>lives</em></h2>
+          <p class="sub">Eight folders at the top level. Nothing is zipped, nothing is hidden behind an upload limit, and every change to the canon is a commit you can read.</p>
+        </div>
+      </div>
+
+      <div class="map rv">
+
+        <article class="node">
+          <div class="path"><b>KnightGangRefs</b>/</div>
+          <p>Full turnarounds for the Knight Gang, from the founding four through the Werewolf, the Robot, and the Interdimensional Traveler.</p>
+          <div class="count">20 sheets</div>
+        </article>
+
+        <article class="node">
+          <div class="path"><b>TaoGang_ModelSheets</b>/</div>
+          <p>The monastery cast, including an unarmed pass on the Sword Master and a second reading of the Yin Yang Adept.</p>
+          <div class="count">10 sheets</div>
+        </article>
+
+        <article class="node">
+          <div class="path"><b>the_pantheon_of_three</b>/</div>
+          <p>Sheets, a four file prompt library, and two scene renders for the trio, with the hall kept as a separate cleared plate.</p>
+          <div class="count">10 files</div>
+        </article>
+
+        <article class="node">
+          <div class="path"><b>tao_gang_meetup_comic_assets</b>/</div>
+          <p>Three finished plates and the continuity prompts that produced them, split by the beat each one covers.</p>
+          <div class="count">6 files</div>
+        </article>
+
+        <article class="node">
+          <div class="path"><b>scene_introduce_rogue_to_tao_gang</b>/</div>
+          <p>The largest folder. Opening, transition, and closing frames, three segment scripts in several dialects, the setting extraction schema, four takes, and the dialogue.</p>
+          <div class="count">22 files</div>
+        </article>
+
+        <article class="node">
+          <div class="path"><b>knight-gang-selfie-assets</b>/</div>
+          <p>The founding four group shot and the request that built it, down to who holds the camera and where the device has to be.</p>
+          <div class="count">2 files</div>
+        </article>
+
+        <article class="node">
+          <div class="path"><b>no_discord_no_concord_assets</b>/</div>
+          <p>Setting plate and an eight second video prompt for the confrontation among the ruins, shot by shot with timings.</p>
+          <div class="count">2 files</div>
+        </article>
+
+        <article class="node">
+          <div class="path"><b>selfie_prompt_modules</b>/</div>
+          <p>The reusable selfie request in both XML and JSON, carrying the sheet authority block that the rest of the library leans on.</p>
+          <div class="count">2 files</div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CLOSING ===================== -->
+  <section class="closing">
+    <div class="shell">
+      <h2 class="rv">Take it and <em>keep going</em></h2>
+      <p class="rv">Fork it, extend a cast, add a scene pack. The only rule that travels with the files is the one that made them work.</p>
+      <div class="rv">
+        <div class="terminal">
+          <code><b>git clone</b> https://github.com/Funny-Youngster/SKFanartShotSource.git</code>
+          <button class="copy" id="cloneBtn"><span>Copy</span></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="shell">
+    <div class="foot">
+      <p class="legal">Soul Knight is a trademark of ChillyRoom. This is an unofficial archive built by fans and carries no affiliation with the studio.</p>
+      <p>Kept by
+        <a href="https://github.com/Funny-Youngster" target="_blank" rel="noopener">@Funny-Youngster</a> and
+        <a href="https://github.com/LostInHustle" target="_blank" rel="noopener">@LostInHustle</a>
       </p>
-      
-      <div class="cta-buttons">
-        <a href="https://github.com/Funny-Youngster/SKFanartShotSource.git" class="btn btn-primary" target="_blank">
-          <span>⬇️</span>
-          <span>Clone Repository</span>
-        </a>
-        <a href="https://github.com/Funny-Youngster/SKFanartShotSource" class="btn btn-secondary" target="_blank">
-          <span>🔍</span>
-          <span>Browse on GitHub</span>
-        </a>
-      </div>
-      
-      <div class="git-command">
-        <code>git clone https://github.com/Funny-Youngster/SKFanartShotSource.git</code>
-      </div>
-    </section>
+    </div>
+  </div>
+</footer>
 
-  </main>
+<!-- ===================== LIGHTBOX ===================== -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <button class="lb-close" id="lbClose" aria-label="Close viewer">✕</button>
+  <button class="lb-nav lb-prev" id="lbPrev" aria-label="Previous image">‹</button>
+  <button class="lb-nav lb-next" id="lbNext" aria-label="Next image">›</button>
+  <img id="lbImg" src="" alt="">
+  <div class="lb-cap">
+    <h5 id="lbTitle"></h5>
+    <span id="lbFile"></span>
+  </div>
+</div>
 
-  <!-- ===== FOOTER ===== -->
-  <footer>
-    <p>
-      <strong>SKFanartShotSource</strong> • Fresh Soul Knight Creative Assets<br>
-      Maintained by <a href="https://github.com/Funny-Youngster" target="_blank">@Funny-Youngster</a> & 
-      <a href="https://github.com/LostInHustle" target="_blank">@LostInHustle</a>
-    </p>
-    <p style="margin-top: 0.5rem; font-size: 0.92rem;">
-      🎮 Soul Knight is a trademark of ChillyRoom. This is a fan-made resource project.
-    </p>
-  </footer>
+<script>
+(function(){
+  'use strict';
 
-  <!-- ===== INTERACTIONS ===== -->
-  <script>
-    // Smooth scroll
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  /* ---- scroll progress + pinned bar ---- */
+  var rail = document.getElementById('railFill');
+  var bar  = document.getElementById('topbar');
+  var tick = false;
+
+  function onScroll(){
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    var p = h > 0 ? window.scrollY / h : 0;
+    rail.style.width = (p * 100).toFixed(3) + '%';
+    bar.classList.toggle('pinned', window.scrollY > 40);
+    tick = false;
+  }
+  window.addEventListener('scroll', function(){
+    if(!tick){ tick = true; requestAnimationFrame(onScroll); }
+  }, {passive:true});
+  onScroll();
+
+  /* ---- reveal on scroll ---- */
+  var reveals = document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, {rootMargin:'0px 0px -8% 0px', threshold:0.06});
+    reveals.forEach(function(el){ io.observe(el); });
+  }else{
+    reveals.forEach(function(el){ el.classList.add('in'); });
+  }
+
+  /* ---- cast tabs ---- */
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('.tab'));
+  tabs.forEach(function(tab){
+    tab.addEventListener('click', function(){
+      tabs.forEach(function(t){
+        var panel = document.getElementById(t.getAttribute('aria-controls'));
+        var on = (t === tab);
+        t.setAttribute('aria-selected', on ? 'true' : 'false');
+        if(panel){
+          panel.hidden = !on;
+          if(on){ panel.classList.add('in'); }
         }
       });
     });
+  });
 
-    // Intersection Observer for animations
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.style.opacity = '1';
-          entry.target.style.transform = 'translateY(0)';
-        }
+  /* ---- filmstrip: drop the edge fade once it is scrolled to the end ---- */
+  document.querySelectorAll('.strip-wrap').forEach(function(wrap){
+    var strip = wrap.querySelector('.strip');
+    if(!strip) return;
+    function sync(){
+      var atEnd = strip.scrollLeft + strip.clientWidth >= strip.scrollWidth - 4;
+      wrap.setAttribute('data-end', atEnd ? 'true' : 'false');
+    }
+    strip.addEventListener('scroll', sync, {passive:true});
+    window.addEventListener('resize', sync);
+    sync();
+  });
+
+  /* ---- prompt reader ---- */
+  var files = Array.prototype.slice.call(document.querySelectorAll('.file'));
+  var docTag = document.getElementById('docTag');
+  var tagFor = {
+    'doc-authority':'json · excerpt',
+    'doc-walk':'xml · excerpt',
+    'doc-continuity':'xml · excerpt',
+    'doc-parse':'text · excerpt'
+  };
+  var current = 'doc-authority';
+
+  files.forEach(function(f){
+    f.addEventListener('click', function(){
+      var id = f.getAttribute('data-doc');
+      current = id;
+      files.forEach(function(o){
+        o.setAttribute('aria-selected', o === f ? 'true' : 'false');
       });
-    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-
-    document.querySelectorAll('section').forEach(section => {
-      section.style.opacity = '0';
-      section.style.transform = 'translateY(20px)';
-      section.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
-      observer.observe(section);
-    });
-
-    // Image fallback
-    document.querySelectorAll('img').forEach(img => {
-      img.addEventListener('error', function() {
-        this.style.display = 'none';
+      Object.keys(tagFor).forEach(function(k){
+        var pre = document.getElementById(k);
+        if(pre){ pre.hidden = (k !== id); }
       });
+      docTag.textContent = tagFor[id] || '';
     });
-  </script>
+  });
+
+  function flash(btn){
+    var label = btn.querySelector('span');
+    var old = label.textContent;
+    btn.classList.add('done');
+    label.textContent = 'Copied';
+    setTimeout(function(){
+      btn.classList.remove('done');
+      label.textContent = old;
+    }, 1800);
+  }
+
+  function copyText(text, btn){
+    if(navigator.clipboard && window.isSecureContext){
+      navigator.clipboard.writeText(text).then(function(){ flash(btn); });
+    }else{
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      try{ document.execCommand('copy'); flash(btn); }catch(err){}
+      document.body.removeChild(ta);
+    }
+  }
+
+  document.getElementById('copyBtn').addEventListener('click', function(){
+    var pre = document.getElementById(current);
+    if(pre){ copyText(pre.innerText, this); }
+  });
+
+  document.getElementById('cloneBtn').addEventListener('click', function(){
+    copyText('git clone https://github.com/Funny-Youngster/SKFanartShotSource.git', this);
+  });
+
+  /* ---- lightbox ---- */
+  var lb      = document.getElementById('lightbox');
+  var lbImg   = document.getElementById('lbImg');
+  var lbTitle = document.getElementById('lbTitle');
+  var lbFile  = document.getElementById('lbFile');
+  var plates  = Array.prototype.slice.call(document.querySelectorAll('[data-lb]'));
+  var index   = 0;
+  var lastFocus = null;
+
+  function show(i){
+    var visible = plates.filter(function(p){ return p.offsetParent !== null; });
+    if(!visible.length) return;
+    index = (i + visible.length) % visible.length;
+    var p = visible[index];
+    lbImg.src = p.getAttribute('data-src');
+    lbImg.alt = p.getAttribute('data-title') || '';
+    lbTitle.textContent = p.getAttribute('data-title') || '';
+    lbFile.textContent  = p.getAttribute('data-file') || '';
+    lb.dataset.pool = visible.length;
+  }
+
+  function openAt(el){
+    var visible = plates.filter(function(p){ return p.offsetParent !== null; });
+    lastFocus = document.activeElement;
+    show(visible.indexOf(el));
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    document.getElementById('lbClose').focus();
+  }
+
+  function close(){
+    lb.classList.remove('open');
+    document.body.style.overflow = '';
+    setTimeout(function(){ lbImg.src = ''; }, 400);
+    if(lastFocus){ lastFocus.focus(); }
+  }
+
+  plates.forEach(function(p){
+    p.addEventListener('click', function(e){ e.preventDefault(); openAt(p); });
+  });
+
+  document.getElementById('lbClose').addEventListener('click', close);
+  document.getElementById('lbPrev').addEventListener('click', function(){ show(index - 1); });
+  document.getElementById('lbNext').addEventListener('click', function(){ show(index + 1); });
+  lb.addEventListener('click', function(e){ if(e.target === lb) close(); });
+
+  document.addEventListener('keydown', function(e){
+    if(!lb.classList.contains('open')) return;
+    if(e.key === 'Escape')     close();
+    if(e.key === 'ArrowLeft')  show(index - 1);
+    if(e.key === 'ArrowRight') show(index + 1);
+  });
+
+  /* ---- mark plates whose asset is missing instead of showing a broken icon ---- */
+  document.querySelectorAll('.plate img').forEach(function(img){
+    img.addEventListener('error', function(){
+      var host = img.closest('.plate');
+      if(!host) return;
+      host.style.cursor = 'default';
+      host.removeAttribute('data-lb');
+      img.style.visibility = 'hidden';
+      host.setAttribute('title', 'Asset not found at this path');
+    });
+  });
+
+})();
+</script>
 
 </body>
 </html>
