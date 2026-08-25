@@ -166,11 +166,7 @@
         "tone": "asian_american_native",
         "translation_lock": true
       },
-      "markers": [
-        "bangs_cover_right_eye",
-        "hair_clip_visible",
-        "eye_hidden"
-      ]
+      "markers": ["bangs_cover_right_eye", "hair_clip_visible", "eye_hidden"]
     }
   }
 }

@@ -33,10 +33,7 @@
     ],
     "character_mapping": {
       "resolve_required": true,
-      "mapping_rules": [
-        {"sheet_A": "LANCER"},
-        {"sheet_B": "SWORDMASTER"}
-      ]
+      "mapping_rules": [{ "sheet_A": "LANCER" }, { "sheet_B": "SWORDMASTER" }]
     }
   },
   "setting": {

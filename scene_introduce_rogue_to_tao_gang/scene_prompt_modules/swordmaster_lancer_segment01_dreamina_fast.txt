@@ -1,0 +1,57 @@
+Title: SWORDMASTER and LANCER Rogue Conversation
+Duration: ten seconds
+Aspect Ratio: four by three
+Style: grounded cinematic realism, Nolan influenced
+
+Global Requirements
+Analyze all provided images.
+Identify SWORDMASTER_MODEL.
+Identify LANCER_MODEL.
+Identify SCENE_CANON.
+Characters must match their model sheets.
+Environment must match SCENE_CANON.
+No color drift.
+No outfit changes.
+Camera motion must remain minimal and controlled.
+Opening frame must match SCENE_CANON exactly.
+
+Character Constraints
+SWORDMASTER: right eye covered, light green hair clip visible, slender, cup always in the same hand, must match SWORDMASTER_MODEL.
+LANCER: calm, attentive, grounded demeanor, must match LANCER_MODEL.
+
+Scene Constraints
+Environment, lighting, palette, and props must match SCENE_CANON.
+Start frame must preserve identical camera angle, poses, lighting, props, color, exposure, and framing.
+
+Shot Sequence
+Shot One
+Camera: medium, eye level
+Action: SWORDMASTER seated exactly as in SCENE_CANON, lifting cup
+Dialogue: Have you heard of a guy named Rogue.
+Markers: right eye covered, hair clip visible, cup in same hand
+
+Shot Two
+Camera: medium, eye level
+Action: LANCER turns toward SWORDMASTER
+Dialogue: No. What happened.
+
+Shot Three
+Camera: closeup, three quarter
+Action: SWORDMASTER with cup near lips
+Dialogue: He is been giving himself a whole list of titles.
+Markers: right eye covered, hair clip visible, cup in same hand
+
+Shot Four
+Camera: medium, three quarter
+Action: SWORDMASTER gestures with free hand
+Dialogue: The OG of the Knight Gang. The true believer of Inter Dimensionalism. Representative of the House of Knight. I could throw out these posh phrases all day.
+Markers: right eye covered, hair clip visible, cup in same hand
+
+Segment Metadata
+Segment One
+Setting: monastery tea room, afternoon, serene and muted, props include tea cup, low table, traditional seating
+Camera: medium closeup, fifty millimeter lens, centered with slight dutch angle, slow push in, shallow focus on visible eye and hair clip, rule of thirds composition
+Lighting: soft window light from the left, minimal fill, rim light on hair, low key
+Dialogue: Have you heard of a guy named Rogue. delivered in a measured and aloof tone
+Aspect Ratio: four by three
+Duration: ten seconds

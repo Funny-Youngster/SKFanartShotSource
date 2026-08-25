@@ -2,41 +2,119 @@
   "task": "reconstruct_source_scene_environment_only",
   "input_reference": "source_image",
   "preserve_from_source": {
-    "spatial_layout": ["composition", "perspective", "camera_angle", "framing", "depth", "scale"],
+    "spatial_layout": [
+      "composition",
+      "perspective",
+      "camera_angle",
+      "framing",
+      "depth",
+      "scale"
+    ],
     "environment": [
-      "terrain", "ground", "floor", "walls", "ceiling", "sky",
-      "architecture", "structures", "ruins", "interiors", "furniture",
-      "natural_formations", "rocks", "water_bodies", "vegetation",
-      "roads", "paths", "bridges"
+      "terrain",
+      "ground",
+      "floor",
+      "walls",
+      "ceiling",
+      "sky",
+      "architecture",
+      "structures",
+      "ruins",
+      "interiors",
+      "furniture",
+      "natural_formations",
+      "rocks",
+      "water_bodies",
+      "vegetation",
+      "roads",
+      "paths",
+      "bridges"
     ],
     "atmosphere": [
-      "lighting_direction", "light_color", "shadows", "time_of_day",
-      "weather", "fog", "mist", "haze", "particles", "ambient_effects"
+      "lighting_direction",
+      "light_color",
+      "shadows",
+      "time_of_day",
+      "weather",
+      "fog",
+      "mist",
+      "haze",
+      "particles",
+      "ambient_effects"
     ],
-    "surface_qualities": ["textures", "materials", "wear", "weathering", "stains", "patina"],
-    "color_and_tone": ["palette", "color_grading", "contrast", "saturation", "mood"],
-    "style": ["art_style", "rendering", "medium", "level_of_detail", "artistic_treatment"],
+    "surface_qualities": [
+      "textures",
+      "materials",
+      "wear",
+      "weathering",
+      "stains",
+      "patina"
+    ],
+    "color_and_tone": [
+      "palette",
+      "color_grading",
+      "contrast",
+      "saturation",
+      "mood"
+    ],
+    "style": [
+      "art_style",
+      "rendering",
+      "medium",
+      "level_of_detail",
+      "artistic_treatment"
+    ],
     "static_props": [
-      "background_objects", "scenery_props", "tools_left_in_environment",
-      "containers", "signage", "decorations", "debris"
+      "background_objects",
+      "scenery_props",
+      "tools_left_in_environment",
+      "containers",
+      "signage",
+      "decorations",
+      "debris"
     ]
   },
   "exclude_from_output": {
     "living_entities": [
-      "humans", "people", "characters", "figures", "silhouettes", "crowds",
-      "animals", "creatures", "monsters", "mounts", "pets", "insects", "birds"
+      "humans",
+      "people",
+      "characters",
+      "figures",
+      "silhouettes",
+      "crowds",
+      "animals",
+      "creatures",
+      "monsters",
+      "mounts",
+      "pets",
+      "insects",
+      "birds"
     ],
     "entity_attachments": [
-      "weapons", "swords", "guns", "bows", "shields", "armor", "clothing_on_body",
-      "held_items", "worn_accessories"
+      "weapons",
+      "swords",
+      "guns",
+      "bows",
+      "shields",
+      "armor",
+      "clothing_on_body",
+      "held_items",
+      "worn_accessories"
     ],
     "entity_traces": [
-      "shadows_cast_by_entities", "reflections_of_entities",
-      "footprints", "blood", "active_effects_emitted_by_entities",
-      "spell_effects", "muzzle_flashes", "motion_blur_from_entities"
+      "shadows_cast_by_entities",
+      "reflections_of_entities",
+      "footprints",
+      "blood",
+      "active_effects_emitted_by_entities",
+      "spell_effects",
+      "muzzle_flashes",
+      "motion_blur_from_entities"
     ],
     "piloted_or_occupied_objects": [
-      "ridden_vehicles", "active_mechs", "occupied_cockpits"
+      "ridden_vehicles",
+      "active_mechs",
+      "occupied_cockpits"
     ]
   },
   "fill_strategy": {
