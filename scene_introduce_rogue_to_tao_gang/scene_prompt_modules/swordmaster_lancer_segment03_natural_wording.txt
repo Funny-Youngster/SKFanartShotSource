@@ -1,0 +1,31 @@
+The segment runs ten seconds in a four‑by‑three aspect ratio and maintains a grounded cinematic realism influenced by Nolan. All provided images must be analyzed. The system must correctly identify SWORDMASTER_MODEL, LANCER_MODEL, and SCENE_CANON. Characters must match their model sheets exactly, and the environment must match the established scene canon. There can be no color drift, no outfit changes, and camera motion must remain minimal and controlled. The opening frame must match the canonical scene precisely.
+
+Character Requirements
+The Swordmaster’s right eye remains covered by her bangs, and her light‑green hair clip stays visible at all times. She is slender, and her tea cup stays in the same hand throughout the segment. Her appearance must match the Swordmaster model sheet exactly.
+
+The Lancer maintains a calm, attentive, grounded demeanor consistent with his model sheet.
+
+Scene Requirements
+The monastery tea room remains the setting. Afternoon light filters in with a serene, contemplative calm. The palette stays muted, and all props remain unchanged: the tea cup, the low table, and traditional seating. The pacing is moderate, carrying forward the continuity from the Swordmaster’s earlier mocking list of titles. A pause after the question and a subtle smile mark the emotional beat. Although the global duration is ten seconds, the internal pacing carries the weight of an eighteen‑second rhythm to preserve gravitas.
+
+Narrative Action
+The Swordmaster takes a slow sip of tea and sets the cup down. She reveals Rogue’s impending arrival at the monastery, delivering the information with Taoist philosophical weight.
+
+Camera Direction
+The shot is a close‑up captured with an 85mm prime lens. The Swordmaster is centered in the frame, with her bangs and hair clip clearly visible. The camera performs a slow tilt downward to follow the cup as she lowers it, then returns to her face. Focus remains sharp on her face and hair clip, while the cup stays slightly soft. The composition maintains vertical symmetry, with the hair clip positioned at the golden‑ratio point.
+
+Lighting
+Soft window light enters from camera left, serving as the key light. Fill light is minimal to preserve a sense of mystery. A subtle accent highlights the light‑green hair clip. The overall mood is philosophical and determined.
+
+Pacing
+The rhythm is slow and weighty, with deliberate pauses. The emotional beat is defined by the sip of tea, the placement of the cup, and the delivery of the dialogue.
+
+Dialogue
+The Swordmaster speaks with calm, resolute philosophical weight. Her line is delivered with steady composure:
+
+“Rogue is coming to the monastery. We’re going to meet him. Ignoring him isn’t an option. And as Taoists, we value champions who can do things that are meta‑real.”
+
+Her bangs continue to cover her right eye throughout the action.
+
+Continuity
+The segment begins immediately after the Lancer’s statement of respect. It concludes with a stable exit state that leads into the next sequence. All visual markers remain consistent: the hair clip stays visible, the right eye remains covered, and the props and lighting remain unchanged. The match cut aligns perfectly with segments one and two.
