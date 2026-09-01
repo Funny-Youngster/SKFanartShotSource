@@ -1,0 +1,99 @@
+{
+  "title": "SWORDMASTER and LANCER Rogue Conversation",
+  "duration": "10 seconds",
+  "aspect_ratio": "4:3",
+  "style": "grounded cinematic realism, Nolan influenced",
+
+  "global_requirements": {
+    "analyze_images": true,
+    "identify_SWORDMASTER_MODEL": true,
+    "identify_LANCER_MODEL": true,
+    "identify_SCENE_CANON": true,
+    "character_model_match": true,
+    "environment_scene_canon_match": true,
+    "no_color_drift": true,
+    "no_outfit_changes": true,
+    "minimal_camera_motion": true,
+    "opening_frame_matches_scene_canon": true,
+    "dialogue_language": "English",
+    "auto_translation": "disabled"
+  },
+
+  "character_constraints": {
+    "SWORDMASTER": {
+      "right_eye_covered": true,
+      "light_green_hair_clip_visible": true,
+      "body_type": "slender",
+      "cup_same_hand": true,
+      "match_model_sheet": "SWORDMASTER_MODEL"
+    },
+    "LANCER": {
+      "demeanor": "calm, attentive, grounded",
+      "match_model_sheet": "LANCER_MODEL"
+    }
+  },
+
+  "scene_constraints": {
+    "environment": "monastery tea room",
+    "time_of_day": "afternoon",
+    "mood": "serene contemplative calm",
+    "palette": "muted",
+    "props": ["tea cup", "low table", "traditional seating"],
+    "pacing": "moderate with internal eighteen second rhythm for gravitas",
+    "lighting": {
+      "key_light": "soft window light from camera left",
+      "fill_light": "minimal",
+      "accent": "subtle highlight on hair clip",
+      "overall_mood": "philosophical and determined"
+    },
+    "continuity": {
+      "right_eye_covered": true,
+      "hair_clip_visible": true,
+      "props_unchanged": true,
+      "lighting_unchanged": true,
+      "camera_angle_preserved": true
+    }
+  },
+
+  "narrative_action": {
+    "description": "SWORDMASTER takes a slow sip of tea, lowers the cup, and sets it down. She reveals Rogue's impending arrival at the monastery with Taoist philosophical weight.",
+    "dialogue": "Rogue is coming to the monastery. We are going to meet him. Ignoring him is not an option. And as Taoists, we value champions who can do things that are meta real.",
+    "delivery": "calm resolute philosophical weight"
+  },
+
+  "camera_direction": {
+    "shot_type": "closeup",
+    "lens": "85mm prime",
+    "framing": "centered",
+    "markers": {
+      "bangs_cover_right_eye": true,
+      "hair_clip_visible": true
+    },
+    "motion": "slow tilt downward following the cup then returning to face",
+    "focus": {
+      "primary": "face and hair clip",
+      "secondary": "cup slightly soft"
+    },
+    "composition": {
+      "vertical_symmetry": true,
+      "golden_ratio_point": "hair clip"
+    }
+  },
+
+  "pacing": {
+    "rhythm": "slow and weighty",
+    "beats": "sip of tea, placement of cup, delivery of dialogue"
+  },
+
+  "continuity_requirements": {
+    "starting_point": "immediately after LANCER statement of respect",
+    "ending_state": "stable exit leading into next sequence",
+    "match_cut_alignment": "segments one and two",
+    "visual_markers": {
+      "hair_clip_visible": true,
+      "right_eye_covered": true,
+      "props_unchanged": true,
+      "lighting_unchanged": true
+    }
+  }
+}
