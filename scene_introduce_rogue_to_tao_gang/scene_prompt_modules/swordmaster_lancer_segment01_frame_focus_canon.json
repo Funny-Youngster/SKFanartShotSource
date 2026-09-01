@@ -1,0 +1,103 @@
+{
+  "title": "SWORDMASTER and LANCER Rogue Conversation",
+  "duration": "10 seconds",
+  "aspect_ratio": "4:3",
+  "style": "grounded cinematic realism, Nolan influenced",
+
+  "global_requirements": {
+    "analyze_images": true,
+    "identify_SWORDMASTER_MODEL": true,
+    "identify_LANCER_MODEL": true,
+    "identify_SCENE_CANON": true,
+    "character_model_match": true,
+    "environment_scene_canon_match": true,
+    "no_color_drift": true,
+    "no_outfit_changes": true,
+    "minimal_camera_motion": true,
+    "opening_frame_matches_scene_canon": true
+  },
+
+  "character_constraints": {
+    "SWORDMASTER": {
+      "right_eye_covered": true,
+      "light_green_hair_clip_visible": true,
+      "body_type": "slender",
+      "cup_same_hand": true,
+      "match_model_sheet": "SWORDMASTER_MODEL"
+    },
+    "LANCER": {
+      "demeanor": "calm, attentive, grounded",
+      "match_model_sheet": "LANCER_MODEL"
+    }
+  },
+
+  "scene_constraints": {
+    "environment_match": "SCENE_CANON",
+    "lighting_match": "SCENE_CANON",
+    "palette_match": "SCENE_CANON",
+    "props_match": "SCENE_CANON",
+    "start_frame_preservation": {
+      "camera_angle": true,
+      "poses": true,
+      "lighting": true,
+      "props": true,
+      "color": true,
+      "exposure": true,
+      "framing": true
+    }
+  },
+
+  "shot_sequence": [
+    {
+      "shot": "Shot One",
+      "camera": "medium, eye level",
+      "action": "SWORDMASTER seated exactly as in SCENE_CANON, lifting cup",
+      "dialogue": "Have you heard of a guy named Rogue?",
+      "markers": {
+        "right_eye_covered": true,
+        "hair_clip_visible": true,
+        "cup_same_hand": true
+      }
+    },
+    {
+      "shot": "Shot Two",
+      "camera": "medium, eye level",
+      "action": "LANCER turns toward SWORDMASTER",
+      "dialogue": "No. What happened?",
+      "markers": {}
+    },
+    {
+      "shot": "Shot Three",
+      "camera": "closeup, three quarter",
+      "action": "SWORDMASTER with cup near lips",
+      "dialogue": "He's been giving himself a whole list of titles.",
+      "markers": {
+        "right_eye_covered": true,
+        "hair_clip_visible": true,
+        "cup_same_hand": true
+      }
+    },
+    {
+      "shot": "Shot Four",
+      "camera": "medium, three quarter",
+      "action": "SWORDMASTER gestures with free hand",
+      "dialogue": "The OG of the Knight Gang. The true believer of Inter Dimensionalism. Representative of the House of Knight. I could throw out these posh phrases all day.",
+      "markers": {
+        "right_eye_covered": true,
+        "hair_clip_visible": true,
+        "cup_same_hand": true
+      }
+    }
+  ],
+
+  "segment_metadata": {
+    "segment_one": {
+      "setting": "monastery tea room, afternoon, serene and muted, props include tea cup, low table, traditional seating",
+      "camera": "medium closeup, fifty millimeter lens, centered with slight dutch angle, slow push in, shallow focus on visible eye and hair clip, rule of thirds composition",
+      "lighting": "soft window light from the left, minimal fill, rim light on hair, low key",
+      "dialogue_delivery": "“Have you heard of a guy named Rogue?” delivered in a measured and aloof tone",
+      "aspect_ratio": "4:3",
+      "duration": "10 seconds"
+    }
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "title": "SWORDMASTER and LANCER Rogue Conversation",
+  "duration": "10 seconds",
+  "aspect_ratio": "4:3",
+  "style": "grounded cinematic realism, Nolan influenced",
+
+  "global_requirements": {
+    "analyze_images": true,
+    "identify_SWORDMASTER_MODEL": true,
+    "identify_LANCER_MODEL": true,
+    "identify_SCENE_CANON": true,
+    "character_model_match": true,
+    "environment_scene_canon_match": true,
+    "no_color_drift": true,
+    "no_outfit_changes": true,
+    "minimal_camera_motion": true,
+    "opening_frame_matches_scene_canon": true,
+    "dialogue_language": "English",
+    "auto_translation": "disabled"
+  },
+
+  "character_constraints": {
+    "SWORDMASTER": {
+      "right_eye_covered": true,
+      "light_green_hair_clip_visible": true,
+      "body_type": "slender",
+      "cup_same_hand": true,
+      "match_model_sheet": "SWORDMASTER_MODEL"
+    },
+    "LANCER": {
+      "demeanor": "calm, attentive, grounded",
+      "match_model_sheet": "LANCER_MODEL"
+    }
+  },
+
+  "scene_constraints": {
+    "environment_match": "SCENE_CANON",
+    "lighting_match": "SCENE_CANON",
+    "palette_match": "SCENE_CANON",
+    "props_match": "SCENE_CANON",
+    "setting": "monastery tea room, afternoon, serene and muted",
+    "props": ["tea cup", "low table", "traditional seating"],
+    "pacing": "tight and controlled to fit ten seconds",
+    "start_frame_preservation": {
+      "camera_angle": true,
+      "poses": true,
+      "lighting": true,
+      "props": true,
+      "color": true,
+      "exposure": true,
+      "framing": true
+    }
+  },
+
+  "shot_sequence": [
+    {
+      "shot": "Shot One",
+      "camera": "closeup, three quarter, 85mm lens",
+      "action": "LANCER turns gaze toward SWORDMASTER, expression curious and engaged",
+      "dialogue": "",
+      "markers": {
+        "demeanor": "calm, attentive, grounded"
+      }
+    },
+    {
+      "shot": "Shot Two",
+      "camera": "closeup, three quarter",
+      "action": "SWORDMASTER exhales softly, amused and lightly mocking",
+      "dialogue": "",
+      "markers": {
+        "right_eye_covered": true,
+        "light_green_hair_clip_visible": true,
+        "cup_same_hand": true
+      }
+    },
+    {
+      "shot": "Shot Three",
+      "camera": "medium, three quarter, 50mm lens",
+      "action": "LANCER speaks with shift from skepticism to respect",
+      "dialogue": "At first I thought it was just nonsense, but then I realized you meant that red haired guy. I know him, and I respect him because he saved the Airbender from falling into the Abyss of Turbid Chi.",
+      "markers": {
+        "demeanor": "calm, attentive, grounded"
+      }
+    },
+    {
+      "shot": "Shot Four",
+      "camera": "closeup, three quarter",
+      "action": "Cut back to SWORDMASTER with tea, maintaining continuity",
+      "dialogue": "",
+      "markers": {
+        "right_eye_covered": true,
+        "light_green_hair_clip_visible": true,
+        "cup_same_hand": true
+      }
+    }
+  ],
+
+  "continuity_requirements": {
+    "starting_point": "Immediately after SWORDMASTER mocking list of titles",
+    "visual_markers": {
+      "right_eye_covered": true,
+      "light_green_hair_clip_visible": true,
+      "props_unchanged": true,
+      "lighting_unchanged": true,
+      "camera_angle_preserved": true
+    }
+  }
+}

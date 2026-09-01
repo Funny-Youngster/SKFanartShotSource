@@ -1,0 +1,165 @@
+<PROMPT>
+
+<RENDERING_SPEC>
+  STYLE: High‑fidelity semi‑realistic anime.
+  LINEWORK: Ultra‑clean, softly tapered.
+  SHADING: Hybrid cel‑shaded + painterly volumetric.
+  MATERIALS:
+    METAL: Crisp specular reflections.
+    FABRIC: Subtle micro‑grain.
+    ORGANIC: Soft luminous texture.
+  LIGHTING:
+    KEY_LIGHT: Warm, directional, cinematic.
+    FILL_LIGHT: Cool ambient.
+    CONSISTENCY: Identical lighting direction, intensity, softness, and shadow behavior across ALL panels.
+  COLOR_PALETTE: Jewel tones + muted neutrals + autumn hues.
+  BACKGROUND: Clean, neutral, plain. Painterly texture with depth‑of‑field blur and reduced distant contrast.
+  AESTHETIC: Premium fantasy / JRPG key‑art quality.
+</RENDERING_SPEC>
+
+<REDRAW_RULES>
+  <STYLE_MATCH>
+    MATCH: High‑fidelity semi‑realistic anime.
+    RENDERING_PROPERTIES: Must match the redrawn reference exactly.
+  </STYLE_MATCH>
+
+  <CHARACTER_VISIBILITY_ENFORCEMENT>
+    REQUIREMENT:
+      - Character’s appearance MUST remain 100% visible.
+      - NO part of the body, silhouette, clothing, or identity may be obscured by the arms.
+      - Arms MUST NOT cover the torso, face, or any defining features.
+    SOURCE_REFERENCE: Visibility must match the uploaded source image.
+  </CHARACTER_VISIBILITY_ENFORCEMENT>
+
+  <CHARACTER_TRAITS>
+    EXPRESSION_POSTURE: Aloof, gorgeous vibe.
+    AGE: Appears mid‑20s.
+    COLOR_MODE: Full color only.
+
+    HEIGHT: EXACTLY 5'11".
+    HEIGHT_ENFORCEMENT:
+      - Full‑body proportions MUST represent a tall 5'11" adult.
+      - NO shortening, compressing, shrinking, or stylizing the body.
+      - NO “average height” or “skinny short” silhouette.
+
+    BODY_PROPORTIONS:
+      - Balanced, natural, anatomically correct.
+      - Leg‑to‑torso ratio MUST match a real 5'11" human.
+      - Shoulder width, limb length, and head‑to‑body ratio MUST reflect tall adult proportions.
+
+    WEAPON_REQUIREMENTS:
+      - Character MUST hold exactly ONE shield and ONE large knife/sword.
+      - BOTH weapons MUST be directly referenced from the uploaded source image.
+      - NO substitutions, redesigns, reinterpretations, or alternate versions.
+      - Weapon scale, shape, silhouette, materials, and detailing MUST match the source image precisely.
+      - WEAPON CONSISTENCY ACROSS PANELS:
+          * In ALL full‑body views (front, left profile, right profile, back), the character MUST be visibly holding:
+              1. The same shield from the source image.
+              2. The same large knife/sword from the source image.
+          * Weapon position MUST remain consistent with natural anatomical variation for each view.
+          * Weapons MUST remain fully visible and unobscured in every full‑body panel.
+          * NO panel may omit, hide, crop out, or reposition the weapons in a way that contradicts the source image.
+  </CHARACTER_TRAITS>
+
+  <IDENTITY_CONSISTENCY>
+    IDENTITY_LOCK: DO NOT alter facial features, hair, body shape, or clothing.
+    SOURCE_OF_IDENTITY: Uploaded reference image ONLY.
+  </IDENTITY_CONSISTENCY>
+</REDRAW_RULES>
+
+<STYLE>
+  BACKGROUND: Clean, neutral, plain.
+  AESTHETIC_MATCH: Rendering, realism, texture, and color treatment MUST match the redrawn character.
+  SHEET_LOOK: Crisp, print‑ready, high‑detail reference sheet.
+</STYLE>
+
+<LAYOUT>
+  COMPOSITION: Two horizontal rows.
+
+  <TOP_ROW>
+    FULL_BODY_VIEWS (4):
+      1. Front
+      2. Left profile (facing left)
+      3. Right profile (facing right)
+      4. Back
+    POSE: Relaxed A‑pose, legs parallel.
+
+    <ALIGNMENT>
+      SCALE:
+        - All four full‑body views MUST share identical scale.
+        - Scale MUST represent EXACT 5'11" height.
+        - Head height and total body height MUST match across all four views.
+      ANATOMY: Clean, accurate silhouette.
+      SPACING: Even spacing + clean panel separation.
+      FRAMING: Uniform framing across all full‑body panels.
+    </ALIGNMENT>
+  </TOP_ROW>
+
+  <BOTTOM_ROW>
+    PORTRAITS (3):
+      1. Front portrait
+      2. Left profile portrait
+      3. Right profile portrait
+
+    <ALIGNMENT>
+      FACIAL_SCALE: Identical across all portraits.
+      SPACING: Even spacing + clean separation.
+    </ALIGNMENT>
+  </BOTTOM_ROW>
+</LAYOUT>
+
+<CONSISTENCY_RULES>
+  IDENTITY: Must remain perfectly consistent across ALL panels.
+
+  SCALE:
+    FULL_BODY:
+      - MUST represent EXACT 5'11".
+      - MUST remain constant across all full‑body views.
+    PORTRAIT:
+      - Facial scale MUST remain constant across all portrait views.
+
+  ANATOMY:
+    - Accurate anatomy in ALL views.
+    - Proportions MUST reflect a tall, well‑balanced 5'11" adult.
+    - NO shortening of limbs, torso, or neck.
+    - NO stylized shrinking or “skinny short” silhouette.
+</CONSISTENCY_RULES>
+
+<LIGHTING_RULES>
+  DIRECTION: Identical in all panels.
+  INTENSITY: Identical in all panels.
+  SOFTNESS: Identical in all panels.
+  SHADOWS: Natural, controlled, detail‑preserving.
+</LIGHTING_RULES>
+
+<PANELS>
+  <FULL_BODY_PANELS>
+    <PANEL order="1" type="full-body" view="front"/>
+    <PANEL order="2" type="full-body" view="left-profile" facing="left"/>
+    <PANEL order="3" type="full-body" view="right-profile" facing="right"/>
+    <PANEL order="4" type="full-body" view="back"/>
+  </FULL_BODY_PANELS>
+
+  <PORTRAIT_PANELS>
+    <PANEL order="1" type="portrait" view="front"/>
+    <PANEL order="2" type="portrait" view="left-profile" facing="left"/>
+    <PANEL order="3" type="portrait" view="right-profile" facing="right"/>
+  </PORTRAIT_PANELS>
+</PANELS>
+
+<FRAMING>
+  SPACING: Even spacing between ALL panels.
+  SEPARATION: Clean panel dividers.
+  UNIFORMITY: Uniform framing across both rows.
+</FRAMING>
+
+<OUTPUT>
+  FINAL_ASPECT_RATIO: 4:3 horizontal rectangle.
+</OUTPUT>
+
+<REFERENCES>
+  IDENTITY_SOURCE: Uploaded reference image ONLY.
+  STYLE_SOURCE: Redrawn version ONLY.
+</REFERENCES>
+
+</PROMPT>

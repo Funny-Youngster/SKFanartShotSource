@@ -1,0 +1,148 @@
+Analyze this image and convert all visually observable information into a highly detailed, structured JSON format.
+
+Your analysis must isolate:
+1. All inanimate objects (furniture, décor, architecture, props)
+2. All animate entities (humans, animals, fictional characters, stylized figures, mannequins)
+3. All environmental and compositional elements (lighting, shadows, reflections, depth, perspective)
+
+When uncertain, do NOT guess.  
+If any detail cannot be visually confirmed, explicitly mark it as:
+"unknown", "partially_visible", or "occluded".
+
+Never invent details.
+
+------------------------------------------------------------
+OBJECTS (Inanimate)
+------------------------------------------------------------
+For each object, extract:
+- name
+- color (descriptive or hex)
+- material (e.g., matte leather, brushed steel, oak wood)
+- position_in_room (relative spatial description)
+- object_state (open/closed/on/off/folded/etc.)
+- texture_details:
+    - pattern_type (striped, floral, geometric, none)
+    - pattern_scale (small/medium/large)
+    - surface_texture (smooth, rough, woven, ribbed)
+- material_optics:
+    - reflectivity
+    - transparency
+    - glossiness
+- object_relationships:
+    - supported_by
+    - attached_to
+    - contained_within
+    - overlapping_with
+
+------------------------------------------------------------
+ENTITIES (Humans, Animals, Characters)
+------------------------------------------------------------
+For each entity, extract a full multi-layer appearance model:
+
+entity_type:
+  - human | animal | fictional_character | mannequin | stylized_figure
+
+identity:
+  - name_or_role (e.g., “woman sitting”, “male character”, “child”, “robot”)
+
+visibility:
+  - visible_parts (list)
+  - occluded_parts (list)
+  - occlusion_sources (what is blocking what)
+
+facial_features:
+  - eyes: { visible, color, shape, occluded_by }
+  - eyebrows: { visible, shape, occluded_by }
+  - nose: { visible, shape, occluded_by }
+  - mouth: { visible, expression, occluded_by }
+  - jawline: { visible, occluded_by }
+  - facial_hair: { type, color, coverage }
+  - accessories: [glasses, piercings, masks, etc.]
+
+hairstyle:
+  - overall_style (e.g., “long layered hair”, “ponytail with loose strands”)
+  - color (hex or descriptive)
+  - structure: [
+      {
+        segment_name,
+        length,
+        texture,
+        position,
+        covers (which facial features or clothing parts it overlaps)
+      }
+    ]
+
+clothing:
+  - layers (top-to-bottom):
+      [
+        {
+          garment_type,
+          color,
+          material,
+          pattern,
+          fit,
+          coverage (body regions covered)
+        }
+      ]
+  - clothing_physics:
+      - drape_behavior
+      - wrinkle_patterns
+      - motion_effects (if applicable)
+
+body_pose:
+  - posture (standing, sitting, leaning, crouching)
+  - limb_positions (arms, legs, head orientation)
+  - gestures (pointing, holding, waving)
+
+expressive_state:
+  - emotional_posture (tense, relaxed, confident, shy)
+  - micro_gestures (subtle hand or body cues)
+
+anatomy_style:
+  - realism_level (realistic, semi-realistic, stylized, exaggerated)
+  - body_proportions (standard, elongated, chibi, heroic, etc.)
+
+interactions:
+  - holding (objects)
+  - touching (objects or entities)
+  - facing (direction or target)
+  - sitting_on / leaning_on (objects)
+
+position_in_room:
+  - relative spatial description
+
+------------------------------------------------------------
+ENVIRONMENT & COMPOSITION
+------------------------------------------------------------
+lighting:
+  - type (natural, artificial, mixed)
+  - direction (e.g., left window, overhead lamp)
+  - color_temperature (warm/cool/neutral)
+  - shadow_properties (soft/hard, direction, intensity)
+  - reflections (surfaces reflecting light or entities)
+
+spatial_relationships:
+  - depth_order (foreground/midground/background)
+  - relative_scale
+  - perspective_notes (camera angle, vanishing lines)
+
+composition:
+  - symmetry (symmetric/asymmetric)
+  - dominant_shapes (curved, angular, mixed)
+  - focal_points
+  - color_balance (warm/cool/mixed/neutral)
+
+------------------------------------------------------------
+TOP-LEVEL JSON KEYS
+------------------------------------------------------------
+Your final JSON must include:
+
+- room_style
+- overall_color_palette
+- lighting
+- composition
+- spatial_relationships
+- objects: [ ... ]
+- entities: [ ... ]
+
+Output ONLY valid JSON, formatted as a copyable JSON code block using Markdown.

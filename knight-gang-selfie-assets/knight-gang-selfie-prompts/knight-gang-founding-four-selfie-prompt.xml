@@ -1,0 +1,100 @@
+<SelfieRequest>
+
+    <SourceImages>
+        <TotalCharacters>4</TotalCharacters>
+        <AllowedCharacters>
+            <Character>Knight</Character>
+            <Character>Rogue</Character>
+            <Character>Wizard</Character>
+            <Character>Assassin</Character>
+        </AllowedCharacters>
+        <AppearanceConstraint>
+            All character appearances and clothing must remain exactly as shown in the source images with perfect detail accuracy.
+        </AppearanceConstraint>
+        <AgeHint>All characters appear approximately 18 years old.</AgeHint>
+    </SourceImages>
+
+    <PhotoSetting>
+        <Location>
+            A completely featureless, empty room with no visible environmental details.
+        </Location>
+
+        <Arrangement>
+            <Grouping>All four characters must be grouped very closely together.</Grouping>
+            <Facing>All characters must face directly toward the camera.</Facing>
+            <Leaning>All characters must lean slightly inward toward the center.</Leaning>
+
+            <DepthConstraints>
+                <CameraDistance>All characters positioned near the camera.</CameraDistance>
+                <Separation>
+                    Minimal depth is required. No background separation between characters is allowed.
+                </Separation>
+            </DepthConstraints>
+
+            <Visibility>
+                All characters must be fully visible and unobstructed.
+            </Visibility>
+        </Arrangement>
+    </PhotoSetting>
+
+    <CameraPerspective>
+        <Type>Selfie perspective</Type>
+        <Holder>Exactly one character holds the camera at arm’s length.</Holder>
+        <DeviceVisibility>The camera or device must not appear anywhere in the frame.</DeviceVisibility>
+    </CameraPerspective>
+
+    <HeightAndBodyConstraints>
+
+        <HardRequirement>
+            These constraints are mandatory and must not be altered or contradicted.
+        </HardRequirement>
+
+        <UniversalHeight>Exactly 5'11"</UniversalHeight>
+        <UniversalBodyType>
+            All characters must be equally tall and slender in overall proportion.
+        </UniversalBodyType>
+
+        <CharacterSpecifications>
+
+            <Knight>
+                Exactly 5'11", tall and slender.
+            </Knight>
+
+            <Rogue>
+                Exactly 5'11", tall and slender.
+            </Rogue>
+
+            <Assassin>
+                Exactly 5'11", tall and slender.
+            </Assassin>
+
+            <Wizard>
+                Exactly 5'11" in height.
+                Slender and tall overall.
+                Exhibits a queen-like, aloof, regal presence.
+                Must remain height-consistent with all other characters.
+            </Wizard>
+
+        </CharacterSpecifications>
+
+    </HeightAndBodyConstraints>
+
+    <Output>
+        <AspectRatio>
+            <Width>4</Width>
+            <Height>3</Height>
+        </AspectRatio>
+        <Orientation>Landscape</Orientation>
+    </Output>
+
+    <Constraints>
+        <ExactCount>Exactly 4 distinct characters must be visible.</ExactCount>
+        <UniqueCharacters>No repeating characters.</UniqueCharacters>
+        <SingleHolder>Only one character provides the selfie perspective.</SingleHolder>
+    </Constraints>
+
+    <CharacterOrder>
+        Knight, Rogue, Wizard, Assassin
+    </CharacterOrder>
+
+</SelfieRequest>

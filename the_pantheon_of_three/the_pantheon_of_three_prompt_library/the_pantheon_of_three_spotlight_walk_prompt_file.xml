@@ -1,0 +1,250 @@
+<prompt>
+  <title>the_pantheon_of_three — final_key_art</title>
+
+  <format>
+    <orientation>horizontal</orientation>
+    <aspect_ratio>4:3</aspect_ratio>
+    <framing>three_quarters_view, characters_close_to_camera</framing>
+    <output_type>character_group_illustration</output_type>
+  </format>
+
+  <global_rules>
+    <five_finger_rule>
+      <rule>All characters MUST have exactly five fingers on each hand.</rule>
+      <rule>Each finger MUST be fully separated with correct anatomy.</rule>
+      <priority>HARD_OVERRIDE</priority>
+    </five_finger_rule>
+
+    <depth_levels>
+      <costume_prince>LEVEL_1</costume_prince>
+      <warliege>LEVEL_2</warliege>
+      <trickster>LEVEL_2</trickster>
+      <rule>Warliege and Trickster share the same depth plane.</rule>
+      <rule>Costume Prince overlaps both Level 2 characters.</rule>
+    </depth_levels>
+
+    <height>All characters are 5_11 with aligned eye levels.</height>
+
+    <proximity_rules>
+      <rule>All characters stay close together as a unified trio.</rule>
+      <rule>All characters walk forward on the same red_carpet path.</rule>
+    </proximity_rules>
+
+    <reference_rules>
+      <rule>All clothing, accessories, weapons, and appearance match reference sheets exactly.</rule>
+      <rule>No redesigns, no missing items, no new items.</rule>
+    </reference_rules>
+  </global_rules>
+
+  <setting>
+    <location>grand_hall_entrance</location>
+    <lighting>strong_backlight_with_volumetric_rays</lighting>
+    <floor>red_carpet</floor>
+    <background>stone_columns_and_arches_blurred</background>
+    <atmosphere>cinematic_haze</atmosphere>
+  </setting>
+
+  <character id="costume_prince">
+    <reference>frog_prince_model_sheet_image_3</reference>
+    <role>leader</role>
+    <position>center_level_1_walking_forward</position>
+    <body>slender_elegant_inverted_triangle</body>
+    <height>5_11</height>
+
+    <hand_constraints>
+      <rule>Both hands MUST show five clearly separated fingers.</rule>
+      <rule>No mitten_shapes or fused_fingers.</rule>
+      <priority>HARD_OVERRIDE</priority>
+    </hand_constraints>
+
+    <outfit>
+      <kigurumi>
+        <type>oversized_green_frog_onesie</type>
+        <color>#4CAF50</color>
+        <texture>plush_fleece</texture>
+        <hood>frog_eyes_gold_yellow_black_pupils</hood>
+        <belly_patch>light_green_yellow_empty</belly_patch>
+        <fit>baggy_with_natural_folds</fit>
+      </kigurumi>
+      <feet>plush_frog_feet</feet>
+      <hands>plush_gloves_five_fingers_visible</hands>
+    </outfit>
+
+    <accessories>
+      <crown>gold_three_point_red_gem</crown>
+      <scarf>deep_red</scarf>
+      <cape>dark_red_mid_calf</cape>
+    </accessories>
+
+    <props>
+      <right_hand>
+        <item>long_barreled_water_gun</item>
+        <colors>green_yellow_red</colors>
+        <pose>raised_45_degrees</pose>
+      </right_hand>
+      <left_hand>
+        <item>red_slime_dummy_ball</item>
+        <details>yellow_eyes_small_mouth_glossy</details>
+      </left_hand>
+      <rule>right_hand_gun_left_hand_slime</rule>
+    </props>
+
+    <face>
+      <hair>dark_brown_black</hair>
+      <eyes>brown</eyes>
+      <cheeks>pink_blush</cheeks>
+      <expression>calm_slightly_smug</expression>
+    </face>
+
+    <lighting>rim_light_back_soft_fill_front</lighting>
+  </character>
+
+  <character id="warliege">
+    <reference>armored_knight_model_sheet_image_4</reference>
+    <role>tank</role>
+    <position>left_of_prince_level_2</position>
+    <body>armored_broad_imposing</body>
+    <height>5_11</height>
+
+    <hand_constraints>
+      <rule>Gauntlets show five articulated finger_segments.</rule>
+      <priority>HARD_OVERRIDE</priority>
+    </hand_constraints>
+
+    <armor>
+      <type>full_plate</type>
+      <color>#4A4A4A</color>
+      <texture>brushed_metal</texture>
+      <coverage>full_body</coverage>
+    </armor>
+
+    <fur_trim>white_thick</fur_trim>
+
+    <helmet>
+      <type>full_face</type>
+      <visor>narrow_slit</visor>
+      <crown>gold_multi_point_red_gems</crown>
+    </helmet>
+
+    <props>
+      <right_hand>
+        <item>two_handed_sword</item>
+        <pose>resting_on_shoulder</pose>
+      </right_hand>
+      <left_hand>
+        <item>kite_shield</item>
+        <pose>held_forward</pose>
+      </left_hand>
+      <rule>right_sword_left_shield</rule>
+    </props>
+
+    <cape>dark_blue_purple</cape>
+    <belt>dark_leather_blue_gem</belt>
+
+    <lighting>armor_edge_highlights_rim_on_fur</lighting>
+  </character>
+
+  <character id="trickster">
+    <reference>shadow_rogue_model_sheet_image_2</reference>
+    <role>assassin</role>
+    <position>right_of_prince_level_2</position>
+    <body>curvy_athletic_elegant</body>
+    <height>5_11</height>
+
+    <hand_constraints>
+      <rule>Five fingers visible on both hands.</rule>
+      <priority>HARD_OVERRIDE</priority>
+    </hand_constraints>
+
+    <outfit>
+      <top>black_crop_top_gold_trim</top>
+      <bottoms>black_shorts_gold_accents</bottoms>
+      <stockings>dark_thigh_highs_star_pattern</stockings>
+      <boots>black_mid_calf_gold_trim</boots>
+    </outfit>
+
+    <cloak>
+      <type>hooded</type>
+      <exterior>dark_geometric_pattern</exterior>
+      <interior>red</interior>
+      <hood>up</hood>
+    </cloak>
+
+    <jewelry>gold_armbands_choker_boot_accents</jewelry>
+
+    <weapons>
+      <right_hand>dagger_gold_hilt</right_hand>
+      <left_hand>cane_sword_curved_gold_handle</left_hand>
+      <rule>no_swapping</rule>
+    </weapons>
+
+    <hair>
+      <style>long_flowing</style>
+      <color>blonde_silver_two_tone</color>
+    </hair>
+
+    <face>
+      <eyes>blue</eyes>
+      <marking>tear_drop</marking>
+      <expression>confident_mysterious</expression>
+    </face>
+
+    <lighting>soft_side_light_rim_on_hair</lighting>
+  </character>
+
+  <composition>
+    <camera>
+      <angle>eye_level_slight_low</angle>
+      <distance>close_medium</distance>
+      <focus>sharp_characters_blurred_background</focus>
+      <lens>85mm</lens>
+    </camera>
+
+    <layout>
+      <rule>Prince_center_level_1</rule>
+      <rule>Warliege_left_level_2</rule>
+      <rule>Trickster_right_level_2</rule>
+      <rule>Unified_trio_close_together</rule>
+      <rule>All_walk_same_red_carpet</rule>
+    </layout>
+
+    <ground>
+      <rule>Feet_visible_on_carpet</rule>
+      <rule>Contact_shadows_present</rule>
+    </ground>
+  </composition>
+
+  <lighting_unified>
+    <source>entrance_backlight</source>
+    <direction>behind_above</direction>
+    <rim_light>strong</rim_light>
+    <fill>cool_ambient_red_carpet_bounce</fill>
+    <shadows>consistent</shadows>
+  </lighting_unified>
+
+  <color_rules>
+    <gold>consistent_gold_tone</gold>
+    <red>harmonized_red_elements</red>
+    <metal>consistent_reflectivity</metal>
+    <shadow_color>cool_shadows_warm_highlights</shadow_color>
+  </color_rules>
+
+  <anti_drift>
+    <rule>No redesigns or missing items.</rule>
+    <rule>Trickster_hood_up</rule>
+    <rule>Warliege_helmet_closed</rule>
+    <rule>Prince_face_visible</rule>
+    <rule>No_clipping</rule>
+    <rule>Weapons_correct_hands</rule>
+    <rule>Five_finger_rule_absolute</rule>
+  </anti_drift>
+
+  <final_check>
+    <item>Five_fingers_visible_on_all_hands</item>
+    <item>Correct_depth_levels</item>
+    <item>Unified_group_on_same_carpet</item>
+    <item>All_props_correct</item>
+    <item>No_clipping</item>
+    <item>Consistent_lighting_and_colors</item>
+  </final_check>
+</prompt>
