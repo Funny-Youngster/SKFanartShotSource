@@ -26,11 +26,11 @@
   <ReferenceMaterials>
     <StyleReference>
       <Rendering>
-        <Linework>High‑fidelity semi‑realistic anime with tapered lines. Mandatory.</Linework>
-        <Shading>Hybrid cel‑shaded and painterly volumetric shading. Mandatory.</Shading>
+        <Linework>High fidelity semirealistic anime with tapered lines. Mandatory.</Linework>
+        <Shading>Hybrid cel shaded and painterly volumetric shading. Mandatory.</Shading>
         <Materials>
-          <Metal>High‑specular reflections. Mandatory.</Metal>
-          <Fabric>Micro‑grain texture. Mandatory.</Fabric>
+          <Metal>Highly specular reflections. Mandatory.</Metal>
+          <Fabric>Fine grain texture. Mandatory.</Fabric>
         </Materials>
         <Surfaces>Soft, luminous rendering for organic surfaces. Mandatory.</Surfaces>
         <Lighting>Warm directional lighting with cool ambient fill. Mandatory.</Lighting>
@@ -45,7 +45,7 @@
 
   <PhotoSetting>
     <Location>
-      <Environment>Taoist hermit‑style utopia with trees, mountains, and clouds. No substitutions.</Environment>
+      <Environment>Taoist utopia in the style of a hermitage with trees, mountains, and clouds. No substitutions.</Environment>
     </Location>
     <Arrangement>
       <Distribution>
@@ -55,8 +55,8 @@
         <Facing>All characters must face the camera in a semicircle. No alternate orientations.</Facing>
       </Orientation>
       <Depth>
-        <FrontRow count="4">Front micro‑row. Mandatory.</FrontRow>
-        <BackRow count="3">Back micro‑row positioned less than one character‑width behind. Mandatory.</BackRow>
+        <FrontRow count="4">Small front row. Mandatory.</FrontRow>
+        <BackRow count="3">Small back row positioned less than one character width behind. Mandatory.</BackRow>
       </Depth>
       <Visibility>
         <Requirement>All characters must be fully visible. No occlusion.</Requirement>
@@ -90,16 +90,16 @@
 
     <Height>
       <Approximate>5'11"</Approximate>
-      <Adjustment>Apply selfie‑appropriate foreshortening. Mandatory.</Adjustment>
+      <Adjustment>Apply foreshortening appropriate for a selfie. Mandatory.</Adjustment>
     </Height>
 
     <AdditionalCharacterConstraints>
       <Swordmaster>
         <Hair>
           <Coverage>Hair must cover one eye. No exceptions.</Coverage>
-          <Clip color="light-green">Clip must be visible. No omission.</Clip>
+          <Clip color="light green">Clip must be visible. No omission.</Clip>
           <Style>
-            <Length>Waist‑length. No shortening.</Length>
+            <Length>Reaching the waist. No shortening.</Length>
             <Structure>Ponytail. No alternate structures.</Structure>
           </Style>
         </Hair>

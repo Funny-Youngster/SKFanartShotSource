@@ -1,9 +1,9 @@
 <PROMPT>
 
   <RENDERING_SPEC>
-    <STYLE>High-fidelity semi-realistic anime.</STYLE>
-    <LINEWORK>Ultra-clean, softly tapered.</LINEWORK>
-    <SHADING>Hybrid cel-shaded + painterly volumetric.</SHADING>
+    <STYLE>High fidelity semirealistic anime.</STYLE>
+    <LINEWORK>Exceptionally clean, softly tapered.</LINEWORK>
+    <SHADING>Hybrid cel shaded + painterly volumetric.</SHADING>
 
     <MATERIALS>
       <METAL>Crisp specular reflections (for crown and water gun details).</METAL>
@@ -20,10 +20,10 @@
     <COLOR_PALETTE>Vibrant greens, gold, deep reds, and muted neutrals.</COLOR_PALETTE>
     
     <BACKGROUND>
-      Clean, neutral, plain; painterly texture with depth-of-field blur and reduced distant contrast.
+      Clean, neutral, plain; painterly texture with depth of field blur and reduced distant contrast.
     </BACKGROUND>
     
-    <AESTHETIC>Premium fantasy / JRPG key-art quality.</AESTHETIC>
+    <AESTHETIC>Premium fantasy / JRPG key art quality.</AESTHETIC>
   </RENDERING_SPEC>
 
   <REFERENCE_CLEANUP>
@@ -41,26 +41,26 @@
   <CHARACTER_TRAITS>
     <GENDER>Male.</GENDER>
     <EXPRESSION_POSTURE>Playful yet aloof, gorgeous vibe.</EXPRESSION_POSTURE>
-    <AGE>Appears mid-20s.</AGE>
+    <AGE>Appears mid twenties.</AGE>
     <COLOR_MODE>Full color only.</COLOR_MODE>
 
     <HEIGHT>EXACTLY 5'11".</HEIGHT>
     <HEIGHT_ENFORCEMENT>
-      <RULE>Full-body proportions MUST represent a tall 5'11" adult male.</RULE>
+      <RULE>Full body proportions MUST represent a tall 5'11" adult male.</RULE>
       <RULE>No shortening, compressing, shrinking, or stylizing the body.</RULE>
       <RULE>No "average height" or "skinny short" silhouette.</RULE>
     </HEIGHT_ENFORCEMENT>
 
     <BODY_PROPORTIONS>
-      <RULE>Inverted-triangle male physique (broad shoulders, tapered waist) visible at the neck/wrists.</RULE>
+      <RULE>Inverted triangle male physique (broad shoulders, tapered waist) visible at the neck/wrists.</RULE>
       <RULE>Balanced, natural, anatomically correct.</RULE>
-      <RULE>Leg-to-torso ratio MUST match a real 5'11" male.</RULE>
-      <RULE>Shoulder width, limb length, and head-to-body ratio MUST reflect tall adult male proportions.</RULE>
+      <RULE>Leg to torso ratio MUST match a real 5'11" male.</RULE>
+      <RULE>Shoulder width, limb length, and head to body ratio MUST reflect tall adult male proportions.</RULE>
     </BODY_PROPORTIONS>
 
     <CLOTHING_DETAILS>
       <KIGURUMI>
-        <TYPE>Full-body oversized green frog kigurumi (onesie style).</TYPE>
+        <TYPE>Full body oversized green frog kigurumi (onesie style).</TYPE>
         <COLOR>Bright vibrant green.</COLOR>
         <HOOD_FEATURES>Must have large, 3D frog eyes (yellow/gold with black pupils) on the forehead area of the hood.</HOOD_FEATURES>
         <BELLY_PATCH>
@@ -103,20 +103,20 @@
         <ITEM>Colorful Water Gun.</ITEM>
         <COLORS>Green body, Yellow accents, Red handle/trigger area.</COLORS>
         <POSE>Raised high in the air.</POSE>
-        <RULE>Left hand MUST hold the water gun in ALL full-body panels.</RULE>
+        <RULE>Left hand MUST hold the water gun in ALL full body panels.</RULE>
         <RULE>Hand position MUST remain natural and anatomically correct.</RULE>
       </LEFT_HAND>
 
       <RIGHT_HAND>
         <ITEM>Red Slime Dummy.</ITEM>
         <DESCRIPTION>Red round slime object with a face (two yellow eyes, mouth).</DESCRIPTION>
-        <RULE>Right hand MUST hold the red slime dummy in ALL full-body panels.</RULE>
+        <RULE>Right hand MUST hold the red slime dummy in ALL full body panels.</RULE>
         <RULE>EXACT same slime dummy design, color, shape, and size as source.</RULE>
       </RIGHT_HAND>
 
       <CONSISTENCY>
         <RULE>Handedness must never change (Left=Gun, Right=Slime).</RULE>
-        <RULE>Both items must appear together in all full-body views.</RULE>
+        <RULE>Both items must appear together in all full body views.</RULE>
       </CONSISTENCY>
     </WEAPON_AND_ITEM_RULES>
     
@@ -137,7 +137,7 @@
   <STYLE>
     <BACKGROUND>Clean, neutral, plain.</BACKGROUND>
     <AESTHETIC_MATCH>Rendering, realism, texture, and color treatment MUST match the redrawn character.</AESTHETIC_MATCH>
-    <SHEET_LOOK>Crisp, print-ready, high-detail reference sheet.</SHEET_LOOK>
+    <SHEET_LOOK>Crisp, ready to print, highly detailed reference sheet.</SHEET_LOOK>
   </STYLE>
 
   <LAYOUT>
@@ -151,17 +151,17 @@
         <VIEW order="4">Back</VIEW>
       </FULL_BODY_VIEWS>
 
-      <POSE>Relaxed A-pose, legs parallel; Left hand raised holding water gun, Right hand holding slime dummy.</POSE>
+      <POSE>Relaxed A pose, legs parallel; Left hand raised holding water gun, Right hand holding slime dummy.</POSE>
 
       <ALIGNMENT>
         <SCALE>
-          <RULE>All four full-body views MUST share identical scale.</RULE>
+          <RULE>All four full body views MUST share identical scale.</RULE>
           <RULE>Scale MUST represent EXACT 5'11" height.</RULE>
           <RULE>Head height and total body height MUST match across all four views.</RULE>
         </SCALE>
         <ANATOMY>Clean, accurate silhouette.</ANATOMY>
         <SPACING>Even spacing + clean panel separation.</SPACING>
-        <FRAMING>Uniform framing across all full-body panels.</FRAMING>
+        <FRAMING>Uniform framing across all full body panels.</FRAMING>
       </ALIGNMENT>
     </TOP_ROW>
 
@@ -187,7 +187,7 @@
     <SCALE>
       <FULL_BODY>
         <RULE>MUST represent EXACT 5'11".</RULE>
-        <RULE>MUST remain constant across all full-body views.</RULE>
+        <RULE>MUST remain constant across all full body views.</RULE>
       </FULL_BODY>
       <PORTRAIT>
         <RULE>Facial scale MUST remain constant across all portrait views.</RULE>
@@ -196,7 +196,7 @@
 
     <ANATOMY>
       <RULE>Accurate anatomy in ALL views.</RULE>
-      <RULE>Proportions MUST reflect a tall, well-balanced 5'11" male with an inverted-triangle build.</RULE>
+      <RULE>Proportions MUST reflect a tall, well balanced 5'11" male with an inverted triangle build.</RULE>
       <RULE>No shortening of limbs, torso, or neck.</RULE>
       <RULE>No stylized shrinking or "skinny short" silhouette.</RULE>
     </ANATOMY>
@@ -210,8 +210,8 @@
     </CLOTHING>
 
     <ACCESSORY>
-      <RULE>Red slime dummy MUST appear in Right Hand in ALL full-body views.</RULE>
-      <RULE>Water gun MUST appear in Left Hand in ALL full-body views.</RULE>
+      <RULE>Red slime dummy MUST appear in Right Hand in ALL full body views.</RULE>
+      <RULE>Water gun MUST appear in Left Hand in ALL full body views.</RULE>
       <RULE>NO redesign, recolor, or reinterpretation of accessories.</RULE>
       <RULE>Water gun colors (Green/Yellow/Red) must remain constant.</RULE>
       <RULE>Slime dummy colors (Red with face) must remain constant.</RULE>
@@ -222,7 +222,7 @@
     <DIRECTION>Identical in all panels.</DIRECTION>
     <INTENSITY>Identical in all panels.</INTENSITY>
     <SOFTNESS>Identical in all panels.</SOFTNESS>
-    <SHADOWS>Natural, controlled, detail-preserving.</SHADOWS>
+    <SHADOWS>Natural, controlled, preserving detail.</SHADOWS>
   </LIGHTING_RULES>
 
   <PANELS>

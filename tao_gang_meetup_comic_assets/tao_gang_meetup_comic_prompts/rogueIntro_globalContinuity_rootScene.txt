@@ -12,7 +12,7 @@
       <step>Analyze all three images before generating any panel.</step>
       <step>Identify the SWORDMASTER model sheet (Image 1).</step>
       <step>Identify the LANCER model sheet (Image 2).</step>
-      <step>Identify the start-scene environment reference (Image 0).</step>
+      <step>Identify the opening scene environment reference (Image 0).</step>
       <step>Assign them as SWORDMASTER_MODEL, LANCER_MODEL, and SCENE_CANON.</step>
       <step>Use these assignments consistently for all panels.</step>
     </identificationRules>
@@ -23,14 +23,14 @@
       <rule>No new outfits, colors, or missing accessories.</rule>
       <rule>Maintain perfect recognition continuity across all panels.</rule>
       <rule>CRITICAL: Weapons are STATIC PROPS. Do not generate characters holding weapons unless specified.</rule>
-      <rule>CRITICAL: Swordmaster's hair is a high ponytail with long, waist-length loose hair flowing down the back.</rule>
+      <rule>CRITICAL: Swordmaster's hair is a high ponytail with long loose hair reaching the waist and flowing down the back.</rule>
     </retrievalRules>
 
     <character id="SWORDMASTER">
       <hair>
         <bangs>fully cover her right eye</bangs>
-        <style>high ponytail with waist-length loose hair flowing down the back</style>
-        <accessory><type>hair clip</type><color>light-green</color></accessory>
+        <style>high ponytail with loose hair reaching the waist and flowing down the back</style>
+        <accessory><type>hair clip</type><color>light green</color></accessory>
       </hair>
       <props>
         <cup>same hand in every panel</cup>
@@ -75,7 +75,7 @@
   <outputFormat>
     <composite>true</composite>
     <panelCount>4</panelCount>
-    <panelShape>horizontal-rectangle</panelShape>
+    <panelShape>horizontal rectangle</panelShape>
     <finalAspectRatio>4:3</finalAspectRatio>
     <layout>freeform</layout>
   </outputFormat>
@@ -84,7 +84,7 @@
   <panels>
 
     <panel id="1">
-      <camera><shotType>medium</shotType><angle>eye-level</angle><composition>over-the-shoulder from Lancer's perspective</composition></camera>
+      <camera><shotType>medium</shotType><angle>eye level</angle><composition>over the shoulder from Lancer's perspective</composition></camera>
       <action>
         <description>SWORDMASTER sits on the left bench. Her glowing blue sword leans against the bench beside her. She lifts her tea cup with aloof grace, posture composed.</description>
       </action>
@@ -94,7 +94,7 @@
     </panel>
 
     <panel id="2">
-      <camera><shotType>medium</shotType><angle>eye-level</angle><composition>over-the-shoulder from Swordmaster's perspective</composition></camera>
+      <camera><shotType>medium</shotType><angle>eye level</angle><composition>over the shoulder from Swordmaster's perspective</composition></camera>
       <action>
         <description>LANCER sits on the right. His spear leans against the pillar beside him. He turns his head toward her, a subtle shift in his shoulders, looking attentive.</description>
       </action>
@@ -104,23 +104,23 @@
     </panel>
 
     <panel id="3">
-      <camera><shotType>close-up</shotType><angle>three-quarter</angle><composition>focus on SWORDMASTER</composition></camera>
+      <camera><shotType>closeup</shotType><angle>three quarter</angle><composition>focus on SWORDMASTER</composition></camera>
       <action>
         <description>Close up on SWORDMASTER. She exhales a quiet amused breath, cup near her lips. Her bangs cover her right eye.</description>
       </action>
       <dialogue>
-        <line>He’s been giving himself a whole list of titles—</line>
+        <line>He’s been giving himself a whole list of titles:</line>
       </dialogue>
     </panel>
 
     <panel id="4">
-      <camera><shotType>medium</shotType><angle>three-quarter</angle><composition>wide shot showing both characters and the table</composition></camera>
+      <camera><shotType>medium</shotType><angle>three quarter</angle><composition>wide shot showing both characters and the table</composition></camera>
       <action>
         <description>SWORDMASTER gestures lightly with her free hand, controlled and deliberate. LANCER watches her. The tea set sits on the stone table between them.</description>
       </action>
       <dialogue>
         <line>“The OG of the Knight Gang.”</line>
-        <line>“The true believer of Inter-Dimensionalism.”</line>
+        <line>“The true believer of Interdimensionalism.”</line>
         <line>“Representative of the House of Knight.”</line>
         <line>I could throw out these posh phrases all day...</line>
       </dialogue>
