@@ -27,7 +27,7 @@
 
       <SWORDMASTER priority="highest">
         <rule>Right eye must remain fully covered by bangs.</rule>
-        <rule>Light‑green hair clip must remain visible on the bangs.</rule>
+        <rule>Light green hair clip must remain visible on the bangs.</rule>
         <rule>Expression aloof or faintly amused; posture elegant; cup handling consistent with model sheet.</rule>
       </SWORDMASTER>
 
@@ -47,18 +47,18 @@
 
     <panel id="C1">
       <camera>
-        <shotType>close-up</shotType>
-        <angle>eye-level</angle>
+        <shotType>closeup</shotType>
+        <angle>eye level</angle>
         <framing>symmetrical</framing>
       </camera>
 
       <action>
         <staging>
           <block>
-            AIRBENDER and ROGUE stand close together, both facing forward with matching eyelines. AIRBENDER’s raised hand gesture remains, but his micro‑expression is warm and subtly confident, hinting at recognition of the unseen counterparts.
+            AIRBENDER and ROGUE stand close together, both facing forward with matching eyelines. AIRBENDER’s raised hand gesture remains, but his expression is warm and subtly confident, hinting at recognition of the unseen counterparts.
           </block>
           <block>
-            ROGUE maintains a composed, steady forward gaze with a faint, respectful half‑smile, reinforcing the implied cross‑panel connection. Both maintain strict model‑sheet fidelity and 5'11 proportional consistency.
+            ROGUE maintains a composed, steady forward gaze with a faint, respectful smile, reinforcing the implied connection between panels. Both maintain strict model sheet fidelity and 5'11 proportional consistency.
           </block>
         </staging>
 
@@ -71,9 +71,9 @@
 
       <dialogue>
         <line speaker="AIRBENDER">It’s been ages since I was trapped in that ancient mirage, wrestling with the qi.</line>
-        <line speaker="AIRBENDER">And this—(lightly tapping Rogue)—is the young warrior who pulled me out of that Saṃsāra loop.</line>
+        <line speaker="AIRBENDER">And this (lightly tapping Rogue) is the young warrior who pulled me out of that Saṃsāra loop.</line>
         <line speaker="AIRBENDER">Rogue, meet my friends: Swordmaster and Lancer.</line>
-        <line speaker="AIRBENDER">And yes—he really is Rogue, a true believer in Inter‑Dimensionalism, the broader framework that encompasses Taoism.</line>
+        <line speaker="AIRBENDER">And yes, he really is Rogue, a true believer in Interdimensionalism, the broader framework that encompasses Taoism.</line>
       </dialogue>
     </panel>
 
@@ -81,7 +81,7 @@
     <panel id="C2">
       <camera>
         <shotType>medium</shotType>
-        <angle>eye-level</angle>
+        <angle>eye level</angle>
         <framing>symmetrical</framing>
       </camera>
 
@@ -91,10 +91,10 @@
             SWORDMASTER and LANCER stand elegantly side by side or with slight spatial offset, both facing forward with matching eyelines that align with AIRBENDER and ROGUE’s eyelines from the previous panel.
           </block>
           <block>
-            SWORDMASTER’s micro‑expression is a subtle, aloof half‑smirk, suggesting poised acknowledgment. Her posture remains elegant, cup held with precise model‑sheet accuracy, right eye covered by bangs, hair clip visible.
+            SWORDMASTER’s expression is a subtle, aloof smirk, suggesting poised acknowledgment. Her posture remains elegant, cup held with precise model sheet accuracy, right eye covered by bangs, hair clip visible.
           </block>
           <block>
-            LANCER maintains a calm, steady forward gaze with a faint softening of the eyes, creating a quiet, respectful counterpoint to AIRBENDER and ROGUE. His posture aligns with model‑sheet proportions and the 5'11 height constraint.
+            LANCER maintains a calm, steady forward gaze with a faint softening of the eyes, creating a quiet, respectful counterpoint to AIRBENDER and ROGUE. His posture aligns with model sheet proportions and the 5'11 height constraint.
           </block>
         </staging>
 

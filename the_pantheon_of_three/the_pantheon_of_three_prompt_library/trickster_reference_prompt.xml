@@ -1,90 +1,90 @@
 <PROMPT>
 
 <RENDERING_SPEC>
-  STYLE: High‑fidelity semi‑realistic anime.
-  LINEWORK: Ultra‑clean, softly tapered.
-  SHADING: Hybrid cel‑shaded + painterly volumetric.
+  STYLE: High fidelity semirealistic anime.
+  LINEWORK: Exceptionally clean, softly tapered.
+  SHADING: Hybrid cel shaded + painterly volumetric.
   MATERIALS:
     METAL: Crisp specular reflections.
-    FABRIC: Subtle micro‑grain.
+    FABRIC: Subtle fine grain.
     ORGANIC: Soft luminous texture.
   LIGHTING:
     KEY_LIGHT: Warm, directional, cinematic.
     FILL_LIGHT: Cool ambient.
     CONSISTENCY: Same direction, intensity, softness, and shadow behavior across ALL panels.
   COLOR_PALETTE: Jewel tones + muted neutrals + autumn hues.
-  BACKGROUND: Clean neutral plain backdrop with painterly texture, depth‑of‑field blur, and reduced distant contrast.
-  AESTHETIC: Premium fantasy / JRPG key‑art.
+  BACKGROUND: Clean neutral plain backdrop with painterly texture, depth of field blur, and reduced distant contrast.
+  AESTHETIC: Premium fantasy / JRPG key art.
 </RENDERING_SPEC>
 
 <REDRAW_RULES>
 
   <STYLE_MATCH>
-    MATCH: High‑fidelity semi‑realistic anime.
+    MATCH: High fidelity semirealistic anime.
     RENDERING_PROPERTIES: Must match the redrawn reference exactly.
   </STYLE_MATCH>
 
   <CHARACTER_TRAITS>
     EXPRESSION_POSTURE: Aloof, composed, gorgeous.
-    AGE: Appears mid‑20s.
+    AGE: Appears mid twenties.
     COLOR_MODE: Full color only.
 
     HEIGHT: EXACT 5'11".
     HEIGHT_ENFORCEMENT:
-      - Full‑body proportions MUST reflect a real 5'11" adult.
-      - No shortening, compressing, shrinking, or stylizing the body.
-      - No “average height” or “short‑skinny” silhouette.
+      • Full body proportions MUST reflect a real 5'11" adult.
+      • No shortening, compressing, shrinking, or stylizing the body.
+      • No “average height” or “short and skinny” silhouette.
 
     BODY_PROPORTIONS:
-      - Balanced, natural, anatomically correct.
-      - Leg‑to‑torso ratio MUST match a real 5'11" human.
-      - Shoulder width, limb length, and head‑to‑body ratio MUST reflect tall adult proportions.
+      • Balanced, natural, anatomically correct.
+      • Leg to torso ratio MUST match a real 5'11" human.
+      • Shoulder width, limb length, and head to body ratio MUST reflect tall adult proportions.
 
     <SOURCE_IMAGE_CONSTRAINTS>
 
       <BODY_TYPE>
-        - Slender‑curvy athletic build.
-        - Subtle visible muscle tone (not bulky).
-        - Waist‑to‑hip ratio MUST match the reference.
-        - Long, elegant limbs consistent with a tall 5'11" frame.
-        - No exaggerated hourglass, no hyper‑muscularity, no soft/childlike proportions.
+        • Slender and curvy athletic build.
+        • Subtle visible muscle tone (not bulky).
+        • Waist to hip ratio MUST match the reference.
+        • Long, elegant limbs consistent with a tall 5'11" frame.
+        • No exaggerated hourglass, no excessive muscularity, no soft/childlike proportions.
       </BODY_TYPE>
 
       <CLOAK_AND_HOOD>
-        - Cloak MUST match reference: dark exterior, ornate gold patterning, red interior lining.
-        - Hood MUST be worn UP in ALL views.
-        - Hood MUST cover the upper head and frame the face exactly like the reference.
-        - Hood MUST NOT obscure identity‑critical features (eyes, hair color split, facial marking).
-        - Cloak length, drape, weight, and silhouette MUST match the reference.
-        - No alternate hood shapes, no deep shadows hiding identity.
+        • Cloak MUST match reference: dark exterior, ornate gold patterning, red interior lining.
+        • Hood MUST be worn UP in ALL views.
+        • Hood MUST cover the upper head and frame the face exactly like the reference.
+        • Hood MUST NOT obscure features essential to identity (eyes, hair color split, facial marking).
+        • Cloak length, drape, weight, and silhouette MUST match the reference.
+        • No alternate hood shapes, no deep shadows hiding identity.
       </CLOAK_AND_HOOD>
 
       <CLOTHING_FIDELITY>
-        - Crop top: black with gold accents, mid‑torso length.
-        - Shorts: black with gold trim + star‑shaped belt ornament.
-        - Thigh‑high stockings: black with star patterns.
-        - Boots: black with gold detailing.
-        - Jewelry: gold bracelets, star earrings, all accessories identical to reference.
-        - No redesigns, no missing elements.
+        • Crop top: black with gold accents, mid torso length.
+        • Shorts: black with gold trim + star shaped belt ornament.
+        • Thigh high stockings: black with star patterns.
+        • Boots: black with gold detailing.
+        • Jewelry: gold bracelets, star earrings, all accessories identical to reference.
+        • No redesigns, no missing elements.
       </CLOTHING_FIDELITY>
 
       <HAIR_RULES>
-        - Hair MUST remain half golden‑blonde / half white, exact split as reference.
-        - Length: long, flowing, mid‑back.
-        - Parting, volume, and silhouette MUST remain consistent across all views.
-        - No recoloring, no restyling, no length changes.
+        • Hair MUST remain half golden blonde / half white, exact split as reference.
+        • Length: long, flowing, mid back.
+        • Parting, volume, and silhouette MUST remain consistent across all views.
+        • No recoloring, no restyling, no length changes.
       </HAIR_RULES>
 
       <FACIAL_FEATURES>
-        - Facial structure MUST match reference exactly (eyes, nose, lips, jawline).
-        - Facial marking near eye MUST match reference (shape, size, placement).
-        - Expression: aloof, composed, confident.
+        • Facial structure MUST match reference exactly (eyes, nose, lips, jawline).
+        • Facial marking near eye MUST match reference (shape, size, placement).
+        • Expression: aloof, composed, confident.
       </FACIAL_FEATURES>
 
       <SILHOUETTE_LOCK>
-        - Overall silhouette MUST match reference: tall, elegant, confident.
-        - Cloak outline, hood shape, hair mass, and limb proportions MUST remain consistent.
-        - No widening, shrinking, or altering silhouette.
+        • Overall silhouette MUST match reference: tall, elegant, confident.
+        • Cloak outline, hood shape, hair mass, and limb proportions MUST remain consistent.
+        • No widening, shrinking, or altering silhouette.
       </SILHOUETTE_LOCK>
 
     </SOURCE_IMAGE_CONSTRAINTS>
@@ -100,7 +100,7 @@
 <STYLE>
   BACKGROUND: Clean, neutral, plain.
   AESTHETIC_MATCH: Rendering, realism, texture, and color treatment MUST match the redrawn character.
-  SHEET_LOOK: Crisp, print‑ready, high‑detail reference sheet.
+  SHEET_LOOK: Crisp, ready to print, highly detailed reference sheet.
 </STYLE>
 
 <LAYOUT>
@@ -112,16 +112,16 @@
       2. Left profile (facing left)
       3. Right profile (facing right)
       4. Back
-    POSE: Relaxed A‑pose, legs parallel.
+    POSE: Relaxed A pose, legs parallel.
 
     <ALIGNMENT>
       SCALE:
-        - All four full‑body views MUST share identical scale.
-        - Scale MUST represent EXACT 5'11".
-        - Head height and total body height MUST match across all four views.
+        • All four full body views MUST share identical scale.
+        • Scale MUST represent EXACT 5'11".
+        • Head height and total body height MUST match across all four views.
       ANATOMY: Clean, accurate silhouette.
       SPACING: Even spacing + clean panel separation.
-      FRAMING: Uniform framing across all full‑body panels.
+      FRAMING: Uniform framing across all full body panels.
     </ALIGNMENT>
   </TOP_ROW>
 
@@ -146,22 +146,22 @@
     PORTRAIT: Identical facial scale across all portraits.
 
   ANATOMY:
-    - Accurate anatomy in ALL views.
-    - Proportions MUST reflect a tall, well‑balanced 5'11" adult.
-    - No shortening of limbs, torso, or neck.
-    - No stylized shrinking.
+    • Accurate anatomy in ALL views.
+    • Proportions MUST reflect a tall, well balanced 5'11" adult.
+    • No shortening of limbs, torso, or neck.
+    • No stylized shrinking.
 
   <HOOD_COVERAGE_RULES>
-    - Hood UP in ALL panels.
-    - Hood shape consistent across angles.
-    - Hood interior red lining visible where appropriate.
-    - Hood MUST NOT obscure identity‑critical features.
+    • Hood UP in ALL panels.
+    • Hood shape consistent across angles.
+    • Hood interior red lining visible where appropriate.
+    • Hood MUST NOT obscure features essential to identity.
   </HOOD_COVERAGE_RULES>
 
   <CLOAK_PHYSICS>
-    - Cloak drape consistent across all views.
-    - No wind, no dramatic motion, no fluttering.
-    - Fabric weight MUST match reference (heavy, structured).
+    • Cloak drape consistent across all views.
+    • No wind, no dramatic motion, no fluttering.
+    • Fabric weight MUST match reference (heavy, structured).
   </CLOAK_PHYSICS>
 </CONSISTENCY_RULES>
 
@@ -169,7 +169,7 @@
   DIRECTION: Identical in all panels.
   INTENSITY: Identical in all panels.
   SOFTNESS: Identical in all panels.
-  SHADOWS: Natural, controlled, detail‑preserving.
+  SHADOWS: Natural, controlled, preserving detail.
 </LIGHTING_RULES>
 
 <PANELS>

@@ -11,7 +11,7 @@
     <visualLocks>
       <SWORDMASTER>
         <rule priority="highest">Right eye must remain fully covered by bangs.</rule>
-        <rule priority="highest">Light‑green hair clip must remain visible on the bangs.</rule>
+        <rule priority="highest">Light green hair clip must remain visible on the bangs.</rule>
       </SWORDMASTER>
     </visualLocks>
 
@@ -24,13 +24,13 @@
 
     <panel id="A">
       <camera>
-        <shotType>close-up</shotType>
-        <angle>eye-level</angle>
+        <shotType>closeup</shotType>
+        <angle>eye level</angle>
       </camera>
 
       <action>
         <description>
-          LANCER faces the camera in a close-up. Maintain his canonical appearance and proportions.
+          LANCER faces the camera in a closeup. Maintain his canonical appearance and proportions.
           He gives a calm, elegant smile.
         </description>
       </action>
@@ -44,14 +44,14 @@
 
     <panel id="B">
       <camera>
-        <shotType>close-up</shotType>
-        <angle>eye-level</angle>
+        <shotType>closeup</shotType>
+        <angle>eye level</angle>
       </camera>
 
       <action>
         <description>
-          Close-up of SWORDMASTER. Her right eye remains fully covered by her bangs, and the
-          light‑green hair clip is clearly visible. She takes a slow sip of tea, then sets the cup
+          Closeup of SWORDMASTER. Her right eye remains fully covered by her bangs, and the
+          light green hair clip is clearly visible. She takes a slow sip of tea, then sets the cup
           down with aloof grace.
         </description>
       </action>
@@ -60,7 +60,7 @@
         <line speaker="SWORDMASTER">Rogue is coming to the monastery.</line>
         <line speaker="SWORDMASTER">We’re going to meet him.</line>
         <line speaker="SWORDMASTER">Ignoring him isn’t an option.</line>
-        <line speaker="SWORDMASTER">And as Taoists… we value champions who can do things that are meta‑real.</line>
+        <line speaker="SWORDMASTER">And as Taoists… we value champions who can do things that are metareal.</line>
       </dialogue>
     </panel>
 

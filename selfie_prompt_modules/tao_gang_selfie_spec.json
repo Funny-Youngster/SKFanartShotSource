@@ -24,11 +24,11 @@
     "reference_materials": {
       "style_reference": {
         "rendering": {
-          "linework": "High-fidelity semi-realistic anime with tapered lines. Mandatory.",
-          "shading": "Hybrid cel-shaded and painterly volumetric shading. Mandatory.",
+          "linework": "High fidelity semirealistic anime with tapered lines. Mandatory.",
+          "shading": "Hybrid cel shaded and painterly volumetric shading. Mandatory.",
           "materials": {
-            "metal": "High-specular reflections. Mandatory.",
-            "fabric": "Micro-grain texture. Mandatory.",
+            "metal": "Highly specular reflections. Mandatory.",
+            "fabric": "Fine grain texture. Mandatory.",
             "surfaces": "Soft, luminous rendering for organic surfaces. Mandatory."
           },
           "lighting": "Warm directional lighting with cool ambient fill. Mandatory."
@@ -42,7 +42,7 @@
     },
     "photo_setting": {
       "location": {
-        "environment": "Taoist hermit-style utopia with trees, mountains, and clouds. No substitutions."
+        "environment": "Taoist utopia in the style of a hermitage with trees, mountains, and clouds. No substitutions."
       },
       "arrangement": {
         "distribution": {
@@ -54,11 +54,11 @@
         "depth": {
           "front_row": {
             "count": 4,
-            "description": "Front micro-row. Mandatory."
+            "description": "Small front row. Mandatory."
           },
           "back_row": {
             "count": 3,
-            "description": "Back micro-row positioned less than one character-width behind. Mandatory."
+            "description": "Small back row positioned less than one character width behind. Mandatory."
           }
         },
         "visibility": {
@@ -75,7 +75,7 @@
       "demographics": {
         "age_approximate": 18,
         "height_approximate": "5'11\"",
-        "height_adjustment": "Apply selfie-appropriate foreshortening. Mandatory."
+        "height_adjustment": "Apply foreshortening appropriate for a selfie. Mandatory."
       },
       "weapon_constraint": {
         "remove": "All weapons and handheld objects must be removed. None may appear."
@@ -90,11 +90,11 @@
           "hair": {
             "coverage": "Hair must cover one eye. No exceptions.",
             "clip": {
-              "color": "light-green",
+              "color": "light green",
               "visibility": "Clip must be visible. No omission."
             },
             "style": {
-              "length": "Waist-length. No shortening.",
+              "length": "Reaching the waist. No shortening.",
               "structure": "Ponytail. No alternate structures."
             }
           }

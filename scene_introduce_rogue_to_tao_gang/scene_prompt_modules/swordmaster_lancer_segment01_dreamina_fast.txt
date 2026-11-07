@@ -38,13 +38,13 @@ Dialogue: No. What happened.
 Shot Three
 Camera: closeup, three quarter
 Action: SWORDMASTER with cup near lips
-Dialogue: He is been giving himself a whole list of titles.
+Dialogue: He has been giving himself a whole list of titles.
 Markers: right eye covered, hair clip visible, cup in same hand
 
 Shot Four
 Camera: medium, three quarter
 Action: SWORDMASTER gestures with free hand
-Dialogue: The OG of the Knight Gang. The true believer of Inter Dimensionalism. Representative of the House of Knight. I could throw out these posh phrases all day.
+Dialogue: The OG of the Knight Gang. The true believer of Interdimensionalism. Representative of the House of Knight. I could throw out these posh phrases all day.
 Markers: right eye covered, hair clip visible, cup in same hand
 
 Segment Metadata

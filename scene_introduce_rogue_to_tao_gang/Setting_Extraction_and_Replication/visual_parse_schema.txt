@@ -5,15 +5,15 @@ Your analysis must isolate:
 2. All animate entities (humans, animals, fictional characters, stylized figures, mannequins)
 3. All environmental and compositional elements (lighting, shadows, reflections, depth, perspective)
 
-When uncertain, do NOT guess.  
+When uncertain, do NOT guess.
 If any detail cannot be visually confirmed, explicitly mark it as:
 "unknown", "partially_visible", or "occluded".
 
 Never invent details.
 
-------------------------------------------------------------
+============================================================
 OBJECTS (Inanimate)
-------------------------------------------------------------
+============================================================
 For each object, extract:
 - name
 - color (descriptive or hex)
@@ -34,10 +34,10 @@ For each object, extract:
     - contained_within
     - overlapping_with
 
-------------------------------------------------------------
+============================================================
 ENTITIES (Humans, Animals, Characters)
-------------------------------------------------------------
-For each entity, extract a full multi-layer appearance model:
+============================================================
+For each entity, extract a full multilayer appearance model:
 
 entity_type:
   - human | animal | fictional_character | mannequin | stylized_figure
@@ -73,7 +73,7 @@ hairstyle:
     ]
 
 clothing:
-  - layers (top-to-bottom):
+  - layers (from top to bottom):
       [
         {
           garment_type,
@@ -99,7 +99,7 @@ expressive_state:
   - micro_gestures (subtle hand or body cues)
 
 anatomy_style:
-  - realism_level (realistic, semi-realistic, stylized, exaggerated)
+  - realism_level (realistic, semirealistic, stylized, exaggerated)
   - body_proportions (standard, elongated, chibi, heroic, etc.)
 
 interactions:
@@ -111,9 +111,9 @@ interactions:
 position_in_room:
   - relative spatial description
 
-------------------------------------------------------------
+============================================================
 ENVIRONMENT & COMPOSITION
-------------------------------------------------------------
+============================================================
 lighting:
   - type (natural, artificial, mixed)
   - direction (e.g., left window, overhead lamp)
@@ -132,9 +132,9 @@ composition:
   - focal_points
   - color_balance (warm/cool/mixed/neutral)
 
-------------------------------------------------------------
-TOP-LEVEL JSON KEYS
-------------------------------------------------------------
+============================================================
+TOP LEVEL JSON KEYS
+============================================================
 Your final JSON must include:
 
 - room_style
