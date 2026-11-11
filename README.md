@@ -26,8 +26,8 @@ Three rules travel with the files:
 
 | Kind                           | Count |
 | :----------------------------- | ----: |
-| Character model sheets         |    34 |
-| Scene plates and story frames  |    15 |
+| Character model sheets         |    35 |
+| Scene plates and story frames  |    14 |
 | Prompt and specification files |    19 |
 | Video takes                    |     4 |
 | Dialogue transcripts           |     1 |
@@ -45,9 +45,9 @@ Three casts are covered: the **Knight Gang**, the **Tao Gang**, and the **Panthe
 
 Full turnarounds for the Knight Gang, from the founding four through the Werewolf, the Robot, and the Interdimensional Traveler. Each sheet carries the front, both profiles, the back, and portrait insets, so a prompt can be held to any angle.
 
-### `TaoGang_ModelSheets/` · 10 sheets
+### `TaoGang_ModelSheets/` · 11 sheets
 
-The monastery cast, including an unarmed pass on the Swordmaster and a second reading of the Yin Yang Adept. Use these for pose, outfit, and proportion continuity.
+The monastery cast, including an unarmed Swordmaster and second versions of the Lancer and Yin Yang Adept. Use these for pose, outfit, and proportion continuity.
 
 ### `the_pantheon_of_three/` · 10 files
 
@@ -61,7 +61,7 @@ Sheets, a prompt library, and two scene renders for the trio. Split three ways:
 
 Three finished comic plates and the continuity prompts behind them, split by the beat each one covers. Good for multi panel work where recognition has to survive across the whole sequence.
 
-### `scene_introduce_rogue_to_tao_gang/` · 21 files
+### `scene_introduce_rogue_to_tao_gang/` · 20 files
 
 The largest folder, and the closest thing here to a full production. A tea room conversation cut as three continuous segments:
 
