@@ -9,7 +9,7 @@
     <title>SKFanartShotSource · Soul Knight Production Archive</title>
     <meta
       name="description"
-      content="Model sheets, story frames, and prompt modules for Soul Knight fan cinema. Thirty four character sheets, fifteen scene plates, nineteen prompt and specification files, kept under version control."
+      content="Model sheets, story frames, and prompt modules for Soul Knight fan cinema. Thirty five character sheets, fourteen scene plates, nineteen prompt and specification files, kept under version control."
     />
     <meta name="theme-color" content="#08090B" />
     <meta property="og:title" content="SKFanartShotSource" />
@@ -892,6 +892,14 @@
         margin-bottom: 0.25rem;
       }
 
+      .alternate-frame {
+        max-width: 32rem;
+        margin-bottom: clamp(2rem, 4vw, 3.5rem);
+      }
+      .alternate-frame .kicker {
+        margin-bottom: 1.4rem;
+      }
+
       .takes {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -1139,6 +1147,16 @@
         letter-spacing: 0.14em;
         text-transform: uppercase;
         color: var(--paper-faint);
+      }
+      .source-link {
+        margin-left: auto;
+        color: var(--paper-dim);
+        font-size: 0.6rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+      .source-link:hover {
+        color: var(--jade-lit);
       }
       .copy {
         display: inline-flex;
@@ -1591,8 +1609,8 @@
           </div>
 
           <div class="stats">
-            <div class="stat"><b>34</b><i>Model sheets</i></div>
-            <div class="stat"><b>15</b><i>Scene plates</i></div>
+            <div class="stat"><b>35</b><i>Model sheets</i></div>
+            <div class="stat"><b>14</b><i>Scene plates</i></div>
             <div class="stat"><b>19</b><i>Prompt files</i></div>
             <div class="stat"><b>04</b><i>Video takes</i></div>
           </div>
@@ -1864,8 +1882,8 @@
 
             <div class="rv">
               <div class="strip-head">
-                <span class="kicker" style="margin: 0">Frames in order</span>
-                <span class="n">07 · drag to scan</span>
+                <span class="kicker" style="margin: 0">Scene frames</span>
+                <span class="n">06 · drag to scan</span>
               </div>
               <div class="strip-wrap">
                 <div class="strip">
@@ -1931,19 +1949,19 @@
                     <a
                       class="plate"
                       data-lb
-                      data-src="scene_introduce_rogue_to_tao_gang/scene_transition_frames/sword_master_eyelevel_frame.jpeg"
-                      data-title="Swordmaster, eye level"
+                      data-src="scene_introduce_rogue_to_tao_gang/scene_transition_frames/swordmaster-critical-shot.jpg"
+                      data-title="Swordmaster, critical shot"
                       data-file="scene_transition_frames/"
                     >
                       <img
-                        src="scene_introduce_rogue_to_tao_gang/scene_transition_frames/sword_master_eyelevel_frame.jpeg"
-                        alt="Eye level transition frame of the Swordmaster"
+                        src="scene_introduce_rogue_to_tao_gang/scene_transition_frames/swordmaster-critical-shot.jpg"
+                        alt="The Swordmaster holding a cup in the garden"
                         loading="lazy"
                         decoding="async"
                       /><span class="corner"></span>
                     </a>
                     <figcaption>
-                      <b>Swordmaster, eye level</b>scene_transition_frames
+                      <b>Swordmaster, critical shot</b>scene_transition_frames
                     </figcaption>
                   </figure>
 
@@ -1951,39 +1969,19 @@
                     <a
                       class="plate"
                       data-lb
-                      data-src="scene_introduce_rogue_to_tao_gang/scene_transition_frames/lancer_eyelevel_frame.jpeg"
-                      data-title="Lancer, eye level"
+                      data-src="scene_introduce_rogue_to_tao_gang/scene_transition_frames/lancer-critical-shot.jpg"
+                      data-title="Lancer, critical shot"
                       data-file="scene_transition_frames/"
                     >
                       <img
-                        src="scene_introduce_rogue_to_tao_gang/scene_transition_frames/lancer_eyelevel_frame.jpeg"
-                        alt="Eye level transition frame of the Lancer"
+                        src="scene_introduce_rogue_to_tao_gang/scene_transition_frames/lancer-critical-shot.jpg"
+                        alt="The Lancer facing the Swordmaster in the garden"
                         loading="lazy"
                         decoding="async"
                       /><span class="corner"></span>
                     </a>
                     <figcaption>
-                      <b>Lancer, eye level</b>scene_transition_frames
-                    </figcaption>
-                  </figure>
-
-                  <figure>
-                    <a
-                      class="plate"
-                      data-lb
-                      data-src="scene_introduce_rogue_to_tao_gang/scene_transition_frames/lancer_floorup_frame.jpeg"
-                      data-title="Lancer, low angle"
-                      data-file="scene_transition_frames/"
-                    >
-                      <img
-                        src="scene_introduce_rogue_to_tao_gang/scene_transition_frames/lancer_floorup_frame.jpeg"
-                        alt="Low angle transition frame of the Lancer"
-                        loading="lazy"
-                        decoding="async"
-                      /><span class="corner"></span>
-                    </a>
-                    <figcaption>
-                      <b>Lancer, low angle</b>scene_transition_frames
+                      <b>Lancer, critical shot</b>scene_transition_frames
                     </figcaption>
                   </figure>
 
@@ -2009,6 +2007,33 @@
                 </div>
               </div>
             </div>
+          </div>
+
+          <div class="alternate-frame rv">
+            <p class="kicker">Unused opening variant</p>
+            <figure>
+              <a
+                class="plate"
+                data-lb
+                data-src="scene_introduce_rogue_to_tao_gang/scene_opening_frames/SWORDMASTER_LANCER_Rogue_Conversation_Unused.png"
+                data-title="Unused opening variant"
+                data-file="scene_opening_frames/SWORDMASTER_LANCER_Rogue_Conversation_Unused.png"
+              >
+                <img
+                  src="scene_introduce_rogue_to_tao_gang/scene_opening_frames/SWORDMASTER_LANCER_Rogue_Conversation_Unused.png"
+                  alt="The Swordmaster and Lancer seated across a tea table in a garden pavilion"
+                  loading="lazy"
+                  decoding="async"
+                /><span class="corner"></span>
+              </a>
+              <figcaption class="caption">
+                <h4>Unused opening variant</h4>
+                <p>
+                  An alternate view of the tea conversation in the garden
+                  pavilion.
+                </p>
+              </figcaption>
+            </figure>
           </div>
 
           <div class="rv">
@@ -2240,7 +2265,7 @@
               <p class="kicker">Reference library</p>
               <h2>The <em>cast</em></h2>
               <p class="sub">
-                Thirty four sheets across three casts, each drawn as a full
+                Thirty five sheets across three casts, each drawn as a full
                 turnaround so a prompt can be held to the front, both profiles,
                 and the back. Select any sheet to read it at full size.
               </p>
@@ -2268,7 +2293,7 @@
               aria-controls="p-tao"
               id="t-tao"
             >
-              Tao Gang<sup>10</sup>
+              Tao Gang<sup>11</sup>
             </button>
             <button
               class="tab"
@@ -2545,18 +2570,18 @@
                 <a
                   class="plate sheet"
                   data-lb
-                  data-src="KnightGangRefs/werewolf_model_sheet.png"
+                  data-src="KnightGangRefs/werewolf_model_sheet.jpg"
                   data-title="Werewolf"
-                  data-file="KnightGangRefs/werewolf_model_sheet.png"
+                  data-file="KnightGangRefs/werewolf_model_sheet.jpg"
                   ><img
-                    src="KnightGangRefs/werewolf_model_sheet.png"
+                    src="KnightGangRefs/werewolf_model_sheet.jpg"
                     alt="Werewolf model sheet"
                     loading="lazy"
                     decoding="async" /><span class="corner"></span
                 ></a>
                 <figcaption class="caption">
                   <h4>Werewolf</h4>
-                  <div class="meta">werewolf_model_sheet.png</div>
+                  <div class="meta">werewolf_model_sheet.jpg</div>
                 </figcaption>
               </figure>
               <figure>
@@ -2715,6 +2740,24 @@
                 <figcaption class="caption">
                   <h4>Lancer</h4>
                   <div class="meta">lancer_model_sheet.png</div>
+                </figcaption>
+              </figure>
+              <figure>
+                <a
+                  class="plate sheet"
+                  data-lb
+                  data-src="TaoGang_ModelSheets/lancer_model_sheet_2.jpg"
+                  data-title="Lancer, second version"
+                  data-file="TaoGang_ModelSheets/lancer_model_sheet_2.jpg"
+                  ><img
+                    src="TaoGang_ModelSheets/lancer_model_sheet_2.jpg"
+                    alt="Lancer model sheet, second version"
+                    loading="lazy"
+                    decoding="async" /><span class="corner"></span
+                ></a>
+                <figcaption class="caption">
+                  <h4>Lancer, second version</h4>
+                  <div class="meta">lancer_model_sheet_2.jpg</div>
                 </figcaption>
               </figure>
               <figure>
@@ -2972,6 +3015,12 @@
             <div class="reader-view">
               <div class="reader-bar">
                 <span class="tag" id="docTag">json · excerpt</span>
+                <a
+                  class="source-link"
+                  id="docSource"
+                  href="selfie_prompt_modules/tao_gang_selfie_spec.json"
+                  >Full source</a
+                >
                 <button class="copy" id="copyBtn"><span>Copy</span></button>
               </div>
 
@@ -3076,10 +3125,10 @@ Never invent details.</code></pre>
             <article class="node">
               <div class="path"><b>TaoGang_ModelSheets</b>/</div>
               <p>
-                The monastery cast, including an unarmed pass on the Sword
-                Master and a second reading of the Yin Yang Adept.
+                The monastery cast, including an unarmed Swordmaster and second
+                versions of the Lancer and Yin Yang Adept.
               </p>
-              <div class="count">10 sheets</div>
+              <div class="count">11 sheets</div>
             </article>
 
             <article class="node">
@@ -3107,7 +3156,7 @@ Never invent details.</code></pre>
                 prompts for three segments in several formats, the setting
                 extraction schema, four takes, and the dialogue.
               </p>
-              <div class="count">21 files</div>
+              <div class="count">20 files</div>
             </article>
 
             <article class="node">
@@ -3302,6 +3351,16 @@ Never invent details.</code></pre>
           document.querySelectorAll(".file"),
         );
         var docTag = document.getElementById("docTag");
+        var docSource = document.getElementById("docSource");
+        var sourceFor = {
+          "doc-authority": "selfie_prompt_modules/tao_gang_selfie_spec.json",
+          "doc-walk":
+            "the_pantheon_of_three/the_pantheon_of_three_prompt_library/the_pantheon_of_three_spotlight_walk_prompt_file.xml",
+          "doc-continuity":
+            "tao_gang_meetup_comic_assets/tao_gang_meetup_comic_prompts/rogueIntro_globalContinuity_rootScene.txt",
+          "doc-parse":
+            "scene_introduce_rogue_to_tao_gang/Setting_Extraction_and_Replication/visual_parse_schema.txt",
+        };
         var tagFor = {
           "doc-authority": "json · excerpt",
           "doc-walk": "xml · excerpt",
@@ -3324,6 +3383,7 @@ Never invent details.</code></pre>
               }
             });
             docTag.textContent = tagFor[id] || "";
+            docSource.href = sourceFor[id];
           });
         });
 
